@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaNetBackend", "FarmaNetBackend\FarmaNetBackend.csproj", "{2F2E5CF7-03E8-4309-95FB-E47B75CF7BAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F2E5CF7-03E8-4309-95FB-E47B75CF7BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2E5CF7-03E8-4309-95FB-E47B75CF7BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2E5CF7-03E8-4309-95FB-E47B75CF7BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2E5CF7-03E8-4309-95FB-E47B75CF7BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6B109B8-8D16-4549-9B3D-A4C2DC2071A9}
+	EndGlobalSection
+EndGlobal
