@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './pages/main/main.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { InputComponent } from './pages/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
