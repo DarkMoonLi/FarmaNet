@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
+    "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj": {
+    "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "projectUniqueName": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "projectName": "FarmaNetBackend",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj",
-        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\obj\\",
+        "projectPath": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
+        "outputPath": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Артём\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
