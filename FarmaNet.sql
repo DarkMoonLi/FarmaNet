@@ -37,14 +37,14 @@ CREATE TABLE WorkerAccount
 	Password VARCHAR(255) NOT NULL,
 	IdWorkerInformation INT NOT NULL,
 	IdPharmacy INT NOT NULL,
-	FOREIGN KEY (IdPharmacy) REFERENCES Pharmacy (Id),
+	FOREIGN KEY (IdPharmacy) REFERENCES Pharmacy (IdPharmacy),
 	FOREIGN KEY (IdWorkerInformation) REFERENCES WorkerInformation (IdWorkerInformation)
 );
 
 /*Нужно создать таблицу для связи типа медикамента с медикаментом*/
-CREATE TABLE TypeMedication
+CREATE TABLE MedicationType
 (
-	IdTypeMedication INT PRIMARY KEY IDENTITY,
+	IdMedicationType INT PRIMARY KEY IDENTITY,
 	Name VARCHAR(80) NOT NULL,
 );
 
@@ -53,21 +53,21 @@ CREATE TABLE Medication
 	IdMedication INT PRIMARY KEY IDENTITY,
 	Name VARCHAR(50) NOT NULL,
 	Recipe VARCHAR(500) NOT NULL,
-	IdTypeMedication INT NOT NULL,
-	FOREIGN KEY (IdTypeMedication) REFERENCES TypeMedication (IdTypeMedication)
+	IdMedicationType INT NOT NULL,
+	FOREIGN KEY (IdMedicationType) REFERENCES MedicationType (IdMedicationType)
 );
 
 CREATE TABLE Supplier
 (
 	IdSupplier INT PRIMARY KEY IDENTITY,
 	Name VARCHAR(50) NOT NULL,
-	Inn VARCHAR(20) NOT NULL
+	Inn VARCHAR(20) NOT NULL			/*Может переделать под числовое значение?*/
 );
 
 CREATE TABLE Import
 (
 	IdImport INT PRIMARY KEY IDENTITY,
-	Number SMALLINT NOT NULL,
+	Number SMALLINT NOT NULL,          /*Для чего?*/
 	Date DATE NOT NULL,
 	SumPrice DECIMAL(11, 2) NOT NULL,
 	IdSupplier INT NOT NULL,
@@ -93,10 +93,11 @@ CREATE TABLE WorkingHours
 	FOREIGN KEY (IdWorkerAccount) REFERENCES WorkerAccount (IdWorkerAccount)
 );
 
+/*Не хватает количества и цены?*/
 CREATE TABLE Sale
 (
 	IdMedication INT NOT NULL,
-	IdPharmacy INT NOT nULL,
+	IdPharmacy INT NOT NULL,
 	PRIMARY KEY (IdMedication, IdPharmacy),
 	FOREIGN KEY (IdMedication) REFERENCES Medication (IdMedication),
 	FOREIGN KEY (IdPharmacy) REFERENCES Pharmacy (IdPharmacy)
