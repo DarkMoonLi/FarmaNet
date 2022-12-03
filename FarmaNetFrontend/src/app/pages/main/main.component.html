@@ -1,1 +1,51 @@
-<p>main works!</p>
+<div class="home-container">
+    <img class="photo" src="../../assets/header_image.svg" alt="Фото Еды">
+    <div class="main-container"> 
+        <h1 class="main-container__title">Управляй аптекой удобно</h1>
+        <div class="main-container__description">Решение для фармацевтических компаний и их покупателей.</div>
+        <div class="main-container__functions">
+            <!-- <button class="function-button function-button_add-recipe" mat-button (click)="openNewRecipe()">Добавить рецепт</button>
+            <button class="function-button" mat-button (click)="openDialog()">Войти</button> -->
+        </div>
+        <div class="search-container">
+            <h2 class="search-container__title">Поиск Препаратов</h2>
+            <!-- <p class="search-container__addiction">Введите примерное название блюда, а мы по тегам найдем его</p> -->
+            <div class="search-container__search">
+                <input type="text" class="search-container__input" [(ngModel)]="title" placeholder="Название Лекарства....">
+                <input type="submit" class="search-container__submit" value="Поиск">
+            </div>
+            <div class="search-container__nav">
+                <a *ngFor="let tag of Tags" class="nav-container__link" href="#"> {{tag.name}}</a>
+            </div>
+        </div>
+        <div style="width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 123px;">
+            <!-- <app-recipe class="search" *ngFor="let Recipe of data" [Recipe] = "Recipe"></app-recipe> -->
+        </div>
+        <div class="nav-section">
+            <h2 class="nav-section__title">Cортировка по тегам</h2>
+            <!-- <p class="nav-section__description">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p> -->
+            <div class="nav-section__tags">
+                <a class="tags" *ngFor="let categoty of Categories" href="#">
+                    <img src="../../assets/{{categoty.photo}}" alt="#">
+                    <h3 class="tags__title">{{categoty.name}}</h3>
+                    <!-- <p class="tags__text">{{categoty.text}}</p> -->
+                </a>
+            </div>
+        </div>
+        <div class="random-recipe">  
+            <img src="../../assets/image.png" alt="Тыквенный супчик">
+            <a class="random-recipe__article" href="#">
+                <h2 class="random-recipe__title">Тыквенный Супчик На Кокосовом молоке</h2>
+                <p class="random-recipe__text">Если у вас осталась тыква, и вы не знаете что с ней сделать, 
+                    то это решение для вас! Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост! </p>
+            </a>
+        </div>
+        <div style="width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 123px;">
+            <!-- <app-recipe class="search" *ngFor="let Recipe of data" [Recipe] = "Recipe"></app-recipe> -->
+        </div>
+    </div>
+</div>

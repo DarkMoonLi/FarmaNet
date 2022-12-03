@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {MainComponent} from './pages/main/main.component'
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent},
-    {path: 'main', component: MainPageComponent},
-    {path: 'recipes', component: RecipesPageComponent},
-    {path: 'new_recipe', component: CreateRecipePageComponent},
-    {path: 'recipes/new_recipe', component: CreateRecipePageComponent},
-    {path: 'login', component: DialogElementComponent},
-    {path: 'favorites', component: FavoritesPageComponent},
-    {path: 'change_recipe/:id', component: CreateRecipePageComponent}
+  {path: '', component: MainComponent},
+    {path: 'main', component: MainComponent}
 ];
 
 @NgModule({

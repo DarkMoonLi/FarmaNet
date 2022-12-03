@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html 
+{
+    overflow-y: scroll;
+}
+
+body
+{
+    margin: 0;
+    background-color: #fefefb;
+    background: #fefefb url(assets/wave.svg) no-repeat bottom center;
+    font-family: "Montserrat", sans-serif;
+}
+
+*, 
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+
+.mat-button-focus-overlay 
+{ 
+    background-color: transparent; 
+}
+
+.mat-dialog-container
+{
+    padding: 27px 25px!important;
+    border-radius: 24px!important;
+}
+
+.cdk-overlay-pane
+{
+    max-width: none!important;
+}
+
+.mat-dialog-content
+{
+    padding: 0!important;
+}
+
+.mat-form-field-subscript-wrapper 
+{
+    display: none!important;
+}
