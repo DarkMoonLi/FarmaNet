@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
+using FarmaNetBackend.Infrastructure;
 using FarmaNetBackend.Models.Medication;
-using Recipes.Infrastructure;
 
 namespace FarmaNetBackend
 {
@@ -22,7 +22,7 @@ namespace FarmaNetBackend
 
         public Medication GetMedicationById( int id )
         {
-            Medication medication = (Medication)_context.Medications.Where(p => p.GetId() == id);
+            Medication medication = (Medication)_context.Medications.Where(p => p.Id == id);
             return medication;
         }
 
@@ -49,7 +49,8 @@ namespace FarmaNetBackend
             return new Medication( 
                 medicationDto.Name,
                 medicationDto.Recipe,
-                medicationDto.IdMedicationType 
+                medicationDto.IdMedicationType,
+                medicationDto.TypeMedication
             );
         }
 
@@ -57,9 +58,10 @@ namespace FarmaNetBackend
         {
             return new MedicationDto
             {
-                Name = medication.GetName(),
-                Recipe = medication.GetRecipe(),
-                IdMedicationType = medication.GetTypeId()
+                Name = medication.Name,
+                Recipe = medication.Recipe,
+                IdMedicationType = medication.IdMedicationType,
+                TypeMedication = medication.TypeMedication
             };
         }
 
