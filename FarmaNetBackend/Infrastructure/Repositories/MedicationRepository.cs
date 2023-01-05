@@ -1,19 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
-using FarmaNetBackend.Models.Medication;
-using Recipes.Infrastructure;
+using FarmaNetBackend.Models;
+using FarmaNetBackend.Domain.IRepositories;
+using FarmaNetBackend.Data;
 
-namespace FarmaNetBackend
+namespace FarmaNetBackend.Infrastructure.Repositories
 {
     public class MedicationRepository : IMedicationRepository
     {
-        readonly MedicationDbContext _context;
+        readonly PharmacyDbContext _context;
 
-        public MedicationRepository( MedicationDbContext context )
+        public MedicationRepository( PharmacyDbContext context )
         {
             _context = context;
         }
+
         public List<Medication> GetMedications()
         {
             List<Medication> medications = _context.Medications.ToList();
@@ -22,7 +24,7 @@ namespace FarmaNetBackend
 
         public Medication GetMedicationById( int id )
         {
-            Medication medication = (Medication)_context.Medications.Where(p => p.GetId() == id);
+            Medication medication = (Medication)_context.Medications.Where(p => p.Id == id);
             return medication;
         }
 
@@ -34,7 +36,7 @@ namespace FarmaNetBackend
 
         public void DeleteMedication( int id )
         {
-            Medication medication = _context.Medications.FirstOrDefault( o => o.GetId() == id );
+            Medication medication = _context.Medications.FirstOrDefault( o => o.Id == id );
             if ( medication != null )
             {
                 _context.Medications.Remove( medication );
@@ -46,31 +48,34 @@ namespace FarmaNetBackend
     {
         public static Medication ConvertToMedication( this MedicationDto medicationDto )
         {
-            return new Medication( 
-                medicationDto.Name,
-                medicationDto.Recipe,
-                medicationDto.IdMedicationType 
-            );
+            return new Medication
+            {
+                Name = medicationDto.Name,
+                Recipe = medicationDto.Recipe,
+                IdMedicationType = medicationDto.IdMedicationType,
+                TypeMedication = medicationDto.TypeMedication
+            }; 
         }
 
         public static MedicationDto ConvertToMedicationDto( this Medication medication )
         {
-            return new MedicationDto
-            {
-                Name = medication.GetName(),
-                Recipe = medication.GetRecipe(),
-                IdMedicationType = medication.GetTypeId()
-            };
+            return new MedicationDto(medication);
+            /*{
+                Name = medication.Name,
+                Recipe = medication.Recipe,
+                IdMedicationType = medication.IdMedicationType,
+                TypeMedication = medication.TypeMedication
+            };*/
         }
 
         public static MedicationDto ConvertToMedicationDtoById( this Medication medication )
         {
-            return new MedicationDto
-            {
+            return new MedicationDto(medication);
+            /*{
                 Name = medication.GetName(),
                 Recipe = medication.GetRecipe(),
                 IdMedicationType = medication.GetTypeId()
-            };
+            };*/
         }
     }
 }

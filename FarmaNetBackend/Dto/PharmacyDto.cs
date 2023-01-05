@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Models.Pharmacy;
+﻿using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Dto.PharmacyDto
 {

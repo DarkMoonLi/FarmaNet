@@ -1,18 +1,17 @@
 using FarmaNetBackend.Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Dto.MedicationDto;
-using FarmaNetBackend.Models.Medication;
+using FarmaNetBackend.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using FarmaNetBackend;
 
-namespace HelloMvcApp.Controllers
+namespace FarmaNetBackend.Controllers
 {
     public class MedicationController : Controller
     {
-
         private readonly IMedicationRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
+       
         public MedicationController(IMedicationRepository repository, IUnitOfWork unitOfWork )
         {
             _repository = repository;
@@ -23,7 +22,7 @@ namespace HelloMvcApp.Controllers
         [Route( "medications" )]
         public IActionResult GetMedications()
         {
-            List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => r.ConvertToMedicationDto() );
+            List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
             return Ok( medications );
         }
 
@@ -38,7 +37,7 @@ namespace HelloMvcApp.Controllers
             {
                 return NotFound();
             }
-            return Ok( medication.ConvertToMedicationDtoById() );
+            return Ok(new MedicationDto(medication)); // medication.ConvertToMedicationDtoById() );
         }
 
         [HttpPost]
