@@ -1,1 +1,10 @@
-<p>header works!</p>
+<header class="nav-container">
+    <nav>
+        <a (click)="openMain()" routerLink="" routerLinkActive="active" class="nav-link nav-container__link_recipes">FarmaNet</a>
+        <a (click)="openMainPage()" routerLink="main" routerLinkActive="active" class="nav-link nav-container__link">Главная</a>
+        <a (click)="openRecipes()" routerLink="recipes" routerLinkActive="active" class="nav-link nav-container__link">Популярное</a>
+        <a (click)="openFavoritesPage()" routerLink="favorites" routerLinkActive="active" class="nav-link nav-container__link">Промоакции</a>
+    </nav>
+    <!-- TODO Добавить вход в личный кабинет -->
+    <!-- <app-dialog-element></app-dialog-element> -->
+</header> 
