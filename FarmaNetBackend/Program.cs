@@ -1,26 +1,31 @@
-using Microsoft.AspNetCore.Hosting;
+using FarmaNetBackend.Data;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using System.IO;
 
-namespace FarmaNetBackend
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var configBuilder = new ConfigurationBuilder();
+configBuilder.SetBasePath(Directory.GetCurrentDirectory());
+configBuilder.AddJsonFile("appsettings.json");
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+var config = configBuilder.Build();
+string connectionString = config.GetConnectionString("DefaultConnection");
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<PharmacyDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+
+var services = app.Services.CreateScope().ServiceProvider;
+var context = services.GetRequiredService<PharmacyDbContext>();
+DbInitializer.Initialize(context);
+
+
+app.Run();
