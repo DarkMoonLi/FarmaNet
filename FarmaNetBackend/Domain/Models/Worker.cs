@@ -9,12 +9,12 @@ namespace FarmaNetBackend.Models.Worker
         private string _name;
         private string _lastName;
         private string _email;
-        private DateTime _birthDate;
+        private DateOnly _birthDate;
         private short _passportSeries;
         private short _passportNumber;
         private float _experience;
 
-        public Worker(string name, string lastName, DateTime birthDate,
+        public Worker(string name, string lastName, DateOnly birthDate,
                       short passportSeries, short passportNumber, float experience = 0,
                       string email = "", int idPosition = 0)
         {
@@ -81,7 +81,7 @@ namespace FarmaNetBackend.Models.Worker
             return this;
         }
 
-        public DateTime GetBirthDate()
+        public DateOnly GetBirthDate()
         {
             return _birthDate;
         }

@@ -2,19 +2,25 @@
 {
     public class Medication
     {
-        private int Id;
-        private string Name;
-        private string Recipe;
-        public int IdMedicationType;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Recipe { get; set; }
+        public int IdMedicationType{ get; set; }
+        public TypeMedication TypeMedication { get; set; }
 
-        public Medication(string name, string recipe, int idMedicationType)
+        public Medication()
+        {
+        }
+
+        public Medication(string name, string recipe, int idMedicationType, TypeMedication typeMedication)
         {
             Name = name;
             Recipe = recipe;
             IdMedicationType = idMedicationType;
+            TypeMedication = typeMedication;
         }
 
-        public string GetName()
+    public string GetName()
         {
             return Name;
         }

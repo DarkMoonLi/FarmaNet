@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using FarmaNetBackend.Models;
+using FarmaNetBackend.Models.Medication;
 
 namespace FarmaNetBackend
 {
