@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Models;
+﻿/*using FarmaNetBackend.Models;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Infrastructure.Repositories
@@ -19,3 +19,4 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         }
     }
 }
+*/

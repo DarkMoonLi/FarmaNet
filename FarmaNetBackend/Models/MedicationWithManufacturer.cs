@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualBasic;
+﻿/*using Microsoft.VisualBasic;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,6 +13,7 @@ namespace FarmaNetBackend.Models
 
         public Manufacturer Manufacturer { get; set; }
 
-        public Medication Medication { get; set; }  
+        public Medication Medication { get; set; }
     }
 }
+*/

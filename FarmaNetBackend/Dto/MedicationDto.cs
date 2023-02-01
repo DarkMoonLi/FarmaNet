@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Models;
+﻿using FarmaNetBackend.Models.Medication;
 
 namespace FarmaNetBackend.Dto.MedicationDto
 {

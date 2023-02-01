@@ -8,6 +8,11 @@ namespace FarmaNetBackend.Models.Medication
     public string Name;
     public List<Medication> Medications = new List<Medication>();
 
+    public TypeMedication()
+    {
+
+    }
+
     public TypeMedication(string name)
     {
       Name = name;

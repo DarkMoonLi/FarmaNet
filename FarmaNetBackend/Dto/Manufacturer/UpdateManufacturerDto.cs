@@ -1,4 +1,4 @@
-﻿namespace FarmaNetBackend.Dto.Manufacturer
+﻿/*namespace FarmaNetBackend.Dto.Manufacturer
 {
     public class UpdateManufacturerDto
     {
@@ -7,3 +7,4 @@
         public string Address { get; set; }
     }
 }
+*/

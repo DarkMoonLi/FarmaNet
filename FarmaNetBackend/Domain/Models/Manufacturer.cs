@@ -1,10 +1,12 @@
-﻿namespace FarmaNetBackend.Models.Manufacturer
+﻿using System.Collections.Generic;
+
+namespace FarmaNetBackend.Models.Manufacturer
 {
     public class Manufacturer
     {
-        private int _idManufacturer;
-        private string _name;
-        private string _address;
+        public int _idManufacturer;
+        public string _name;
+        public string _address;
 
         public Manufacturer(string name, string adress)
         {

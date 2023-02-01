@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FarmaNetBackend.Models
@@ -13,7 +13,7 @@ namespace FarmaNetBackend.Models
         public TypeMedication TypeMedication { get; set; }
         public List<MedicationWithManufacturer> Medications { get; set; }
 
-        /*public Medication()
+        *//*public Medication()
         {
         }
 
@@ -48,6 +48,7 @@ namespace FarmaNetBackend.Models
         public TypeMedication GetTypeMedication()
         {
             return TypeMedication;
-        }*/
+        }*//*
     }
 }
+*/

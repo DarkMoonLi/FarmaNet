@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+/*using System.Collections.Generic;
 
 namespace FarmaNetBackend.Models
 {
@@ -8,9 +8,9 @@ namespace FarmaNetBackend.Models
         public string Name { get; set; }
         public List<Medication> Medications { get; set; }
 
-        /*public TypeMedication(string name)
+        *//*public TypeMedication(string name)
         {
             Name = name;
-        }*/
+        }*//*
   }
-}
+}*/

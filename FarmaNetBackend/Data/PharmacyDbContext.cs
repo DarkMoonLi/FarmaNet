@@ -1,4 +1,6 @@
-using FarmaNetBackend.Models;
+/*using FarmaNetBackend.Models.Manufacturer;
+using FarmaNetBackend.Models.Medication;
+using FarmaNetBackend.Models.MedicationWithManufacturer;
 using Microsoft.EntityFrameworkCore;
 //using Microsoft.Extensions.Configuration;
 
@@ -20,13 +22,13 @@ namespace FarmaNetBackend.Data
 
        
 
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        *//*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(
                                         Configuration.GetConnectionString("DefaultConnection")
                                         );
-        }*/
+        }*//*
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,14 +48,14 @@ namespace FarmaNetBackend.Data
         private void InitManufacturerTable(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Manufacturer>().ToTable("Manufacturer");
-            modelBuilder.Entity<Manufacturer>().HasKey(manuf => manuf.IdManufacturer);
+            modelBuilder.Entity<Manufacturer>().HasKey(manuf => manuf._idManufacturer);
             //modelBuilder.Entity<Manufacturer>().HasMany(manufacturer => manufacturer.Medications).WithOne().HasForeignKey(medWithManuf => medWithManuf.IdManufacturer);
         }
 
         private void InitMedicationWithManufacturerTable(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MedicationWithManufacturer>().ToTable("Medication_with_manufacturer");
-            modelBuilder.Entity<MedicationWithManufacturer>().HasKey(medWithManuf => new {medWithManuf.IdMedication, medWithManuf.IdManufacturer});
+            modelBuilder.Entity<MedicationWithManufacturer>().HasKey(medWithManuf => new {medWithManuf._idMedication, medWithManuf._idManufacturer});
             modelBuilder.Entity<MedicationWithManufacturer>().HasOne(medWithManuf => medWithManuf.Manufacturer).WithMany(manuf => manuf.Medications).HasForeignKey(manufacturer => manufacturer.IdManufacturer);
             modelBuilder.Entity<MedicationWithManufacturer>().HasOne(medWithManuf => medWithManuf.Medication).WithMany(med => med.Medications).HasForeignKey(medication => medication.IdMedication);
         }
@@ -62,7 +64,7 @@ namespace FarmaNetBackend.Data
         //    this.SaveChanges();
         //}
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
+        *//*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Medication>().HasNoKey();
             modelBuilder.Entity<Manufacturer>(
@@ -79,6 +81,7 @@ namespace FarmaNetBackend.Data
             //Medication med = new Medication("Test", "Recipie", 123);
 
             //Medications.Add(med);
-        }*/
+        }*//*
     }
 }
+*/

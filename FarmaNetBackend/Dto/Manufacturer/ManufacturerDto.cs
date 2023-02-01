@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Models;
+﻿/*using FarmaNetBackend.Models;
 
 namespace FarmaNetBackend.Dto.Manufacturer
 {   
@@ -8,7 +8,7 @@ namespace FarmaNetBackend.Dto.Manufacturer
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public ManufacturerDto(FarmaNetBackend.Models.Manufacturer manufacturer)
+        public ManufacturerDto(Manufacturer manufacturer)
         {
             //IdManufacturer = manufacturer.GetId();
             //Name = manufacturer.GetName();
@@ -16,3 +16,4 @@ namespace FarmaNetBackend.Dto.Manufacturer
         }
     }
 }
+*/

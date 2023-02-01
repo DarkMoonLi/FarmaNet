@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Domain",
-    "\\Domain\\Models"
+    "\\Domain\\Models",
+    "\\Infrastructure"
   ],
-  "SelectedNode": "\\Domain\\Models\\MedicationWithManufacturer.cs",
+  "SelectedNode": "\\FarmaNetBackend.sln",
   "PreviewInSolutionExplorer": false
 }
