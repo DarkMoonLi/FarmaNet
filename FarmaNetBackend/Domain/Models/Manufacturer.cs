@@ -1,11 +1,16 @@
-﻿namespace FarmaNetBackend.Models.Manufacturer
+﻿using System.Collections.Generic;
+
+namespace FarmaNetBackend.Domain.Models
 {
     public class Manufacturer
     {
-        private int _idManufacturer;
-        private string _name;
-        private string _address;
+        public int _idManufacturer { get; set; }
+        public string _name { get; set; }
+        public string _address { get; set; }
 
+        public virtual List<MedicationWithManufacturer> MedicationWithManufacturers { get; set; }
+
+        /*
         public Manufacturer(string name, string adress)
         {
             _name = name;
@@ -40,5 +45,6 @@
 
             return this;
         }
+        */
     }
 }

@@ -1,13 +1,22 @@
-﻿namespace FarmaNetBackend.Models.Pharmacy
+﻿using System.Collections.Generic;
+
+namespace FarmaNetBackend.Domain.Models
 {
     public class Pharmacy
     {
-        private int _idPharmacy;
-        private string _name;
-        private string _adress;
-        private string _email;
-        private string _description;
+        public int _idPharmacy { get; set; }
+        public string _name { get; set; }
+        public string _adress { get; set; }
+        public string _email { get; set; }
+        public string _description { get; set; }
 
+        public virtual List<WorkerAccount> WorkerAccounts { get; set; }
+        public virtual List<WriteDowns> WriteDowns { get; set; }
+        public virtual List<Import> Imports { get; set; }
+        public virtual List<PharmacyWithMedication> PharmacyWithMedications { get; set; }
+        public virtual List<Sale> Sales { get; set; }
+
+        /*
         public Pharmacy(string name, string adress, string email = "", string description = "")
         {
             _name = name;
@@ -74,5 +83,6 @@
               
             return this;
         }
+        */
     }
 }
