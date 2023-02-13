@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Entity;
+using System.Collections.Generic;
 
 namespace FarmaNetBackend.Domain.Models
 {
@@ -7,7 +8,8 @@ namespace FarmaNetBackend.Domain.Models
         public int _idMedication { get; set; }
         public string _name { get; set; }
         public string _recipe { get; set; }
-        public int _idMedicationType{ get; set; }
+        
+        //public int _idMedicationType{ get; set; }
 
         
         public TypeMedication TypeMedication { get; set; }

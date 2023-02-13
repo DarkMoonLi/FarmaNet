@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Domain.Models
@@ -8,18 +9,5 @@ namespace FarmaNetBackend.Domain.Models
         public string _name { get; set; }
 
         public virtual List<Medication> Medications { get; set; }
-
-    /*
-    public TypeMedication()
-    {
-
-    }
-
-    public TypeMedication(string name)
-    {
-      Name = name;
-    }
-    */
-
     }
 }

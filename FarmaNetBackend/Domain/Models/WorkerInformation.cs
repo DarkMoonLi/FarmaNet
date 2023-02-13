@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace FarmaNetBackend.Domain.Models
 {
     public class WorkerInformation
     {
-        public int _idWorker { get; set; }
-        public int _idPosition { get; set; }
+        public int _idWorkerInformation { get; set; }
+        //public int _idPosition { get; set; }
+        
         public string _name { get; set; }
         public string _lastName { get; set; }
         public string _email { get; set; }
