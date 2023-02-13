@@ -7,13 +7,13 @@ namespace FarmaNetBackend.Domain.Configurations
     {
         public PharmacyConfiguration()
         {
-            this.HasKey(p => p._idPharmacy);    
+            this.HasKey(p => p.PharmacyId);    
 
-            this.Property(p => p._name).IsRequired().HasMaxLength(Constants.nameLength);
+            this.Property(p => p.Name).IsRequired().HasMaxLength(Constants.nameLength);
             
-            this.Property(p => p._adress).HasMaxLength(Constants.adressLength);
-            this.Property(p => p._email).HasMaxLength(Constants.emailLength);
-            this.Property(p => p._description).HasMaxLength(Constants.descriptionLength);
+            this.Property(p => p.Adress).HasMaxLength(Constants.adressLength);
+            this.Property(p => p.Email).HasMaxLength(Constants.emailLength);
+            this.Property(p => p.Description).HasMaxLength(Constants.descriptionLength);
         }
     }
 }

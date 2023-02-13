@@ -7,11 +7,11 @@ namespace FarmaNetBackend.Domain.Configurations
     {
         public PositionConfiguration()
         {
-            this.HasKey(p => p._idPosition);
+            this.HasKey(p => p.PositionId);
 
-            this.Property(p => p._position).IsRequired().HasMaxLength(Constants.positionLength);
+            this.Property(p => p.Post).IsRequired().HasMaxLength(Constants.positionLength);
 
-            this.Property(p => p._salaryInHours).HasColumnType(Constants.columnTypeReal);
+            this.Property(p => p.SalaryInHours).HasColumnType(Constants.columnTypeReal);
         }
     }
 }

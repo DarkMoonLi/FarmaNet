@@ -7,12 +7,14 @@ namespace FarmaNetBackend.Domain.Configurations
     {
         public WorkingHoursConfiguration()
         {
-            this.HasKey(w => w._idWorkingHours);
+            this.HasKey(w => w.WorkingHoursId);
 
-            this.Property(w => w._date).IsRequired().HasColumnType(Constants.columnTypeDate);
-            this.Property(w => w._time).IsRequired().HasColumnType(Constants.columnTypeTime);
+            this.Property(w => w.Date).IsRequired().HasColumnType(Constants.columnTypeDate);
+            this.Property(w => w.Time).IsRequired().HasColumnType(Constants.columnTypeTime);
 
-            this.Property(w => w._description).HasMaxLength(Constants.descriptionLength);
+            this.Property(w => w.Description).HasMaxLength(Constants.descriptionLength);
+
+            this.HasRequired(w => w.WorkerAccount).WithMany(w => w.WorkingHours).HasForeignKey(w => w.WorkerAccountId);
         }
     }
 }

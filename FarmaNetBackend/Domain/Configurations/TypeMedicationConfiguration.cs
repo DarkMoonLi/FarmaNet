@@ -3,13 +3,13 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class TypeMedicationConfiguration : EntityTypeConfiguration<TypeMedication>
+    public class TypeMedicationConfiguration : EntityTypeConfiguration<MedicationType>
     {
         public TypeMedicationConfiguration()
         {
-            this.HasKey(t => t._idMedicationType);
+            this.HasKey(t => t.MedicationTypeId);
 
-            this.Property(t => t._name).IsRequired().HasMaxLength(Constants.nameLength);
+            this.Property(t => t.Name).IsRequired().HasMaxLength(Constants.nameLength);
         }
     }
 }

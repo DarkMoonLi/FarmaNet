@@ -7,11 +7,11 @@ namespace FarmaNetBackend.Domain.Configurations
     {
         public ManufacturerConfiguration()
         {
-            this.HasKey(m => m._idManufacturer);    
+            this.HasKey(m => m.ManufacturerId);    
 
-            this.Property(m => m._name).IsRequired().HasMaxLength(Constants.nameLength);
+            this.Property(m => m.Name).IsRequired().HasMaxLength(Constants.nameLength);
             
-            this.Property(m => m._address).HasMaxLength(Constants.adressLength);
+            this.Property(m => m.Address).HasMaxLength(Constants.adressLength);
         }
     }
 }

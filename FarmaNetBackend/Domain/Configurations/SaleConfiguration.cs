@@ -7,9 +7,14 @@ namespace FarmaNetBackend.Domain.Configurations
     {
         public SaleConfiguration()
         {
-            this.Property(s => s._quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
+            this.HasKey(s => new { s.PharmacyId, s.MedicationId });    
 
-            this.Property(s => s._price).HasColumnType(Constants.columnTypeMoney);
+            this.Property(s => s.Quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
+
+            this.Property(s => s.Price).HasColumnType(Constants.columnTypeMoney);
+
+            this.HasRequired(s => s.Medication).WithMany(m => m.Sales).HasForeignKey(s => s.MedicationId);
+            this.HasRequired(s => s.Pharmacy).WithMany(p => p.Sales).HasForeignKey(s => s.PharmacyId);
         }
     }
 }
