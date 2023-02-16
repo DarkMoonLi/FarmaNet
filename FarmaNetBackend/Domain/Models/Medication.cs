@@ -17,5 +17,9 @@ namespace FarmaNetBackend.Domain.Models
         public virtual List<PharmacyWithMedication> PharmacyWithMedications { get; set; }
         public virtual List<WriteDowns> WriteDowns { get; set; }
         public virtual List<Sale> Sales { get; set; }
+
+
+        public Medication()
+        { }
     }
 }

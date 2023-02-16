@@ -10,5 +10,9 @@ namespace FarmaNetBackend.Domain.Models
         public string Inn { get; set; }
 
         public virtual List<Import> Imports { get; set; }
+
+
+        public Supplier()
+        { }
     }
 }

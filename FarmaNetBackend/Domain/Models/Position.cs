@@ -11,5 +11,9 @@ namespace FarmaNetBackend.Domain.Models
         public float? SalaryInHours { get; set; }
 
         public virtual List<WorkerInformation> WorkerInformations { get; set; }
+
+
+        public Position()
+        { }
     }
 }

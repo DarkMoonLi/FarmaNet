@@ -20,5 +20,9 @@ namespace FarmaNetBackend.Domain.Models
 
         public Position Position { get; set; }
         public virtual List<WorkerAccount> WorkerAccounts { get; set; }
+
+
+        public WorkerInformation()
+        { }
     }
 }

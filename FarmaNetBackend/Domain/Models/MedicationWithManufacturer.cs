@@ -9,5 +9,9 @@ namespace FarmaNetBackend.Domain.Models
 
         public Manufacturer Manufacturer { get; set; }
         public Medication Medication { get; set; }
+
+
+        public MedicationWithManufacturer()
+        { }
     }
 }

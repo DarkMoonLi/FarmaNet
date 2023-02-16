@@ -12,5 +12,9 @@ namespace FarmaNetBackend.Domain.Models
 
         public Import Import { get; set; }
         public Medication Medication { get; set; }
+
+
+        public ImportWithMedication()
+        { }
     }
 }

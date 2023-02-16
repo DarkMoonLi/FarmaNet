@@ -12,5 +12,9 @@ namespace FarmaNetBackend.Domain.Models
 
         public Medication Medication { get; set; }
         public Pharmacy Pharmacy { get; set; }
+
+
+        public Sale()
+        { }
     }
 }

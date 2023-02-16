@@ -9,5 +9,9 @@ namespace FarmaNetBackend.Domain.Models
         public string Name { get; set; }
 
         public virtual List<Medication> Medications { get; set; }
+
+
+        public MedicationType()
+        { }
     }
 }

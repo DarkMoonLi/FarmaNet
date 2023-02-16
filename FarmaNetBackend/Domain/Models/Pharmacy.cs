@@ -17,5 +17,11 @@ namespace FarmaNetBackend.Domain.Models
         public virtual List<Import> Imports { get; set; }
         public virtual List<PharmacyWithMedication> PharmacyWithMedications { get; set; }
         public virtual List<Sale> Sales { get; set; }
+
+
+        public Pharmacy()
+        {
+            
+        }
     }
 }

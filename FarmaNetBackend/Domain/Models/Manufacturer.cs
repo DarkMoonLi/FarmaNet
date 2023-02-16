@@ -12,5 +12,9 @@ namespace FarmaNetBackend.Domain.Models
         public string Address { get; set; }
 
         public virtual List<MedicationWithManufacturer> MedicationWithManufacturers { get; set; }
+
+
+        public Manufacturer()
+        { }
     }
 }

@@ -17,5 +17,9 @@ namespace FarmaNetBackend.Domain.Models
         public Pharmacy Pharmacy { get; set; }
 
         public virtual List<WorkingHours> WorkingHours { get; set; }
+
+
+        public WorkerAccount()
+        { }
     }
 }

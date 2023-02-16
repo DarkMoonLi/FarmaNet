@@ -14,5 +14,9 @@ namespace FarmaNetBackend.Domain.Models
         public string Description { get; set; }
 
         public WorkerAccount WorkerAccount { get; set; }
+
+
+        public WorkingHours()
+        { }
     }
 }
