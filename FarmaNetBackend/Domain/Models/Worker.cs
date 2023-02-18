@@ -14,6 +14,10 @@ namespace FarmaNetBackend.Models.Worker
         private short _passportNumber;
         private float _experience;
 
+        public Worker()
+        {
+        }
+
         public Worker(string name, string lastName, DateOnly birthDate,
                       short passportSeries, short passportNumber, float experience = 0,
                       string email = "", int idPosition = 0)

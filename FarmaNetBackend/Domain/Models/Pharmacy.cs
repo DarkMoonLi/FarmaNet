@@ -2,16 +2,19 @@
 {
     public class Pharmacy
     {
-        private int _idPharmacy;
-        private string _name;
-        private string _adress;
-        private string _email;
-        private string _description;
+        private int _idPharmacy { get; set; }
+        private string _name { get; set; }
+        private string _address { get; set; }
+        private string _email { get; set; }
+        private string _description { get; set; }
+        public Pharmacy()
+        {
+        }
 
-        public Pharmacy(string name, string adress, string email = "", string description = "")
+        public Pharmacy(string name, string address, string email, string description)
         {
             _name = name;
-            _adress = adress;
+            _address = address;
             _email = email;
             _description = description;
         }
@@ -35,12 +38,12 @@
 
         public string GetAdress()
         {
-            return _adress;
+            return _address;
         }
 
         public Pharmacy SetAdress(string adress)
         {
-            _adress = adress;
+            _address = adress;
 
             return this;
         }

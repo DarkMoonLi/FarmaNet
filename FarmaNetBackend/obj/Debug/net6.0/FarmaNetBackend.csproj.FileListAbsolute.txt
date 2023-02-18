@@ -4,8 +4,6 @@ C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.AssemblyInfo.cs
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.RazorAssemblyInfo.cache
-C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.RazorAssemblyInfo.cs
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\appsettings.json
 C:\Users\Acer\Desktop\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\package-lock.json

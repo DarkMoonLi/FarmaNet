@@ -1,21 +1,23 @@
+using FarmaNetBackend.Controllers;
 using FarmaNetBackend.Infrastructure;
+using FarmaNetBackend.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 using System.IO;
-
-var configBuilder = new ConfigurationBuilder();
-configBuilder.SetBasePath(Directory.GetCurrentDirectory());
-
-var config = configBuilder.Build();
+using System.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddDbContext<ApplicationDbContext>();
-
-builder.Services.AddControllers();
+string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+builder.Services.AddTransient<IMedicationRepository, MedicationRepository>();
 
 var app = builder.Build();
+
+app.MapControllers();
 
 app.Run();

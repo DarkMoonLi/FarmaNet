@@ -10,7 +10,7 @@ namespace FarmaNetBackend
         public void Configure( EntityTypeBuilder<Medication> builder )
         {
             builder.ToTable( "Medication" )
-                .HasKey( item => item.Id );
+                .HasKey( item => item._id );
         }
     }
 }

@@ -5,9 +5,11 @@ using FarmaNetBackend.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using FarmaNetBackend.Models.Medication;
+using FarmaNetBackend.Infrastructure.Repositories;
 
 namespace FarmaNetBackend.Controllers
 {
+    [ApiController]
     public class MedicationController : Controller
     {
         private readonly IMedicationRepository _repository;
@@ -20,7 +22,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route( "medications" )]
+        [Route( "/" )]
         public IActionResult GetMedications()
         {
             List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
@@ -38,14 +40,15 @@ namespace FarmaNetBackend.Controllers
             {
                 return NotFound();
             }
-            return Ok(new MedicationDto(medication)); // medication.ConvertToMedicationDtoById() );
+            return Ok(medication.ConvertToMedicationDtoById() );
         }
 
         [HttpPost]
-        [Route( "" )]
-        public IActionResult AddRecipe( [FromBody] MedicationDto medicationDto )
+        [Route( "add" )]
+        public IActionResult AddMedication( [FromBody] MedicationDto medicationDto )
         {
-            _repository.AddMedication( medicationDto );
+            Medication medication = new Medication("яд", "Y", 1, new TypeMedication());
+            _repository.AddMedication( medication.ConvertToMedicationDto() );
             _unitOfWork.Commit();
             return Ok();
         }

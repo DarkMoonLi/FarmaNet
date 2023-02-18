@@ -4,11 +4,11 @@ namespace FarmaNetBackend.Models.Import
 {
 	public class Import
 	{
-		private int _idImport;
-		private int _number;
-		private DateOnly _date;
-		private float _sumPrice;
-		private int _idSupplier;
-		private int _idPharmacy;
-	}
+		private int _idImport { get; set; }
+        private int _number { get; set; }
+        private DateOnly _date { get; set; }
+        private float _sumPrice { get; set; }
+        private int _idSupplier { get; set; }
+        private int _idPharmacy { get; set; }
+    }
 }

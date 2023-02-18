@@ -4,14 +4,14 @@ namespace FarmaNetBackend.Models.Manufacturer
 {
     public class Manufacturer
     {
-        public int _idManufacturer;
-        public string _name;
-        public string _address;
+        public int _idManufacturer { get; set; }
+        public string _name { get; set; }
+        public string _address { get; set; }
 
-        public Manufacturer(string name, string adress)
+        public Manufacturer(string name, string address)
         {
             _name = name;
-            _address = adress;
+            _address = address;
         }
 
         public int GetId()

@@ -22,7 +22,7 @@ namespace FarmaNetBackend.Infrastructure.Repositories
 
         public Medication GetMedicationById( int id )
         {
-            Medication medication = (Medication)_context.Medications.Where(p => p.Id == id);
+            Medication medication = (Medication)_context.Medications.Where(p => p._id == id);
             return medication;
         }
 
@@ -34,7 +34,7 @@ namespace FarmaNetBackend.Infrastructure.Repositories
 
         public void DeleteMedication( int id )
         {
-            Medication medication = _context.Medications.FirstOrDefault( o => o.Id == id );
+            Medication medication = _context.Medications.FirstOrDefault( o => o._id == id );
             if ( medication != null )
             {
                 _context.Medications.Remove( medication );
@@ -48,32 +48,32 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         {
             return new Medication
             {
-                Name = medicationDto.Name,
-                Recipe = medicationDto.Recipe,
-                IdMedicationType = medicationDto.IdMedicationType,
-                TypeMedication = medicationDto.TypeMedication
+                _name = medicationDto.Name,
+                _recipe = medicationDto.Recipe,
+                _idMedicationType = medicationDto.IdMedicationType,
+                _typeMedication = medicationDto.MedicationType
             }; 
         }
 
         public static MedicationDto ConvertToMedicationDto( this Medication medication )
         {
-            return new MedicationDto(medication);
-            /*{
-                Name = medication.Name,
-                Recipe = medication.Recipe,
-                IdMedicationType = medication.IdMedicationType,
-                TypeMedication = medication.TypeMedication
-            };*/
+            return new MedicationDto(medication)
+            {
+                Name = medication._name,
+                Recipe = medication._recipe,
+                IdMedicationType = medication._idMedicationType,
+                MedicationType = medication._typeMedication
+            };
         }
 
         public static MedicationDto ConvertToMedicationDtoById( this Medication medication )
         {
-            return new MedicationDto(medication);
-            /*{
-                Name = medication.GetName(),
-                Recipe = medication.GetRecipe(),
-                IdMedicationType = medication.GetTypeId()
-            };*/
+            return new MedicationDto(medication)
+            {
+                Name = medication._name,
+                Recipe = medication._recipe,
+                IdMedicationType = medication._idMedicationType
+            };
         }
     }
 }

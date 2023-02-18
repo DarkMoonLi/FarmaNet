@@ -8,5 +8,10 @@ namespace FarmaNetBackend.Models.ImportWithMedication
         private int _idMedication;
         private float _price;
         private int _quantity;
+
+        ImportWithMedication()
+        {
+
+        }
     }
 }
