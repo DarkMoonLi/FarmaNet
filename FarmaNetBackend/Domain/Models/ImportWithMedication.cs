@@ -1,17 +1,18 @@
-using System;
-
-namespace FarmaNetBackend.Models.ImportWithMedication
+namespace FarmaNetBackend.Domain.Models
 {
     public class ImportWithMedication
     {
-        private int _idInvoice;
-        private int _idMedication;
-        private float _price;
-        private int _quantity;
+        public int ImportId { get; set; }
+        public int MedicationId { get; set; }
+        
+        public float? Price { get; set; }
+        public int Quantity { get; set; }
 
-        ImportWithMedication()
-        {
+        public Import Import { get; set; }
+        public Medication Medication { get; set; }
 
-        }
+
+        public ImportWithMedication()
+        { }
     }
 }

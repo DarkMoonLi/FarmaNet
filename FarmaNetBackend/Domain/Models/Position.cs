@@ -1,11 +1,18 @@
-using System;
+using System.Collections.Generic;
 
-namespace FarmaNetBackend.Models.Position
+namespace FarmaNetBackend.Domain.Models
 {
     public class Position
     {
-        private int _idPosition;
-        private string _position;
-        private float _salaryInHours;
+        public int PositionId { get; set; }
+        
+        public string Post { get; set; }
+        public float? SalaryInHours { get; set; }
+
+        public virtual List<WorkerInformation> WorkerInformations { get; set; }
+
+
+        public Position()
+        { }
     }
 }

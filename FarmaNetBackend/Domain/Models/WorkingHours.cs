@@ -1,13 +1,21 @@
 using System;
 
-namespace FarmaNetBackend.Models.WorkingHours
+namespace FarmaNetBackend.Domain.Models
 {
     public class WorkingHours
     {
-        private int _idWorkingHours;
-        private int _idWorkerAccount;
-        private DateOnly _date;
-        private TimeOnly _time;
-        private string _description;
+        public int WorkingHoursId { get; set; }
+        
+        public int WorkerAccountId { get; set; }
+        
+        public DateOnly Date { get; set; }
+        public TimeOnly Time { get; set; }
+        public string Description { get; set; }
+
+        public WorkerAccount WorkerAccount { get; set; }
+
+
+        public WorkingHours()
+        { }
     }
 }

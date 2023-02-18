@@ -1,46 +1,18 @@
 ﻿using System.Collections.Generic;
 
-namespace FarmaNetBackend.Models.Manufacturer
+namespace FarmaNetBackend.Domain.Models
 {
     public class Manufacturer
     {
-        public int _idManufacturer { get; set; }
-        public string _name { get; set; }
-        public string _address { get; set; }
+        public int ManufacturerId { get; set; }
+        
+        public string Name { get; set; }
+        public string Address { get; set; }
 
-        public Manufacturer(string name, string address)
-        {
-            _name = name;
-            _address = address;
-        }
+        public virtual List<MedicationWithManufacturer> MedicationWithManufacturers { get; set; }
 
-        public int GetId()
-        {
-            return _idManufacturer;
-        }
 
-        public string GetName()
-        {
-            return _name;
-        }
-
-        public Manufacturer SetName(string name)
-        {
-            _name = name;
-
-            return this;
-        }
-
-        public string GetAdress()
-        {
-            return _address;
-        }
-
-        public Manufacturer SetAdress(string adress)
-        {
-            _address = adress;
-
-            return this;
-        }
+        public Manufacturer()
+        { }
     }
 }

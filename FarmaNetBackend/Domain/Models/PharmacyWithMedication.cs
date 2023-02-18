@@ -1,12 +1,18 @@
-using System;
-
-namespace FarmaNetBackend.Models.PharmacyWithMedication
+namespace FarmaNetBackend.Domain.Models
 {
     public class PharmacyWithMedication
     {
-        private int _idMedication;
-        private int _idPharmacy;
-        private float _price;
-        private int _quantity;
+        public int MedicationId { get; set; }
+        public int PharmacyId { get; set; }
+        
+        public float? Price { get; set; }
+        public int Quantity { get; set; }
+
+        public Pharmacy Pharmacy { get; set; }
+        public Medication Medication { get; set; }
+
+
+        public PharmacyWithMedication()
+        { }
     }
 }

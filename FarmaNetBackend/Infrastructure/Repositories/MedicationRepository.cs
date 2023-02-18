@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
-using FarmaNetBackend.Models.Medication;
+using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Infrastructure.Repositories
 {
@@ -48,10 +48,10 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         {
             return new Medication
             {
-                _name = medicationDto.Name,
-                _recipe = medicationDto.Recipe,
-                _idMedicationType = medicationDto.IdMedicationType,
-                _typeMedication = medicationDto.MedicationType
+                Name = medicationDto.Name,
+                Recipe = medicationDto.Recipe,
+                MedicationTypeId = medicationDto.IdMedicationType,
+                MedicationType = medicationDto.TypeMedication
             }; 
         }
 

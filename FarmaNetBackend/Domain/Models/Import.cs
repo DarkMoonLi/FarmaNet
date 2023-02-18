@@ -1,14 +1,26 @@
-using System;
+using System.Collections.Generic;
 
-namespace FarmaNetBackend.Models.Import
+namespace FarmaNetBackend.Domain.Models
 {
 	public class Import
 	{
-		private int _idImport { get; set; }
-        private int _number { get; set; }
-        private DateOnly _date { get; set; }
-        private float _sumPrice { get; set; }
-        private int _idSupplier { get; set; }
-        private int _idPharmacy { get; set; }
-    }
+		public int ImportId { get; set; }
+
+		public int Number { get; set; }
+		public DateOnly Date { get; set; }
+		public float? SumPrice { get; set; }
+		
+		
+		public int SupplierId { get; set; }
+		public int PharmacyId { get; set; }
+
+
+		public virtual List<ImportWithMedication> ImportWithMedications { get; set; }
+        public Supplier Supplier { get; set; }
+        public Pharmacy Pharmacy { get; set; }
+
+
+		public Import()
+		{  }
+	}
 }

@@ -1,11 +1,17 @@
-using System;
-
-namespace FarmaNetBackend.Models.WriteDowns
+namespace FarmaNetBackend.Domain.Models
 {
     public class WriteDowns
-    {
-        private int _idMedication;
-        private int _idPharmacy;
-        private int Quantity;
+    {   
+        public int PharmacyId { get; set; }
+        public int MedicationId { get; set; }
+
+        public int Quantity { get; set; }
+
+        public Pharmacy Pharmacy { get; set; }
+        public Medication Medication { get; set; }
+
+
+        public WriteDowns()
+        { }
     }
 }

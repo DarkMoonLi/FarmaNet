@@ -1,11 +1,17 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
-namespace FarmaNetBackend.Models.Supplier
+namespace FarmaNetBackend.Domain.Models
 {
     public class Supplier
     {
-        private int _idSupplier;
-        private int _name;
-        private int _inn;
+        public int SupplierId { get; set; }
+        public string Name { get; set; }
+        public string Inn { get; set; }
+
+        public virtual List<Import> Imports { get; set; }
+
+
+        public Supplier()
+        { }
     }
 }

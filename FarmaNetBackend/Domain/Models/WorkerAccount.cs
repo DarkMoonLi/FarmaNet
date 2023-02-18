@@ -1,13 +1,24 @@
-using System;
+using System.Collections.Generic;
 
-namespace FarmaNetBackend.Models.WorkerAccount
+namespace FarmaNetBackend.Domain.Models
 {
     public class WorkerAccount
     {
-        private int _idWorkerAccount;
-        private string _login;
-        private string _password;
-        private int _idWorkerInformation;
-        private int _idPharmacy;
+        public int WorkerAccountId { get; set; }
+        
+        public string Login { get; set; }
+        public string Password { get; set; }
+        
+        public int WorkerInformationId { get; set; }
+        public int PharmacyId { get; set; }
+
+        public WorkerInformation WorkerInformation { get; set; }
+        public Pharmacy Pharmacy { get; set; }
+
+        public virtual List<WorkingHours> WorkingHours { get; set; }
+
+
+        public WorkerAccount()
+        { }
     }
 }

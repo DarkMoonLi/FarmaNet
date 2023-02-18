@@ -1,7 +1,6 @@
 using FarmaNetBackend.Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Dto.MedicationDto;
-using FarmaNetBackend.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using FarmaNetBackend.Models.Medication;
