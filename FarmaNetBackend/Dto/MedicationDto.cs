@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Models;
+using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Dto.MedicationDto
 {
@@ -8,7 +8,7 @@ namespace FarmaNetBackend.Dto.MedicationDto
         public string Name { get; set; }
         public string Recipe { get; set; }
         public int IdMedicationType { get; set; }
-        public TypeMedication TypeMedication { get; set; }
+        public MedicationType TypeMedication { get; set; }
 
         public MedicationDto(Medication med)
         {

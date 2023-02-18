@@ -1,5 +1,5 @@
-﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+﻿using System.Data.Entity.ModelConfiguration;
+using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Domain.Configurations
 {

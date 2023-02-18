@@ -1,17 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
-using FarmaNetBackend.Models;
-using FarmaNetBackend.Domain.IRepositories;
-using FarmaNetBackend.Data;
+using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Infrastructure.Repositories
 {
     public class MedicationRepository : IMedicationRepository
     {
-        readonly PharmacyDbContext _context;
+        readonly ApplicationDbContext _context;
 
-        public MedicationRepository( PharmacyDbContext context )
+        public MedicationRepository( ApplicationDbContext context )
         {
             _context = context;
         }
@@ -52,8 +50,8 @@ namespace FarmaNetBackend.Infrastructure.Repositories
             {
                 Name = medicationDto.Name,
                 Recipe = medicationDto.Recipe,
-                IdMedicationType = medicationDto.IdMedicationType,
-                TypeMedication = medicationDto.TypeMedication
+                MedicationTypeId = medicationDto.IdMedicationType,
+                MedicationType = medicationDto.TypeMedication
             }; 
         }
 

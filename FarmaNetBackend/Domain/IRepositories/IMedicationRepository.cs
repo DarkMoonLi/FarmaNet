@@ -1,4 +1,4 @@
-using FarmaNetBackend.Models;
+using FarmaNetBackend.Domain.Models;
 using FarmaNetBackend.Dto.MedicationDto;
 using System.Collections.Generic;
 

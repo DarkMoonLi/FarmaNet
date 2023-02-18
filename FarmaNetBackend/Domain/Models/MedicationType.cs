@@ -1,4 +1,3 @@
-using System.Data.Entity;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Domain.Models

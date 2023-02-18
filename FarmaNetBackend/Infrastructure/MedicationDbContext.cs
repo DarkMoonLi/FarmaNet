@@ -1,6 +1,5 @@
+using System.Data.Entity;
 using FarmaNetBackend.Domain.IRepositories;
-using FarmaNetBackend.Models.Medication;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace Recipes.Infrastructure

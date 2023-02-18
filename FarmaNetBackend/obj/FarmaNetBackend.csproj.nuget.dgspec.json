@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
   },
   "projects": {
-    "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj": {
+    "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "projectName": "FarmaNetBackend",
-        "projectPath": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\FarmaNetBackend.csproj",
-        "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
-        "outputPath": "C:\\Ucheba\\Базы данных\\Курсовая\\FarmaNet-Artyom\\FarmaNet-Artyom\\FarmaNetBackend\\obj\\",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Артём\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +42,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,6 +59,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -58,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

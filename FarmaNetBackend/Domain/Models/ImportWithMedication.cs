@@ -1,5 +1,3 @@
-using System.Data.Entity;
-
 namespace FarmaNetBackend.Domain.Models
 {
     public class ImportWithMedication

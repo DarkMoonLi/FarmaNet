@@ -5,10 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Domain\Model\**" />
+    <Compile Remove="Infrastucture\**" />
+    <Content Remove="Domain\Model\**" />
+    <Content Remove="Infrastucture\**" />
+    <EmbeddedResource Remove="Domain\Model\**" />
+    <EmbeddedResource Remove="Infrastucture\**" />
+    <None Remove="Domain\Model\**" />
+    <None Remove="Infrastucture\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Domain\IRepositories\" />
-    <Folder Include="Domain\Model\" />
-    <Folder Include="Infrastucture\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
 </Project>

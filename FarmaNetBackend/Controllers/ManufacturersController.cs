@@ -1,18 +1,16 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using FarmaNetBackend.Data;
-using FarmaNetBackend.Models;
+using FarmaNetBackend.Domain.Models;
+using System.Data.Entity.Infrastructure;
 
 namespace FarmaNetBackend.Controllers
 {
     public class ManufacturersController : Controller
     {
-        private readonly PharmacyDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public ManufacturersController(PharmacyDbContext context)
         {
@@ -88,7 +86,7 @@ namespace FarmaNetBackend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdManufacturer,Name,Address")] Manufacturer manufacturer)
         {
-            if (id != manufacturer.IdManufacturer)
+            if (id != manufacturer.ManufacturerId)
             {
                 return NotFound();
             }
@@ -102,7 +100,7 @@ namespace FarmaNetBackend.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ManufacturerExists(manufacturer.IdManufacturer))
+                    if (!ManufacturerExists(manufacturer.ManufacturerId))
                     {
                         return NotFound();
                     }
@@ -158,4 +156,4 @@ namespace FarmaNetBackend.Controllers
           return _context.Manufacturers.Any(e => e.IdManufacturer == id);
         }
     }
-}
+}*/
