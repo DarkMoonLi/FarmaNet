@@ -1,6 +1,7 @@
 using FarmaNetBackend.Domain.Configurations;
 using FarmaNetBackend.Domain.IRepositories;
 using FarmaNetBackend.Domain.Models;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace FarmaNetBackend.Infrastructure
@@ -23,8 +24,10 @@ namespace FarmaNetBackend.Infrastructure
         public DbSet<WorkingHours> WorkingHours { get; set; }
         public DbSet<WriteDowns> WriteDowns { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext( DbContextOptions<ApplicationDbContext> options ) : base(options)
         {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         void IUnitOfWork.Commit()
@@ -32,7 +35,7 @@ namespace FarmaNetBackend.Infrastructure
             SaveChanges();
         }
 
-        protected override void OnModelCreating( ModelBuilder modelBuilder )
+        protected override void OnModelCreating(ModelBuilder modelBuilder )
         {
             modelBuilder.ApplyConfiguration(new ImportConfiguration());
             modelBuilder.ApplyConfiguration(new ImportWithMedicationConfiguration());
