@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
 using FarmaNetBackend.Domain.Models;
+using System.Xml.Linq;
 
 namespace FarmaNetBackend.Infrastructure.Repositories
 {
@@ -22,7 +23,7 @@ namespace FarmaNetBackend.Infrastructure.Repositories
 
         public Medication GetMedicationById( int id )
         {
-            Medication medication = (Medication)_context.Medications.Where(p => p._id == id);
+            Medication medication = (Medication)_context.Medications.Where(p => p.MedicationId == id);
             return medication;
         }
 
@@ -34,7 +35,7 @@ namespace FarmaNetBackend.Infrastructure.Repositories
 
         public void DeleteMedication( int id )
         {
-            Medication medication = _context.Medications.FirstOrDefault( o => o._id == id );
+            Medication medication = _context.Medications.FirstOrDefault( o => o.MedicationId == id );
             if ( medication != null )
             {
                 _context.Medications.Remove( medication );
@@ -59,10 +60,10 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         {
             return new MedicationDto(medication)
             {
-                Name = medication._name,
-                Recipe = medication._recipe,
-                IdMedicationType = medication._idMedicationType,
-                MedicationType = medication._typeMedication
+                Name = medication.Name,
+                Recipe = medication.Recipe,
+                IdMedicationType = medication.MedicationTypeId,
+                TypeMedication = medication.MedicationType
             };
         }
 
@@ -70,9 +71,9 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         {
             return new MedicationDto(medication)
             {
-                Name = medication._name,
-                Recipe = medication._recipe,
-                IdMedicationType = medication._idMedicationType
+                Name = medication.Name,
+                Recipe = medication.Recipe,
+                IdMedicationType = medication.MedicationTypeId
             };
         }
     }

@@ -1,20 +1,21 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class WorkingHoursConfiguration : EntityTypeConfiguration<WorkingHours>
+    public class WorkingHoursConfiguration : IEntityTypeConfiguration<WorkingHours>
     {
-        public WorkingHoursConfiguration()
+        public void Configure(EntityTypeBuilder<WorkingHours> builder)
         {
-            this.HasKey(w => w.WorkingHoursId);
+            builder.HasKey(w => w.WorkingHoursId);
 
-            this.Property(w => w.Date).IsRequired().HasColumnType(Constants.columnTypeDate);
-            this.Property(w => w.Time).IsRequired().HasColumnType(Constants.columnTypeTime);
+            builder.Property(w => w.Date).IsRequired().HasColumnType(Constants.columnTypeDate);
+            builder.Property(w => w.Time).IsRequired().HasColumnType(Constants.columnTypeTime);
 
-            this.Property(w => w.Description).HasMaxLength(Constants.descriptionLength);
+            builder.Property(w => w.Description).HasMaxLength(Constants.descriptionLength);
 
-            this.HasRequired(w => w.WorkerAccount).WithMany(w => w.WorkingHours).HasForeignKey(w => w.WorkerAccountId);
+            builder.HasOne(w => w.WorkerAccount).WithMany(w => w.WorkingHours).IsRequired().HasForeignKey(w => w.WorkerAccountId);
         }
     }
 }

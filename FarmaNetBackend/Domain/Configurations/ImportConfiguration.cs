@@ -1,21 +1,24 @@
-﻿using System.Data.Entity.ModelConfiguration;
-using FarmaNetBackend.Domain.Models;
+﻿using FarmaNetBackend.Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Data.Entity.ModelConfiguration;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class ImportConfiguration : EntityTypeConfiguration<Import>
+    public class ImportConfiguration : IEntityTypeConfiguration<Import>
     {
-        public ImportConfiguration()
+        public void Configure(EntityTypeBuilder<Import> builder)
         {
-            this.HasKey(i => i.ImportId);
-            
-            this.Property(i => i.Date).IsRequired().HasColumnType(Constants.columnTypeDate);
-            this.Property(i => i.Number).IsRequired().HasColumnType(Constants.columnTypeInt);
-            
-            this.Property(i => i.SumPrice).HasColumnType(Constants.columnTypeMoney);
+            builder.HasKey(i => i.ImportId);
 
-            this.HasRequired(i => i.Supplier).WithMany(s => s.Imports).HasForeignKey(i => i.SupplierId);
-            this.HasRequired(i => i.Pharmacy).WithMany(p => p.Imports).HasForeignKey(i => i.PharmacyId);
+            builder.Property(i => i.Date).IsRequired().HasColumnType(Constants.columnTypeDate);
+            builder.Property(i => i.Number).IsRequired().HasColumnType(Constants.columnTypeInt);
+
+            builder.Property(i => i.SumPrice).HasColumnType(Constants.columnTypeMoney);
+
+            builder.HasOne(i => i.Supplier).WithMany(s => s.Imports).IsRequired().HasForeignKey(i => i.SupplierId);
+            builder.HasOne(i => i.Pharmacy).WithMany(p => p.Imports).IsRequired().HasForeignKey(i => i.PharmacyId);
         }
     }
 }

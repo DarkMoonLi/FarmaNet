@@ -1,20 +1,21 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class SaleConfiguration : EntityTypeConfiguration<Sale>
+    public class SaleConfiguration : IEntityTypeConfiguration<Sale>
     {
-        public SaleConfiguration()
+        public void Configure(EntityTypeBuilder<Sale> builder)
         {
-            this.HasKey(s => new { s.PharmacyId, s.MedicationId });    
+            builder.HasKey(s => new { s.PharmacyId, s.MedicationId });
 
-            this.Property(s => s.Quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
+            builder.Property(s => s.Quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
 
-            this.Property(s => s.Price).HasColumnType(Constants.columnTypeMoney);
+            builder.Property(s => s.Price).HasColumnType(Constants.columnTypeMoney);
 
-            this.HasRequired(s => s.Medication).WithMany(m => m.Sales).HasForeignKey(s => s.MedicationId);
-            this.HasRequired(s => s.Pharmacy).WithMany(p => p.Sales).HasForeignKey(s => s.PharmacyId);
+            builder.HasOne(s => s.Medication).WithMany(m => m.Sales).IsRequired().HasForeignKey(s => s.MedicationId);
+            builder.HasOne(s => s.Pharmacy).WithMany(p => p.Sales).IsRequired().HasForeignKey(s => s.PharmacyId);
         }
     }
 }

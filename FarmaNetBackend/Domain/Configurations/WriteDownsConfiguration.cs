@@ -1,18 +1,19 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class WriteDownsConfiguration : EntityTypeConfiguration<WriteDowns>
+    public class WriteDownsConfiguration : IEntityTypeConfiguration<WriteDowns>
     {
-        public WriteDownsConfiguration()
+        public void Configure(EntityTypeBuilder<WriteDowns> builder)
         {
-            this.HasKey(w => new {w.PharmacyId, w.MedicationId});
+            builder.HasKey(w => new { w.PharmacyId, w.MedicationId });
 
-            this.Property(w => w.Quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
+            builder.Property(w => w.Quantity).IsRequired().HasColumnType(Constants.columnTypeSmallInt);
 
-            this.HasRequired(w => w.Pharmacy).WithMany(p => p.WriteDowns).HasForeignKey(w => w.PharmacyId);
-            this.HasRequired(w => w.Medication).WithMany(m => m.WriteDowns).HasForeignKey(w => w.MedicationId);
+            builder.HasOne(w => w.Pharmacy).WithMany(p => p.WriteDowns).IsRequired().HasForeignKey(w => w.PharmacyId);
+            builder.HasOne(w => w.Medication).WithMany(m => m.WriteDowns).IsRequired().HasForeignKey(w => w.MedicationId);
         }
     }
 }

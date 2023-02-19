@@ -1,19 +1,20 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class WorkerAccountConfiguration : EntityTypeConfiguration<WorkerAccount>
+    public class WorkerAccountConfiguration : IEntityTypeConfiguration<WorkerAccount>
     {
-        public WorkerAccountConfiguration()
+        public void Configure(EntityTypeBuilder<WorkerAccount> builder)
         {
-            this.HasKey(w => w.WorkerAccountId);
+            builder.HasKey(w => w.WorkerAccountId);
 
-            this.Property(w => w.Login).IsRequired().HasMaxLength(Constants.loginLength);
-            this.Property(w => w.Password).IsRequired().HasMaxLength(Constants.passwordLength);
+            builder.Property(w => w.Login).IsRequired().HasMaxLength(Constants.loginLength);
+            builder.Property(w => w.Password).IsRequired().HasMaxLength(Constants.passwordLength);
 
-            this.HasRequired(w => w.WorkerInformation).WithMany(w => w.WorkerAccounts).HasForeignKey(w => w.WorkerAccountId);
-            this.HasRequired(w => w.Pharmacy).WithMany(p => p.WorkerAccounts).HasForeignKey(w => w.PharmacyId);
+            builder.HasOne(w => w.WorkerInformation).WithMany(w => w.WorkerAccounts).IsRequired().HasForeignKey(w => w.WorkerAccountId);
+            builder.HasOne(w => w.Pharmacy).WithMany(p => p.WorkerAccounts).IsRequired().HasForeignKey(w => w.PharmacyId);
         }
     }
 }

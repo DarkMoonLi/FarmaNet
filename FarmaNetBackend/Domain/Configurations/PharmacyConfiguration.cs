@@ -1,19 +1,20 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class PharmacyConfiguration : EntityTypeConfiguration<Pharmacy>
+    public class PharmacyConfiguration : IEntityTypeConfiguration<Pharmacy>
     {
-        public PharmacyConfiguration()
+        public void Configure(EntityTypeBuilder<Pharmacy> builder)
         {
-            this.HasKey(p => p.PharmacyId);    
+            builder.HasKey(p => p.PharmacyId);
 
-            this.Property(p => p.Name).IsRequired().HasMaxLength(Constants.nameLength);
-            
-            this.Property(p => p.Adress).HasMaxLength(Constants.adressLength);
-            this.Property(p => p.Email).HasMaxLength(Constants.emailLength);
-            this.Property(p => p.Description).HasMaxLength(Constants.descriptionLength);
+            builder.Property(p => p.Name).IsRequired().HasMaxLength(Constants.nameLength);
+
+            builder.Property(p => p.Adress).HasMaxLength(Constants.adressLength);
+            builder.Property(p => p.Email).HasMaxLength(Constants.emailLength);
+            builder.Property(p => p.Description).HasMaxLength(Constants.descriptionLength);
         }
     }
 }

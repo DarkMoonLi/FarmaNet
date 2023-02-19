@@ -8,7 +8,6 @@ namespace FarmaNetBackend.Domain.Models
         public string Name { get; set; }
         public string Recipe { get; set; }
         public int MedicationTypeId { get; set; }
-
         public MedicationType MedicationType { get; set; }
 
         public virtual List<MedicationWithManufacturer> MedicationWithManufacturers { get; set; }

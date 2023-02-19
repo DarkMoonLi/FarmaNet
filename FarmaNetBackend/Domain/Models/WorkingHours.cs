@@ -8,8 +8,8 @@ namespace FarmaNetBackend.Domain.Models
         
         public int WorkerAccountId { get; set; }
         
-        public DateOnly Date { get; set; }
-        public TimeOnly Time { get; set; }
+        public DateTime Date { get; set; }
+        public TimeSpan Time { get; set; }
         public string Description { get; set; }
 
         public WorkerAccount WorkerAccount { get; set; }

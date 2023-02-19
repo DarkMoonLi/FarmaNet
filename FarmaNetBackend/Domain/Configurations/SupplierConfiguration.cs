@@ -1,17 +1,18 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class SupplierConfiguration : EntityTypeConfiguration<Supplier>
+    public class SupplierConfiguration : IEntityTypeConfiguration<Supplier>
     {
-        public SupplierConfiguration()
+        public void Configure(EntityTypeBuilder<Supplier> builder)
         {
-            this.HasKey(s => s.SupplierId);
+            builder.HasKey(s => s.SupplierId);
 
-            this.Property(s => s.Name).IsRequired().HasMaxLength(Constants.nameLength);
+            builder.Property(s => s.Name).IsRequired().HasMaxLength(Constants.nameLength);
 
-            this.Property(s => s.Inn).HasMaxLength(Constants.innLength);
+            builder.Property(s => s.Inn).HasMaxLength(Constants.innLength);
         }
     }
 }

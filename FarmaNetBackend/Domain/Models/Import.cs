@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace FarmaNetBackend.Domain.Models
 {
@@ -7,7 +8,7 @@ namespace FarmaNetBackend.Domain.Models
 		public int ImportId { get; set; }
 
 		public int Number { get; set; }
-		public DateOnly Date { get; set; }
+		public DateTime Date { get; set; }
 		public float? SumPrice { get; set; }
 		
 		

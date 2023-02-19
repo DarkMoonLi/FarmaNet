@@ -1,15 +1,16 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class TypeMedicationConfiguration : EntityTypeConfiguration<MedicationType>
+    public class TypeMedicationConfiguration : IEntityTypeConfiguration<MedicationType>
     {
-        public TypeMedicationConfiguration()
+        public void Configure(EntityTypeBuilder<MedicationType> builder)
         {
-            this.HasKey(t => t.MedicationTypeId);
+            builder.HasKey(t => t.MedicationTypeId);
 
-            this.Property(t => t.Name).IsRequired().HasMaxLength(Constants.nameLength);
+            builder.Property(t => t.Name).IsRequired().HasMaxLength(Constants.nameLength);
         }
     }
 }

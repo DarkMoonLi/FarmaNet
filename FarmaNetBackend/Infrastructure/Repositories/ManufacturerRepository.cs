@@ -19,4 +19,3 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         }
     }
 }
-*/

@@ -12,11 +12,11 @@ namespace FarmaNetBackend.Dto.MedicationDto
 
         public MedicationDto(Medication med)
         {
-            IdMedication = med._id;
-            Name = med._name;
-            Recipe = med._recipe;
-            IdMedicationType = med._idMedicationType;
-            MedicationType = med._typeMedication;
+            IdMedication = med.MedicationId;
+            Name = med.Name;
+            Recipe = med.Recipe;
+            IdMedicationType = med.MedicationTypeId;
+            TypeMedication = med.MedicationType;
         }
   }
 }

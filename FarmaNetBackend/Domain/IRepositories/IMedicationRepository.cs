@@ -1,6 +1,6 @@
+using FarmaNetBackend.Domain.Models;
 using FarmaNetBackend.Dto.MedicationDto;
 using System.Collections.Generic;
-using FarmaNetBackend.Models.Medication;
 
 public interface IMedicationRepository
 {

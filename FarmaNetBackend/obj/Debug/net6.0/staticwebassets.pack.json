@@ -1,0 +1,237 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\Login.40ef3dcdca03db33.svg",
+      "PackagePath": "staticwebassets\\Login.40ef3dcdca03db33.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Login.svg",
+      "PackagePath": "staticwebassets\\assets\\Login.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Recipe.svg",
+      "PackagePath": "staticwebassets\\assets\\Recipe.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Rectangle-18.svg",
+      "PackagePath": "staticwebassets\\assets\\Rectangle-18.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\String.svg",
+      "PackagePath": "staticwebassets\\assets\\String.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\addphoto.png",
+      "PackagePath": "staticwebassets\\assets\\addphoto.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\clock.svg",
+      "PackagePath": "staticwebassets\\assets\\clock.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\closebutton.svg",
+      "PackagePath": "staticwebassets\\assets\\closebutton.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fav.svg",
+      "PackagePath": "staticwebassets\\assets\\fav.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-Italic-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Mulish-Italic-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-VariableFont_wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Mulish-VariableFont_wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\OFL.txt",
+      "PackagePath": "staticwebassets\\assets\\fonts\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\README.txt",
+      "PackagePath": "staticwebassets\\assets\\fonts\\README.txt"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Black.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Italic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\static\\Mulish-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\foodpicture.png",
+      "PackagePath": "staticwebassets\\assets\\foodpicture.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\header_image.svg",
+      "PackagePath": "staticwebassets\\assets\\header_image.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\ice-cream.png",
+      "PackagePath": "staticwebassets\\assets\\ice-cream.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon1.svg",
+      "PackagePath": "staticwebassets\\assets\\icon1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon2.svg",
+      "PackagePath": "staticwebassets\\assets\\icon2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon3.svg",
+      "PackagePath": "staticwebassets\\assets\\icon3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon4.svg",
+      "PackagePath": "staticwebassets\\assets\\icon4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\image.png",
+      "PackagePath": "staticwebassets\\assets\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\like.svg",
+      "PackagePath": "staticwebassets\\assets\\like.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\meat.png",
+      "PackagePath": "staticwebassets\\assets\\meat.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\pancake.png",
+      "PackagePath": "staticwebassets\\assets\\pancake.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\person.svg",
+      "PackagePath": "staticwebassets\\assets\\person.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\plus.svg",
+      "PackagePath": "staticwebassets\\assets\\plus.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\soup.png",
+      "PackagePath": "staticwebassets\\assets\\soup.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\strawberry.png",
+      "PackagePath": "staticwebassets\\assets\\strawberry.png"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\wave.svg",
+      "PackagePath": "staticwebassets\\assets\\wave.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f2abf64ce1925346.js",
+      "PackagePath": "staticwebassets\\main.f2abf64ce1925346.js"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",
+      "PackagePath": "staticwebassets\\plus.72a464deced10226.svg"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\polyfills.a79e934dd4968e4c.js",
+      "PackagePath": "staticwebassets\\polyfills.a79e934dd4968e4c.js"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\runtime.397c3874548e84cd.js",
+      "PackagePath": "staticwebassets\\runtime.397c3874548e84cd.js"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.0a269146a3cd907b.css",
+      "PackagePath": "staticwebassets\\styles.0a269146a3cd907b.css"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.01e586c2a1542425.svg",
+      "PackagePath": "staticwebassets\\wave.01e586c2a1542425.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FarmaNetBackend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FarmaNetBackend.props",
+      "PackagePath": "build\\FarmaNetBackend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FarmaNetBackend.props",
+      "PackagePath": "buildMultiTargeting\\FarmaNetBackend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FarmaNetBackend.props",
+      "PackagePath": "buildTransitive\\FarmaNetBackend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

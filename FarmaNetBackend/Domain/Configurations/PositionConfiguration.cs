@@ -1,17 +1,18 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FarmaNetBackend.Domain.Configurations
 {
-    public class PositionConfiguration : EntityTypeConfiguration<Position>
+    public class PositionConfiguration : IEntityTypeConfiguration<Position>
     {
-        public PositionConfiguration()
+        public void Configure(EntityTypeBuilder<Position> builder)
         {
-            this.HasKey(p => p.PositionId);
+            builder.HasKey(p => p.PositionId);
 
-            this.Property(p => p.Post).IsRequired().HasMaxLength(Constants.positionLength);
+            builder.Property(p => p.Post).IsRequired().HasMaxLength(Constants.positionLength);
 
-            this.Property(p => p.SalaryInHours).HasColumnType(Constants.columnTypeReal);
+            builder.Property(p => p.SalaryInHours).HasColumnType(Constants.columnTypeReal);
         }
     }
 }
