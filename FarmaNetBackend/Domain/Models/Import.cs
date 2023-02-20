@@ -9,7 +9,7 @@ namespace FarmaNetBackend.Domain.Models
 
 		public int Number { get; set; }
 		public DateTime Date { get; set; }
-		public float? SumPrice { get; set; }
+		public double? SumPrice { get; set; }
 		
 		
 		public int SupplierId { get; set; }
