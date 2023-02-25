@@ -2,6 +2,6 @@ namespace FarmaNetBackend.Domain.IRepositories
 {
     public interface IUnitOfWork
     {
-        void Commit();
+        public void Commit();
     }
 }

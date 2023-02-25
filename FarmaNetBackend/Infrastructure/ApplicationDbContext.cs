@@ -1,7 +1,6 @@
 using FarmaNetBackend.Domain.Configurations;
 using FarmaNetBackend.Domain.IRepositories;
 using FarmaNetBackend.Domain.Models;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace FarmaNetBackend.Infrastructure
@@ -30,9 +29,9 @@ namespace FarmaNetBackend.Infrastructure
             Database.EnsureCreated();
         }
 
-        void IUnitOfWork.Commit()
+        public void Commit()
         {
-            SaveChanges();
+            this.SaveChanges();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder )

@@ -30,11 +30,12 @@ namespace FarmaNetBackend.Domain.Repositories
             return manufacturer;
         }
 
-        public void AddManufacturer( ManufacturerDto manufacturerDto )
+        public void AddManufacturer( AddManufacturerDto manufacturerDto )
         {
             Manufacturer manufacturer = manufacturerDto.ConvertToManufacturer();
 
             _context.Manufacturers.Add(manufacturer);
+            _context.SaveChanges();
         }
 
         public void UpdateManufacturer( ManufacturerDto manufacturerDto )
@@ -55,13 +56,12 @@ namespace FarmaNetBackend.Domain.Repositories
 
     public static class ConvertManufacturer
     {
-        public static Manufacturer ConvertToManufacturer( this ManufacturerDto manufacturerDto)
+        public static Manufacturer ConvertToManufacturer( this AddManufacturerDto manufacturerDto)
         {
             return new Manufacturer
             {
                 Name           = manufacturerDto.Name,
-                Address        = manufacturerDto.Adress,
-                ManufacturerId = manufacturerDto.ManufacturerId
+                Address        = manufacturerDto.Address
             };
 
         }

@@ -41,10 +41,10 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("manufacturers/add")]
-        public IActionResult AddManufacturer(ManufacturerDto manufacturerDto)
+        public IActionResult AddManufacturer(AddManufacturerDto manufacturerDto)
         {
             _repository.AddManufacturer(manufacturerDto);
-            _unitOfWork.Commit();
+            //_unitOfWork.Commit();
             return Ok();
         }
 
