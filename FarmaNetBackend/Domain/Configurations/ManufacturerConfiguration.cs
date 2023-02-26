@@ -9,6 +9,7 @@ namespace FarmaNetBackend.Domain.Configurations
         public void Configure(EntityTypeBuilder<Manufacturer> builder)
         {
             builder.HasKey(m => m.ManufacturerId);
+            builder.Property(m => m.ManufacturerId).IsRequired().ValueGeneratedOnAdd();
 
             builder.Property(m => m.Name).IsRequired().HasMaxLength(Constants.nameLength);
 

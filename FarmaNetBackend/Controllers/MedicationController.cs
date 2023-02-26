@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Dto.MedicationDto;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using FarmaNetBackend.Infrastructure.Repositories;
+using FarmaNetBackend.Domain.Repositories;
 using FarmaNetBackend.Domain.Models;
 
 namespace FarmaNetBackend.Controllers
@@ -39,15 +39,14 @@ namespace FarmaNetBackend.Controllers
             {
                 return NotFound();
             }
-            return Ok(medication.ConvertToMedicationDtoById() );
+            return Ok( medication.ConvertToMedicationDto() );
         }
 
         [HttpPost]
         [Route( "add" )]
         public IActionResult AddMedication( [FromBody] MedicationDto medicationDto )
         {
-            Medication medication = medicationDto.ConvertToMedication();
-            _repository.AddMedication( medication.ConvertToMedicationDto() );
+            _repository.AddMedication(medicationDto);
             _unitOfWork.Commit();
             return Ok();
         }

@@ -13,7 +13,7 @@ namespace FarmaNetBackend.Domain.Configurations
             builder.Property(w => w.Login).IsRequired().HasMaxLength(Constants.loginLength);
             builder.Property(w => w.Password).IsRequired().HasMaxLength(Constants.passwordLength);
 
-            builder.HasOne(w => w.WorkerInformation).WithMany(w => w.WorkerAccounts).IsRequired().HasForeignKey(w => w.WorkerAccountId);
+            builder.HasOne(w => w.WorkerInformation).WithMany(w => w.WorkerAccounts).IsRequired().HasForeignKey(w => w.WorkerInformationId);
             builder.HasOne(w => w.Pharmacy).WithMany(p => p.WorkerAccounts).IsRequired().HasForeignKey(w => w.PharmacyId);
         }
     }

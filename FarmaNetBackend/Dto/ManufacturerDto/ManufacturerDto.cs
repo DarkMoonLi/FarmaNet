@@ -8,6 +8,15 @@ namespace FarmaNetBackend.Dto.ManufacturerDto
         public string Name { get; set; }
         public string Adress { get; set; }
 
+        public ManufacturerDto()
+        { }
+
+        public ManufacturerDto(string name, string address)
+        {
+            Name = name;
+            Adress = address;
+        }
+
         public ManufacturerDto(Manufacturer manufacturer)
         {
             ManufacturerId = manufacturer.ManufacturerId;

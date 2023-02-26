@@ -23,16 +23,18 @@ namespace FarmaNetBackend.Infrastructure
         public DbSet<WorkingHours> WorkingHours { get; set; }
         public DbSet<WriteDowns> WriteDowns { get; set; }
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext( DbContextOptions<ApplicationDbContext> options ) : base(options)
         {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
-        void IUnitOfWork.Commit()
+        public void Commit()
         {
-            SaveChanges();
+            this.SaveChanges();
         }
 
-        protected override void OnModelCreating( ModelBuilder modelBuilder )
+        protected override void OnModelCreating(ModelBuilder modelBuilder )
         {
             modelBuilder.ApplyConfiguration(new ImportConfiguration());
             modelBuilder.ApplyConfiguration(new ImportWithMedicationConfiguration());
