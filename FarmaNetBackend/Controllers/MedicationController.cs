@@ -21,7 +21,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route( "/" )]
+        [Route( "/medications" )]
         public IActionResult GetMedications()
         {
             List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
