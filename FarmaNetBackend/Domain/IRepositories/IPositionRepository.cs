@@ -8,8 +8,8 @@ namespace FarmaNetBackend.Domain.IRepositories
     {
         public List<Position> GetPositions();
         public Position GetPositionById(int id);
-        public void AddPosition(PositionDto positionDto);
-        public void UpdatePosition(PositionDto positionDto);
+        public void AddPosition(AddPositionDto positionDto);
+        public void UpdatePosition(UpdatePositionDto positionDto);
         public void RemovePosition(int id);
     }
 }

@@ -1,5 +1,5 @@
 ﻿using FarmaNetBackend.Domain.Models;
-using FarmaNetBackend.Dto.WorkingHours;
+using FarmaNetBackend.Dto.WorkingHoursDto;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Domain.IRepositories
@@ -8,8 +8,8 @@ namespace FarmaNetBackend.Domain.IRepositories
     {
         public List<WorkingHours> GetWorkingHours();
         public WorkingHours GetWorkingHoursById(int id);
-        public void AddWorkingHours(WorkingHoursDto workingHoursDto);
-        public void UpdateWorkingHours(WorkingHoursDto workingHoursDto);
+        public void AddWorkingHours(AddWorkingHoursDto workingHoursDto);
+        public void UpdateWorkingHours(UpdateWorkingHoursDto workingHoursDto);
         public void RemoveWorkinHours(int id);
     }
 }

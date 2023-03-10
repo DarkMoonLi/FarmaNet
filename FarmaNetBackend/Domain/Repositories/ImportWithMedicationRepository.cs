@@ -30,14 +30,14 @@ namespace FarmaNetBackend.Domain.Repositories
             return importWithMedication;
         }
 
-        public void AddImportWithMedication( ImportWithMedicationDto importWithMedicationDto)
+        public void AddImportWithMedication( AddImportWithMedicationDto importWithMedicationDto)
         {
             ImportWithMedication importWithMedication = importWithMedicationDto.ConvertToImportWithMedication();
 
             _context.ImportWithMedications.Add(importWithMedication);
         }
 
-        public void UpdateImportWithMedication(ImportWithMedicationDto importWithMedicationDto)
+        public void UpdateImportWithMedication(UpdateImportWithMedicationDto importWithMedicationDto)
         { }
 
         public void RemoveImportWithMedication(int id)
@@ -53,17 +53,6 @@ namespace FarmaNetBackend.Domain.Repositories
 
     public static class ConvertImportWithMedication
     {
-        public static ImportWithMedication ConvertToImportWithMedication(this ImportWithMedicationDto importWithMedicationDto)
-        {
-            return new ImportWithMedication
-            {
-                ImportId     = importWithMedicationDto.ImportId,
-                MedicationId = importWithMedicationDto.MedicationId,
-                Price        = importWithMedicationDto.Price,
-                Quantity     = importWithMedicationDto.Quantity
-            };
-        }
-
         public static ImportWithMedicationDto ConvertToImportWithMedicationDto(this ImportWithMedication importWithMedication)
         {
             return new ImportWithMedicationDto(importWithMedication);

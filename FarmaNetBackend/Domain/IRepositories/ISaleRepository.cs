@@ -8,8 +8,8 @@ namespace FarmaNetBackend.Domain.IRepositories
     {
         public List<Sale> GetSales();
         public Sale GetSaleById(int id);
-        public void AddSale(SaleDto saleDto);
-        public void UpdateSale(SaleDto saleDto);
+        public void AddSale(AddSaleDto saleDto);
+        public void UpdateSale(UpdateSaleDto saleDto);
         public void RemoveSale(int id);
     }
 }

@@ -9,7 +9,7 @@ namespace FarmaNetBackend.Domain.IRepositories
         public List<Manufacturer> GetManufacturers();
         public Manufacturer GetManufacturerById(int id);
         public void AddManufacturer(AddManufacturerDto manufacturerDto);
-        public void UpdateManufacturer(ManufacturerDto manufacturerDto);
+        public void UpdateManufacturer(UpdateManufacturerDto manufacturerDto);
         public void RemoveManufacturer(int id);
     }
 }

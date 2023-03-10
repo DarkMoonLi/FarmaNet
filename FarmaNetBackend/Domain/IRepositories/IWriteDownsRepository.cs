@@ -8,8 +8,8 @@ namespace FarmaNetBackend.Domain.IRepositories
     {
         public List<WriteDowns> GetWriteDowns();
         public WriteDowns GetWriteDownById(int id);
-        public void AddWriteDown(WriteDownsDto writeDownsDto);
-        public void UpdateWriteDown(WriteDownsDto writeDownsDto);
+        public void AddWriteDown(AddWriteDownsDto writeDownsDto);
+        public void UpdateWriteDown(UpdateWriteDownsDto writeDownsDto);
         public void RemoveWriteDown(int id);
     }
 }

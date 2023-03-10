@@ -28,13 +28,13 @@ namespace FarmaNetBackend.Domain.Repositories
             return medication;
         }
 
-        public void AddMedication( MedicationDto medicationDto )
+        public void AddMedication(AddMedicationDto medicationDto)
         {
             Medication medication = medicationDto.ConvertToMedication();
             _context.Medications.Add( medication );
         }
 
-        public void UpdateMedication(MedicationDto medicationDto)
+        public void UpdateMedication(UpdateMedicationDto medicationDto)
         {
             
         }
@@ -51,33 +51,9 @@ namespace FarmaNetBackend.Domain.Repositories
 
     public static class ConvertMedication
     {
-        public static Medication ConvertToMedication( this MedicationDto medicationDto )
-        {
-            return new Medication
-            {
-                Name             = medicationDto.Name,
-                Recipe           = medicationDto.Recipe,
-                MedicationTypeId = medicationDto.MedicationTypeId,
-                MedicationType   = medicationDto.MedicationType
-            }; 
-        }
-
         public static MedicationDto ConvertToMedicationDto( this Medication medication )
         {
             return new MedicationDto(medication);
         }
-
-        /*
-        public static MedicationDto ConvertToMedicationDtoById( this Medication medication )
-        {
-            return new MedicationDto(medication)
-            {
-                Name = medication.Name,
-                Recipe = medication.Recipe,
-                IdMedicationType = medication.MedicationTypeId
-            };
-        }
-        */
-
     }
 }

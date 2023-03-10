@@ -25,12 +25,12 @@ namespace FarmaNetBackend.Domain.Repositories
 
         public Manufacturer GetManufacturerById(int id)
         {
-            Manufacturer manufacturer = (Manufacturer)_context.Manufacturers.Where(m => m.ManufacturerId == id);
+            Manufacturer manufacturer = _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == id);
 
             return manufacturer;
         }
 
-        public void AddManufacturer( AddManufacturerDto manufacturerDto )
+        public void AddManufacturer(AddManufacturerDto manufacturerDto)
         {
             Manufacturer manufacturer = manufacturerDto.ConvertToManufacturer();
 
@@ -38,9 +38,17 @@ namespace FarmaNetBackend.Domain.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateManufacturer( ManufacturerDto manufacturerDto )
+        public void UpdateManufacturer(UpdateManufacturerDto manufacturerDto)
         {
-        
+            Manufacturer manufacturer = _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == manufacturerDto.ManufacturerId);
+
+            if (manufacturer != null)
+            {
+                manufacturer.Address = manufacturerDto.Address;
+                manufacturer.Name = manufacturerDto.Name;
+
+                _context.SaveChanges();
+            }
         }
 
         public void RemoveManufacturer( int id )
@@ -50,22 +58,13 @@ namespace FarmaNetBackend.Domain.Repositories
             if (manufacturer != null)
             {
                 _context.Manufacturers.Remove(manufacturer);
+                _context.SaveChanges();
             }
         }
     }
 
     public static class ConvertManufacturer
     {
-        public static Manufacturer ConvertToManufacturer( this AddManufacturerDto manufacturerDto)
-        {
-            return new Manufacturer
-            {
-                Name           = manufacturerDto.Name,
-                Address        = manufacturerDto.Address
-            };
-
-        }
-
         public static ManufacturerDto ConvertToManufacturerDto( this Manufacturer manufacturer)
         {
             return new ManufacturerDto(manufacturer);
