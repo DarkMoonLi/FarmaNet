@@ -1,6 +1,6 @@
 using FarmaNetBackend.Domain.Configurations;
-using FarmaNetBackend.Domain.IRepositories;
 using FarmaNetBackend.Domain.Models;
+using FarmaNetBackend.Domain.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
 namespace FarmaNetBackend.Infrastructure
@@ -8,7 +8,7 @@ namespace FarmaNetBackend.Infrastructure
     public class ApplicationDbContext : DbContext, IUnitOfWork
     {
         public DbSet<Medication> Medications { get; set; }
-        public DbSet<MedicationType> TypeMedications { get; set; }
+        public DbSet<MedicationType> MedicationsTypes { get; set; }
         public DbSet<Import> Imports { get; set; }
         public DbSet<ImportWithMedication> ImportWithMedications { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
@@ -25,8 +25,8 @@ namespace FarmaNetBackend.Infrastructure
 
         public ApplicationDbContext( DbContextOptions<ApplicationDbContext> options ) : base(options)
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
 
         public void Commit()
