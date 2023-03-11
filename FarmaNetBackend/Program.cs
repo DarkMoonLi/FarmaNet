@@ -1,15 +1,13 @@
 using FarmaNetBackend.Authorization;
-using FarmaNetBackend.Domain.IRepositories;
-using FarmaNetBackend.Domain.Repositories;
 using FarmaNetBackend.Infrastructure;
-using FarmaNetBackend.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using FarmaNetBackend.Repositories;
+using FarmaNetBackend.IRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");

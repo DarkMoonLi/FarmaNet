@@ -1,4 +1,4 @@
-﻿using FarmaNetBackend.Domain.Models;
+﻿using FarmaNetBackend.Models;
 using System;
 
 namespace FarmaNetBackend.Dto.ImportDto

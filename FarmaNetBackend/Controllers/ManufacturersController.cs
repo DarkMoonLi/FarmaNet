@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using FarmaNetBackend.Domain.Models;
-using FarmaNetBackend.Domain.IRepositories;
+using FarmaNetBackend.Models;
+using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Dto.ManufacturerDto;
 
 namespace FarmaNetBackend.Controllers
 {
-    public class ManufacturersController : Controller
+  public class ManufacturersController : Controller
     {
         private readonly IManufacturerRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
@@ -44,7 +44,14 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddManufacturer(AddManufacturerDto manufacturerDto)
         {
             _repository.AddManufacturer(manufacturerDto);
-            //_unitOfWork.Commit();
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("manufacturers/update")]
+        public IActionResult UpdateManufacturer(UpdateManufacturerDto manufacturerDto)
+        {
+            _repository.UpdateManufacturer(manufacturerDto);
             return Ok();
         }
 
@@ -53,7 +60,6 @@ namespace FarmaNetBackend.Controllers
         public IActionResult RemoveManufacturer(int id)
         {
             _repository.RemoveManufacturer(id);
-            _unitOfWork.Commit();
             return Ok();
         }
     }

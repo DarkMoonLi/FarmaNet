@@ -1,10 +1,10 @@
-using FarmaNetBackend.Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Dto.MedicationDto;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using FarmaNetBackend.Domain.Models;
-using FarmaNetBackend.Infrastructure.Repositories;
+using FarmaNetBackend.IRepositories;
+using FarmaNetBackend.Models;
+using FarmaNetBackend.Repositories;
 
 namespace FarmaNetBackend.Controllers
 {
@@ -44,7 +44,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route( "add" )]
-        public IActionResult AddMedication( [FromBody] MedicationDto medicationDto )
+        public IActionResult AddMedication(AddMedicationDto medicationDto)
         {
             _repository.AddMedication(medicationDto);
             _unitOfWork.Commit();
