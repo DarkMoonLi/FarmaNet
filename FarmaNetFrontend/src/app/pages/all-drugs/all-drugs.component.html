@@ -1,0 +1,13 @@
+<div class="drugs">
+    <div class="search-container">
+        <h2 class="search-container__title">Поиск Препаратов</h2>
+        <div class="search-container__search">
+            <input type="text" class="search-container__input" [(ngModel)]="title" placeholder="Название Лекарства....">
+            <input type="submit" class="search-container__submit" value="Поиск">
+        </div>
+    </div>
+    <div class="drugs-wrapper">
+        <app-drug *ngFor="let Drug of data" [Drug] = "Drug"></app-drug>
+    </div>
+</div>
+

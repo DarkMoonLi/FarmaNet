@@ -17,6 +17,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {FarmaService} from './farma.service'
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AllDrugsComponent } from './pages/all-drugs/all-drugs.component';
+import { DrugComponent } from './components/drug/drug.component';
+import { DrugInfoComponent } from './components/drug-info/drug-info.component';
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -32,6 +35,9 @@ import { FooterComponent } from './components/footer/footer.component';
     // InputComponent,
     HeaderComponent,
     FooterComponent,
+    AllDrugsComponent,
+    DrugComponent,
+    DrugInfoComponent,
     // LoginFormComponent
   ],
   imports: [
