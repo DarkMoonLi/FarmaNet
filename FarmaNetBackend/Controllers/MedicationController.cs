@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Dto.MedicationDto;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
-using FarmaNetBackend.Domain.Repositories;
 using FarmaNetBackend.Domain.Models;
+using FarmaNetBackend.Infrastructure.Repositories;
 
 namespace FarmaNetBackend.Controllers
 {

@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using FarmaNetBackend.Dto.MedicationDto;
 using FarmaNetBackend.Domain.Models;
-using System.Xml.Linq;
+using FarmaNetBackend.Domain.IRepositories;
+using FarmaNetBackend.Infrastructure;
 
 namespace FarmaNetBackend.Infrastructure.Repositories
 {
@@ -33,6 +34,11 @@ namespace FarmaNetBackend.Infrastructure.Repositories
             _context.Medications.Add( medication );
         }
 
+        public void UpdateMedication(MedicationDto medicationDto)
+        {
+            
+        }
+
         public void DeleteMedication( int id )
         {
             Medication medication = _context.Medications.FirstOrDefault( o => o.MedicationId == id );
@@ -49,24 +55,19 @@ namespace FarmaNetBackend.Infrastructure.Repositories
         {
             return new Medication
             {
-                Name = medicationDto.Name,
-                Recipe = medicationDto.Recipe,
-                MedicationTypeId = medicationDto.IdMedicationType,
-                MedicationType = medicationDto.TypeMedication
+                Name             = medicationDto.Name,
+                Recipe           = medicationDto.Recipe,
+                MedicationTypeId = medicationDto.MedicationTypeId,
+                MedicationType   = medicationDto.MedicationType
             }; 
         }
 
         public static MedicationDto ConvertToMedicationDto( this Medication medication )
         {
-            return new MedicationDto(medication)
-            {
-                Name = medication.Name,
-                Recipe = medication.Recipe,
-                IdMedicationType = medication.MedicationTypeId,
-                TypeMedication = medication.MedicationType
-            };
+            return new MedicationDto(medication);
         }
 
+        /*
         public static MedicationDto ConvertToMedicationDtoById( this Medication medication )
         {
             return new MedicationDto(medication)
@@ -76,5 +77,7 @@ namespace FarmaNetBackend.Infrastructure.Repositories
                 IdMedicationType = medication.MedicationTypeId
             };
         }
+        */
+
     }
 }
