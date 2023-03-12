@@ -1,0 +1,89 @@
+<div class="imports">
+  <!-- <div>Imports shpws</div> -->
+    <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table"> -->
+        <!-- <ng-container matColumnDef="ImportId">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.ImportId}} </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="Number">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Number}} </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="Date">
+          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="SumPrice">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.SumPrice}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="SupplierId">
+          <mat-header-cell *matHeaderCellDef> Symbol1 </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.SupplierId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="PharmacyId">
+          <mat-header-cell *matHeaderCellDef> Symbol2 </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.PharmacyId}} </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
+      <!-- </table> -->
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort >
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="ImportId">
+          <mat-header-cell *matHeaderCellDef>ImportId</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.ImportId}} </mat-cell>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="Number">
+          <mat-header-cell *matHeaderCellDef>Number</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Number}} </mat-cell>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Date">
+          <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="SumPrice">
+          <mat-header-cell *matHeaderCellDef>SumPrice</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.SumPrice}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="SupplierId">
+          <mat-header-cell *matHeaderCellDef>SupplierId</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.SupplierId}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="PharmacyId">
+          <mat-header-cell *matHeaderCellDef>PharmacyId</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.PharmacyId}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['ImportId'];"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['Number'];"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['Date'];"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['SumPrice'];"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['SupplierId'];"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['PharmacyId'];"></mat-row>
+      
+        <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+      </table>
+      
+</div>

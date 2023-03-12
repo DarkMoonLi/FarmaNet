@@ -24,8 +24,11 @@ export class HeaderComponent implements OnInit {
   openRecipes() {
     this.router.navigate(['/recipes']);
   }
-  openFavoritesPage() {
-    this.router.navigate(['/favorites'])
+  openImports() {
+    this.router.navigate(['/imports'])
+  }
+  openProfilePage() {
+    this.router.navigate(['/profile']);
   }
 
 }

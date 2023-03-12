@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Профиль пользователя</h1>
+    <input type="text" class="search-container__input" [(ngModel)]="data.Name" value="{{data.Name}}" placeholder="Имя....">
+    <input type="text" class="search-container__input" [(ngModel)]="data.LastName" value="{{data.LastName}}" placeholder="Фамилия....">
+    <input type="text" class="search-container__input" [(ngModel)]="data.Email" value="{{data.Email}}" placeholder="Email....">
+    <!-- <input type="text" class="search-container__input" [(ngModel)]="data.DataBirth" value="{{data.DataBirth}}" placeholder="Дата рождения...."> -->
+    <h3>Паспортные данные</h3>
+    <input type="text" class="search-container__input" [(ngModel)]="data.SeriesPassport" value="{{data.SeriesPassport}}" placeholder="Серия....">
+    <input type="text" class="search-container__input" [(ngModel)]="data.NumberPassport" value="{{data.NumberPassport}}" placeholder="Номер....">
+    <h3>Отработанные часы</h3>
+    <input type="text" class="search-container__input" [(ngModel)]="data.Experience" value="{{data.NumberPassport}}" placeholder="Часов....">
+    <input type="submit" class="search-container__submit" value="Сохранить">
+</div>
