@@ -2,8 +2,8 @@
 {
     public class UpdatePositionDto
     {
-        public int IdPosition { get; set; }
+        public int PositionId { get; set; }
         public string Position { get; set; }
-        public double SalaryInHours { get; set; }
+        public float? SalaryInHours { get; set; }
     }
 }

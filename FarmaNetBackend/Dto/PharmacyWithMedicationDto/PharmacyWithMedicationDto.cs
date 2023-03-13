@@ -1,4 +1,6 @@
-﻿namespace FarmaNetBackend.Dto.PharmacyWithMedicationDto
+﻿using FarmaNetBackend.Models;
+
+namespace FarmaNetBackend.Dto.PharmacyWithMedicationDto
 {
     public class PharmacyWithMedicationDto
     {
@@ -6,5 +8,13 @@
         public int PharmacyId { get; set; }
         public int Quantity { get; set; }
         public float? Price { get; set; }
+
+        public PharmacyWithMedicationDto(PharmacyWithMedication pharmacyWithMedication)
+        {
+            MedicationId = pharmacyWithMedication.MedicationId;
+            PharmacyId = pharmacyWithMedication.PharmacyId;
+            Quantity = pharmacyWithMedication.Quantity;
+            Price = pharmacyWithMedication.Price;
+        }
     }
 }
