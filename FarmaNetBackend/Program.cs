@@ -18,7 +18,6 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
 builder.Services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
-builder.Services.AddScoped<IUnitOfWork, ApplicationDbContext>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

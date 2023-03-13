@@ -9,12 +9,10 @@ namespace FarmaNetBackend.Controllers
   public class ManufacturersController : Controller
     {
         private readonly IManufacturerRepository _repository;
-        private readonly IUnitOfWork _unitOfWork;
-
-        public ManufacturersController(IManufacturerRepository repository, IUnitOfWork unitOfWork)
+        
+        public ManufacturersController(IManufacturerRepository repository)
         {
             _repository = repository;
-            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
@@ -26,10 +24,10 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("manufacturers/{id:int}")]
-        public IActionResult GetManufacturer(int id)
+        [Route("manufacturer")]
+        public IActionResult GetManufacturer(GetManufacturerDto manufacturerDto)
         {
-            Manufacturer manufacturer = _repository.GetManufacturerById(id);
+            Manufacturer manufacturer = _repository.GetManufacturerById(manufacturerDto);
 
             if (manufacturer == null)
             {
@@ -56,10 +54,10 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpDelete]
-        [Route("manufacturers/{id:int}")]
-        public IActionResult RemoveManufacturer(int id)
+        [Route("manufacturers")]
+        public IActionResult RemoveManufacturer(GetManufacturerDto manufacturerDto)
         {
-            _repository.RemoveManufacturer(id);
+            _repository.RemoveManufacturer(manufacturerDto);
             return Ok();
         }
     }

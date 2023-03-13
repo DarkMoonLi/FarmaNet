@@ -18,33 +18,45 @@ namespace FarmaNetBackend.Repositories
 
         public List<Medication> GetMedications()
         {
-            List<Medication> medications = _context.Medications.ToList();
-            return medications;
+            return _context.Medications.ToList();
         }
 
-        public Medication GetMedicationById( int id )
+        public Medication GetMedicationById(GetMedicationDto medicationDto)
         {
-            Medication medication = (Medication)_context.Medications.Where(p => p.MedicationId == id);
-            return medication;
+            return _context.Medications.FirstOrDefault(p => p.MedicationId == medicationDto.MedicationId);
         }
 
         public void AddMedication(AddMedicationDto medicationDto)
         {
             Medication medication = medicationDto.ConvertToMedication();
-            _context.Medications.Add( medication );
+
+            _context.Medications.Add(medication);
+            _context.SaveChanges();
         }
 
         public void UpdateMedication(UpdateMedicationDto medicationDto)
         {
-            
+            Medication medication = GetMedicationById(new GetMedicationDto{ MedicationId = medicationDto.MedicationId });
+
+            if (medication != null)
+            {
+                medication.MedicationTypeId = medicationDto.MedicationTypeId;
+                medication.Name = medicationDto.Name;
+                medication.Recipe = medicationDto.Recipe;
+
+                _context.Medications.Update(medication);
+                _context.SaveChanges();
+            }
         }
 
-        public void DeleteMedication( int id )
+        public void DeleteMedication(GetMedicationDto medicationDto)
         {
-            Medication medication = _context.Medications.FirstOrDefault( o => o.MedicationId == id );
-            if ( medication != null )
+            Medication medication = GetMedicationById(medicationDto);
+            
+            if (medication != null)
             {
-                _context.Medications.Remove( medication );
+                _context.Medications.Remove(medication);
+                _context.SaveChanges();
             }
         }
     }

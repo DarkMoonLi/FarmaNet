@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface IMedicationWithManufacturerRepository
     {
         public List<MedicationWithManufacturer> GetMedicationWithManufacturers();
-        public MedicationWithManufacturer GetMedicationWithManufacturerById(int id);
+        public MedicationWithManufacturer GetMedicationWithManufacturerById(GetMedicationWithManufacturerDto medicationWithManufacturerDto);
         public void AddMedicationWithManufacturer(AddMedicationWithManufacturerDto medicationWithManufacturerDto);
         public void UpdateMedicationWithManufacturer(UpdateMedicationWithManufacturerDto medicationWithManufacturerDto);
-        public void RemoveMedicationWithManufacturer(int id);
+        public void RemoveMedicationWithManufacturer(GetMedicationWithManufacturerDto medicationWithManufacturerDto);
     }
 }

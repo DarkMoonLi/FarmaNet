@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface IPharmacyRepository
     {
         public List<Pharmacy> GetPharmacies();
-        public Pharmacy GetPharmacyById(int id);
+        public Pharmacy GetPharmacyById(GetPharmacyDto pharmacyDto);
         public void AddPharmacy(AddPharmacyDto pharmacyDto);
         public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto);
-        public void RemovePharmacy(int id);
+        public void RemovePharmacy(GetPharmacyDto pharmacyDto);
     }
 }

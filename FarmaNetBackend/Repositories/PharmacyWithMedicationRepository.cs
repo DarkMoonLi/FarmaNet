@@ -21,10 +21,10 @@ namespace FarmaNetBackend.Repositories
             return _context.PharmacyWithMedications.ToList();
         }
 
-        public PharmacyWithMedication GetPharmacyWithMedicationById(int id)
+        public PharmacyWithMedication GetPharmacyWithMedicationById(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
-            // Поиск ПК по нескольким столбцам сделать
-            return (PharmacyWithMedication)_context.PharmacyWithMedications.Where(p => p.PharmacyId == id);
+            return _context.PharmacyWithMedications.FirstOrDefault(p => p.PharmacyId == pharmacyWithMedicationDto.PharmacyId
+                                                                        && p.MedicationId == pharmacyWithMedicationDto.MedicationId);
         }
 
         public void AddPharmacyWithMedication(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)
@@ -32,18 +32,35 @@ namespace FarmaNetBackend.Repositories
             PharmacyWithMedication pharmacy = pharmacyWithMedicationDto.ConvertToPharmacyWithMedication();
 
             _context.PharmacyWithMedications.Add(pharmacy);
+            _context.SaveChanges();
         }
 
         public void UpdatePharmacyWithMedication(UpdatePharmacyWithMedicationDto pharmacyWithMedicationDto)
-        { }
-
-        public void RemovePharmacyWithMedication(int id)
         {
-            PharmacyWithMedication pharmacy = _context.PharmacyWithMedications.FirstOrDefault(p => p.PharmacyId == id);
+            PharmacyWithMedication pharmacyWithMedication = GetPharmacyWithMedicationById(new GetPharmacyWithMedicationDto
+                                                                                            {
+                                                                                            MedicationId = pharmacyWithMedicationDto.MedicationId,
+                                                                                            PharmacyId = pharmacyWithMedicationDto.PharmacyId
+                                                                                            });
+
+            if (pharmacyWithMedication != null)
+            {
+                pharmacyWithMedication.Price = pharmacyWithMedicationDto.Price;
+                pharmacyWithMedication.Quantity = pharmacyWithMedicationDto.Quantity;
+
+                _context.PharmacyWithMedications.Update(pharmacyWithMedication);
+                _context.SaveChanges();
+            }
+        }
+
+        public void RemovePharmacyWithMedication(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
+        {
+            PharmacyWithMedication pharmacy = GetPharmacyWithMedicationById(pharmacyWithMedicationDto);
 
             if (pharmacy != null)
             {
                 _context.PharmacyWithMedications.Remove(pharmacy);
+                _context.SaveChanges();
             }
         }
     }

@@ -18,16 +18,12 @@ namespace FarmaNetBackend.Repositories
 
         public List<Import> GetImports()
         {
-            List<Import> imports = _context.Imports.ToList();
-
-            return imports;
+            return _context.Imports.ToList();
         }
 
-        public Import GetImportById(int id)
+        public Import GetImportById(GetImportDto importDto)
         {
-            Import import = (Import)_context.Imports.Where(i => i.ImportId == id);
-
-            return import;
+            return _context.Imports.FirstOrDefault(i => i.ImportId == importDto.ImportId);
         }
 
         public void AddImport(AddImportDto importDto)
@@ -35,20 +31,34 @@ namespace FarmaNetBackend.Repositories
             Import import = importDto.ConvertToImport();
 
             _context.Imports.Add(import);
+            _context.SaveChanges();
         }
 
         public void UpdateImport(UpdateImportDto importDto)
         {
+            Import import = GetImportById(new GetImportDto{ImportId = importDto.ImportId});
 
+            if (import != null)
+            {
+                import.SupplierId = importDto.SupplierId;
+                import.SumPrice = importDto.SumPrice;
+                import.Number = importDto.Number;
+                import.Date = importDto.Date;
+                import.PharmacyId = importDto.PharmacyId;
+                
+                _context.Imports.Update(import);
+                _context.SaveChanges();
+            }
         }
 
-        public void RemoveImport(int id)
+        public void RemoveImport(GetImportDto importDto)
         {
-            Import import = _context.Imports.FirstOrDefault(i => i.ImportId == id);
+            Import import = GetImportById(importDto);
 
             if (import != null)
             {
                 _context.Imports.Remove(import);
+                _context.SaveChanges();
             }
         }
     }

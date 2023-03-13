@@ -21,9 +21,9 @@ namespace FarmaNetBackend.Repositories
             return _context.Positions.ToList();
         }
 
-        public Position GetPositionById(int id)
+        public Position GetPositionById(GetPositionDto positionDto)
         {
-            return (Position)_context.Positions.Where(p => p.PositionId == id);
+            return _context.Positions.FirstOrDefault(p => p.PositionId == positionDto.PositionId);
         }
 
         public void AddPosition(AddPositionDto positionDto)
@@ -31,18 +31,31 @@ namespace FarmaNetBackend.Repositories
             Position position = positionDto.ConvertToPosition();
 
             _context.Positions.Add(position);
+            _context.SaveChanges();
         }
 
         public void UpdatePosition(UpdatePositionDto positionDto)
-        { }
-
-        public void RemovePosition(int id)
         {
-            Position position = _context.Positions.FirstOrDefault(p => p.PositionId == id);
+            Position position = GetPositionById(new GetPositionDto { PositionId = positionDto.PositionId });
+
+            if (position != null)
+            {
+                position.Post = positionDto.Position;
+                position.SalaryInHours = positionDto.SalaryInHours;
+
+                _context.Positions.Update(position);
+                _context.SaveChanges();
+            }
+        }
+
+        public void RemovePosition(GetPositionDto positionDto)
+        {
+            Position position = GetPositionById(positionDto);
 
             if (position != null)
             {
                 _context.Remove(position);
+                _context.SaveChanges();
             }
         }
     }

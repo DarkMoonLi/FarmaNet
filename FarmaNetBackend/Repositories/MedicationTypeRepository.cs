@@ -18,16 +18,12 @@ namespace FarmaNetBackend.Repositories
 
         public List<MedicationType> GetMedicationTypes()
         {
-            List<MedicationType> types = _context.MedicationsTypes.ToList();
-
-            return types;
+            return _context.MedicationsTypes.ToList();
         }
 
-        public MedicationType GetMedicationTypeById(int id)
+        public MedicationType GetMedicationTypeById(GetMedicationTypeDto medicationTypeDto)
         {
-            MedicationType type = (MedicationType)_context.MedicationsTypes.Where(t => t.MedicationTypeId == id);
-
-            return type;
+            return _context.MedicationsTypes.FirstOrDefault(t => t.MedicationTypeId == medicationTypeDto.MedicationTypeId);
         }
 
         public void AddMedicationType(AddMedicationTypeDto medicationTypeDto)
@@ -35,19 +31,30 @@ namespace FarmaNetBackend.Repositories
             MedicationType type = medicationTypeDto.ConvertToMedicationType();
 
             _context.MedicationsTypes.Add(type);
+            _context.SaveChanges();
         }
 
         public void UpdateMedicationType(UpdateMedicationTypeDto medicationTypeDto)
         {
+            MedicationType medicationType = GetMedicationTypeById(new GetMedicationTypeDto { MedicationTypeId = medicationTypeDto.MedicationTypeId });
+
+            if (medicationType != null)
+            {
+                medicationType.Name = medicationTypeDto.Name;
+                
+                _context.MedicationsTypes.Update(medicationType);
+                _context.SaveChanges();
+            }
         }
 
-        public void RemoveMedicationType(int id)
+        public void RemoveMedicationType(GetMedicationTypeDto medicationTypeDto)
         {
-            MedicationType type = _context.MedicationsTypes.FirstOrDefault(t => t.MedicationTypeId == id);
+            MedicationType type = GetMedicationTypeById(medicationTypeDto);
             
             if (type != null)
             {
                 _context.MedicationsTypes.Remove(type);
+                _context.SaveChanges();
             }
         }
     }

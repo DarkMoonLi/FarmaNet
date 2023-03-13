@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface IWorkerInformationRepository
     {
         public List<WorkerInformation> GetWorkerInformations();
-        public WorkerInformation GetWorkerInformationById(int id);
+        public WorkerInformation GetWorkerInformationById(GetWorkerInformationDto workerInformationDto);
         public void AddWorkerInformation(AddWorkerInformationDto workerInformationDto);
         public void UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto);
-        public void RemoveWorkerInformation(int id);
+        public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto);
     }
 }
