@@ -35,6 +35,8 @@ namespace FarmaNetBackend.Repositories
             MedicationType type = medicationTypeDto.ConvertToMedicationType();
 
             _context.MedicationsTypes.Add(type);
+
+            _context.SaveChanges();
         }
 
         public void UpdateMedicationType(UpdateMedicationTypeDto medicationTypeDto)

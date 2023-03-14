@@ -27,9 +27,9 @@
             <h2 class="nav-section__title">Cортировка по тегам</h2>
             <!-- <p class="nav-section__description">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p> -->
             <div class="nav-section__tags">
-                <a class="tags" *ngFor="let categoty of Categories" href="#">
-                    <img src="../../assets/{{categoty.photo}}" alt="#">
-                    <h3 class="tags__title">{{categoty.name}}</h3>
+                <a class="tags" *ngFor="let drugType of drugTypes" href="#">
+                    <!-- <img src="../../assets/{{drugType.photo}}" alt="#"> -->
+                    <h3 class="tags__title">{{drugType.name}}</h3>
                     <!-- <p class="tags__text">{{categoty.text}}</p> -->
                 </a>
             </div>

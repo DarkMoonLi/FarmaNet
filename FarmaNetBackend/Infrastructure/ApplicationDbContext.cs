@@ -5,7 +5,7 @@ using FarmaNetBackend.Configurations;
 
 namespace FarmaNetBackend.Infrastructure
 {
-  public class ApplicationDbContext : DbContext, IUnitOfWork
+    public class ApplicationDbContext : DbContext, IUnitOfWork
     {
         public DbSet<Medication> Medications { get; set; }
         public DbSet<MedicationType> MedicationsTypes { get; set; }
@@ -23,10 +23,9 @@ namespace FarmaNetBackend.Infrastructure
         public DbSet<WorkingHours> WorkingHours { get; set; }
         public DbSet<WriteDowns> WriteDowns { get; set; }
 
-        public ApplicationDbContext( DbContextOptions<ApplicationDbContext> options ) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
         public void Commit()
@@ -34,7 +33,7 @@ namespace FarmaNetBackend.Infrastructure
             this.SaveChanges();
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder )
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ImportConfiguration());
             modelBuilder.ApplyConfiguration(new ImportWithMedicationConfiguration());
