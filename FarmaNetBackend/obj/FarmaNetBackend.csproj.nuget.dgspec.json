@@ -10,6 +10,7 @@
         "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "projectName": "FarmaNetBackend",
         "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\obj\\",
         "projectStyle": "PackageReference",
@@ -71,6 +72,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

@@ -20,6 +20,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AllDrugsComponent } from './pages/all-drugs/all-drugs.component';
 import { DrugComponent } from './components/drug/drug.component';
 import { DrugInfoComponent } from './components/drug-info/drug-info.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ImportsComponent } from './pages/imports/imports.component';
+// import { MatTableModule } from '@angular/material/table'  
+import { MatTableModule } from '@angular/material' 
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -38,6 +42,8 @@ import { DrugInfoComponent } from './components/drug-info/drug-info.component';
     AllDrugsComponent,
     DrugComponent,
     DrugInfoComponent,
+    ProfileComponent,
+    ImportsComponent,
     // LoginFormComponent
   ],
   imports: [
@@ -49,6 +55,7 @@ import { DrugInfoComponent } from './components/drug-info/drug-info.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    MatTableModule,
     // MatChipsModule,
     // MatInputModule,
     // MatListModule,

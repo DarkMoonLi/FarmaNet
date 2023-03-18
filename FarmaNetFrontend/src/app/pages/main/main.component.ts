@@ -82,6 +82,12 @@ add() {
     this.router.navigate(['/new_farma']);
   }
 
+  async onProcess(){
+    // await this.httpService.searchRecipe(this.title).then((data: RecipeDto[]) => {
+    //   this.data = data;
+    // });;
+  }
+
   // async onProcess(){
   //   await this.httpService.searchRecipe(this.title).then((data: RecipeDto[]) => {
   //     this.data = data;
