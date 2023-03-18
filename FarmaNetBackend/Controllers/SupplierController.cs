@@ -18,7 +18,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("suppliers")]
-        public IActionResult GetImports()
+        public IActionResult GetSuppliers()
         {
             List<SupplierDto> suppliers = _repository.GetSuppliers().ConvertAll(m => new SupplierDto(m));
             return Ok(suppliers);
@@ -26,7 +26,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("supplier")]
-        public IActionResult GetImport(GetSupplierDto supplierDto)
+        public IActionResult GetSupplier(GetSupplierDto supplierDto)
         {
             Supplier supplier = _repository.GetSupplierById(supplierDto);
 
@@ -40,7 +40,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("suppliers/add")]
-        public IActionResult AddImport(AddSupplierDto supplierDto)
+        public IActionResult AddSupplier(AddSupplierDto supplierDto)
         {
             _repository.AddSupplier(supplierDto);
             return Ok();
@@ -48,7 +48,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("suppliers/update")]
-        public IActionResult UpdateImport(UpdateSupplierDto supplierDto)
+        public IActionResult UpdateSupplier(UpdateSupplierDto supplierDto)
         {
             _repository.UpdateSupplier(supplierDto);
             return Ok();
@@ -56,7 +56,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("suppliers")]
-        public IActionResult RemoveImport(GetSupplierDto supplierDto)
+        public IActionResult RemoveSupplier(GetSupplierDto supplierDto)
         {
             _repository.RemoveSupplier(supplierDto);
             return Ok();

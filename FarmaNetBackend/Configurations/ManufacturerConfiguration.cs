@@ -13,7 +13,7 @@ namespace FarmaNetBackend.Configurations
 
             builder.Property(m => m.Name).IsRequired().HasMaxLength(Constants.nameLength);
 
-            builder.Property(m => m.Address).HasMaxLength(Constants.adressLength);
+            builder.Property(m => m.Address).HasMaxLength(Constants.addressLength);
         }
     }
 }

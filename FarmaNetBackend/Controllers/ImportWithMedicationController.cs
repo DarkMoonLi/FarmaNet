@@ -17,7 +17,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("importWithMedications")]
-        public IActionResult GetImports()
+        public IActionResult GetImportWithMedications()
         {
             List<ImportWithMedicationDto> importWithMedications = _repository.GetImportWithMedications().ConvertAll(m => new ImportWithMedicationDto(m));
             return Ok(importWithMedications);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("importWithMedication")]
-        public IActionResult GetImport(GetImportWithMedicationDto importWithMedicationDto)
+        public IActionResult GetImportWithMedication(GetImportWithMedicationDto importWithMedicationDto)
         {
             ImportWithMedication importWithMedication = _repository.GetImportWithMedicationById(importWithMedicationDto);
 
@@ -39,7 +39,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("importWithMedications/add")]
-        public IActionResult AddImport(AddImportWithMedicationDto importWithMedicationDto)
+        public IActionResult AddImportWithMedication(AddImportWithMedicationDto importWithMedicationDto)
         {
             _repository.AddImportWithMedication(importWithMedicationDto);
             return Ok();
@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("importWithMedications/update")]
-        public IActionResult UpdateImport(UpdateImportWithMedicationDto importWithMedicationDto)
+        public IActionResult UpdateImportWithMedication(UpdateImportWithMedicationDto importWithMedicationDto)
         {
             _repository.UpdateImportWithMedication(importWithMedicationDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("importWithMedications")]
-        public IActionResult RemoveImport(GetImportWithMedicationDto importWithMedicationDto)
+        public IActionResult RemoveImportWithMedication(GetImportWithMedicationDto importWithMedicationDto)
         {
             _repository.RemoveImportWithMedication(importWithMedicationDto);
             return Ok();
