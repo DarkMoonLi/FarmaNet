@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface IWorkerAccountRepository
     {
         public List<WorkerAccount> GetWorkerAccounts();
-        public WorkerAccount GetWorkerAccountById(int id);
+        public WorkerAccount GetWorkerAccountById(GetWorkerAccountDto workerAccountDto);
         public void AddWorkerAccount(AddWorkerAccountDto workerAccountDto);
         public void UpdateWorkerAccount(UpdateWorkerAccountDto workerAccountDto);
-        public void RemoveWorkerAccount(int id);
+        public void RemoveWorkerAccount(GetWorkerAccountDto workerAccountDto);
     }
 }

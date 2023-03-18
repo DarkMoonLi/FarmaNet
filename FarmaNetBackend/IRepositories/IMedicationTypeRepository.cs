@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface IMedicationTypeRepository
     {
         public List<MedicationType> GetMedicationTypes();
-        public MedicationType GetMedicationTypeById(int id);
+        public MedicationType GetMedicationTypeById(GetMedicationTypeDto medicationTypeDto);
         public void AddMedicationType(AddMedicationTypeDto medicationTypeDto);
         public void UpdateMedicationType(UpdateMedicationTypeDto medicationTypeDto);
-        public void RemoveMedicationType(int id);
+        public void RemoveMedicationType(GetMedicationTypeDto medicationTypeDto);
     }
 }

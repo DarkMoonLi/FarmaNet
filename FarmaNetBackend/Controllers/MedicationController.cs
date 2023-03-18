@@ -12,16 +12,14 @@ namespace FarmaNetBackend.Controllers
     public class MedicationController : Controller
     {
         private readonly IMedicationRepository _repository;
-        private readonly IUnitOfWork _unitOfWork;
-       
-        public MedicationController(IMedicationRepository repository, IUnitOfWork unitOfWork )
+        
+        public MedicationController(IMedicationRepository repository)
         {
             _repository = repository;
-            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
-        [Route( "/medications" )]
+        [Route("medications")]
         public IActionResult GetMedications()
         {
             List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
@@ -29,16 +27,18 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType( StatusCodes.Status200OK, Type = typeof( MedicationDto ) )]
-        [ProducesResponseType( StatusCodes.Status404NotFound )]
-        [Route( "{id:int}" )]
-        public IActionResult GetMedicationById( int id )
+        //[ProducesResponseType( StatusCodes.Status200OK, Type = typeof( MedicationDto ) )]
+        //[ProducesResponseType( StatusCodes.Status404NotFound )]
+        [Route("medication")]
+        public IActionResult GetMedicationById(GetMedicationDto medicationDto)
         {
-            Medication medication = _repository.GetMedicationById( id );
+            Medication medication = _repository.GetMedicationById(medicationDto);
+            
             if ( medication == null )
             {
                 return NotFound();
             }
+
             return Ok( medication.ConvertToMedicationDto() );
         }
 
@@ -47,16 +47,14 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddMedication(AddMedicationDto medicationDto)
         {
             _repository.AddMedication(medicationDto);
-            _unitOfWork.Commit();
             return Ok();
         }
 
         [HttpDelete]
-        [Route( "{id:int}" )]
-        public IActionResult DeleteMedication( int id )
+        [Route( "medications" )]
+        public IActionResult DeleteMedication(GetMedicationDto medicationDto)
         {
-            _repository.DeleteMedication( id );
-            _unitOfWork.Commit();
+            _repository.DeleteMedication(medicationDto);
             return Ok();
         }
     }

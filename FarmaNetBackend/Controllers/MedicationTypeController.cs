@@ -13,7 +13,7 @@ namespace FarmaNetBackend.Controllers
         private readonly IMedicationTypeRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public MedicationTypeController(IMedicationTypeRepository repository, IUnitOfWork unitOfWork)
+        public MedicationTypeController(IMedicationTypeRepository repository)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
@@ -38,6 +38,7 @@ namespace FarmaNetBackend.Controllers
             {
                 return NotFound();
             }
+
             return Ok(medicationType);
         }
 
@@ -46,6 +47,14 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddMedicationType(AddMedicationTypeDto medicationTypeDto)
         {
             _repository.AddMedicationType(medicationTypeDto);
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("medicationTypes/update")]
+        public IActionResult UpdateImport(UpdateMedicationTypeDto medicationTypeDto)
+        {
+            _repository.UpdateMedicationType(medicationTypeDto);
             return Ok();
         }
 

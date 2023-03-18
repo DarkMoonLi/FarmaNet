@@ -21,31 +21,43 @@ namespace FarmaNetBackend.Repositories
             return _context.MedicationWithManufacturers.ToList();
         }
 
-        public MedicationWithManufacturer GetMedicationWithManufacturerById(int id)
+        public MedicationWithManufacturer GetMedicationWithManufacturerById(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
-            // Поиск по ПК, если он состоит из нескольких столбцов.
-            return (MedicationWithManufacturer)_context.MedicationWithManufacturers.Where(t => t.MedicationId == id);
+            return _context.MedicationWithManufacturers.FirstOrDefault(t => t.MedicationId == medicationWithManufacturerDto.MedicationId
+                                                                            && t.ManufacturerId == medicationWithManufacturerDto.ManufacturerId);
         }
 
         public void AddMedicationWithManufacturer(AddMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
-            MedicationWithManufacturer type = medicationWithManufacturerDto.ConvertToMedicationWithManufacturer();
+            MedicationWithManufacturer medicationWithManufacturer = medicationWithManufacturerDto.ConvertToMedicationWithManufacturer();
 
-            _context.MedicationWithManufacturers.Add(type);
+            _context.MedicationWithManufacturers.Add(medicationWithManufacturer);
+            _context.SaveChanges();
         }
 
+        // Может и не нужно?
         public void UpdateMedicationWithManufacturer(UpdateMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
+            MedicationWithManufacturer medicationWithManufacturer = GetMedicationWithManufacturerById(new GetMedicationWithManufacturerDto
+                                                                                                        {
+                                                                                                        ManufacturerId = medicationWithManufacturerDto.ManufacturerId,
+                                                                                                        MedicationId = medicationWithManufacturerDto.MedicationId
+                                                                                                        });
+            if (medicationWithManufacturer != null)
+            {
+                _context.MedicationWithManufacturers.Update(medicationWithManufacturer);
+                _context.SaveChanges();
+            }
         }
 
-        public void RemoveMedicationWithManufacturer(int id)
+        public void RemoveMedicationWithManufacturer(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
-            // Поиск по ПК, если он состоит из нескольких столбцов.
-            MedicationWithManufacturer medication = _context.MedicationWithManufacturers.FirstOrDefault(t => t.MedicationId == id);
+            MedicationWithManufacturer medication = GetMedicationWithManufacturerById(medicationWithManufacturerDto);
 
             if (medication != null)
             {
                 _context.MedicationWithManufacturers.Remove(medication);
+                _context.SaveChanges();
             }
         }
     }

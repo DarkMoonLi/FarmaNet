@@ -18,16 +18,12 @@ namespace FarmaNetBackend.Repositories
 
         public List<Manufacturer> GetManufacturers()
         {
-            List<Manufacturer> manufacturers = _context.Manufacturers.ToList();
-
-            return manufacturers;
+            return _context.Manufacturers.ToList();
         }
 
-        public Manufacturer GetManufacturerById(int id)
+        public Manufacturer GetManufacturerById(GetManufacturerDto manufacturerDto)
         {
-            Manufacturer manufacturer = _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == id);
-
-            return manufacturer;
+            return _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == manufacturerDto.ManufacturerId);
         }
 
         public void AddManufacturer(AddManufacturerDto manufacturerDto)
@@ -40,7 +36,7 @@ namespace FarmaNetBackend.Repositories
 
         public void UpdateManufacturer(UpdateManufacturerDto manufacturerDto)
         {
-            Manufacturer manufacturer = _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == manufacturerDto.ManufacturerId);
+            Manufacturer manufacturer = GetManufacturerById(new GetManufacturerDto{ ManufacturerId = manufacturerDto.ManufacturerId });
 
             if (manufacturer != null)
             {
@@ -51,9 +47,9 @@ namespace FarmaNetBackend.Repositories
             }
         }
 
-        public void RemoveManufacturer( int id )
+        public void RemoveManufacturer(GetManufacturerDto manufacturerDto)
         {
-            Manufacturer manufacturer = _context.Manufacturers.FirstOrDefault(m => m.ManufacturerId == id);
+            Manufacturer manufacturer = GetManufacturerById(manufacturerDto);
 
             if (manufacturer != null)
             {

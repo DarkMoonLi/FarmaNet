@@ -7,9 +7,9 @@ namespace FarmaNetBackend.IRepositories
     public interface ISupplierRepository
     {
         public List<Supplier> GetSuppliers();
-        public Supplier GetSupplierById(int id);
+        public Supplier GetSupplierById(GetSupplierDto supplierDto);
         public void AddSupplier(AddSupplierDto supplierDto);
         public void UpdateSupplier(UpdateSupplierDto supplierDto);
-        public void RemoveSupplier(int id);
+        public void RemoveSupplier(GetSupplierDto supplierDto);
     }
 }

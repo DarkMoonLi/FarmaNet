@@ -2,7 +2,7 @@
 {
     public class UpdateSupplierDto
     {
-        public int IdSupplier { get; }
+        public int SupplierId { get; }
         public string Name { get; set; }
         public string Inn { get; set; }
     }
