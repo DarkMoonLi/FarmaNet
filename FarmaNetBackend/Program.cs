@@ -16,8 +16,23 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
+builder.Services.AddScoped<IImportRepository, ImportRepository>();
+builder.Services.AddScoped<IImportWithMedicationRepository, ImportWithMedicationRepository>();
 builder.Services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
+builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
+builder.Services.AddScoped<IMedicationTypeRepository, MedicationTypeRepository>();
+builder.Services.AddScoped<IMedicationWithManufacturerRepository, MedicationWithManufacturerRepository>();
+builder.Services.AddScoped<IPharmacyRepository, PharmacyRepository>();
+builder.Services.AddScoped<IPharmacyWithMedicationRepository, PharmacyWithMedicationRepository>();
+builder.Services.AddScoped<IPositionRepository, PositionRepository>();
+builder.Services.AddScoped<ISaleRepository, SaleRepository>();
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+builder.Services.AddScoped<IWorkerAccountRepository, WorkerAccountRepository>();
+builder.Services.AddScoped<IWorkerInformationRepository, WorkerInformationRepository>();
+builder.Services.AddScoped<IWorkinHoursRepository, WorkingHoursRepository>();
+builder.Services.AddScoped<IWriteDownsRepository, WriteDownsRepository>();
+
+builder.Services.AddScoped<IUnitOfWork, ApplicationDbContext>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -43,5 +58,10 @@ app.UseAuthorization();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+app.UseHttpsRedirection();
+app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 
 app.Run();
