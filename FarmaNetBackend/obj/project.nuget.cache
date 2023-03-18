@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "luLPfdrFfcZzGs3iHtX1nKLlgoMOhN2ftt/wVGXS2xbUYZbuInFeaK2LV80lKuaXphpnz/j7bdKIgI90MZYzGg==",
+  "dgSpecHash": "8NCAJrioBTB/HQ9R7A9cB9zop/1NZmG/0Jj8iqC90LaiZq40pZbg8cNwZtlDOOBiotEYKFDVwpb6eMq8KaQ9Zw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

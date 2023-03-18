@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj": {
+    "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "projectName": "FarmaNetBackend",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\FarmaNetBackend.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNetBackend\\FarmaNetBackend\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,10 +48,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -60,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
