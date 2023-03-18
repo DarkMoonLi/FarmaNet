@@ -11,12 +11,10 @@ namespace FarmaNetBackend.Controllers
     public class MedicationTypeController : Controller
     {
         private readonly IMedicationTypeRepository _repository;
-        private readonly IUnitOfWork _unitOfWork;
 
         public MedicationTypeController(IMedicationTypeRepository repository)
         {
             _repository = repository;
-            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
@@ -31,9 +29,9 @@ namespace FarmaNetBackend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MedicationTypeDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [Route("medicationType/{id:int}")]
-        public IActionResult GetMedicationTypeById(int id)
+        public IActionResult GetMedicationTypeById(GetMedicationTypeDto medicationTypeDto)
         {
-            MedicationType medicationType = _repository.GetMedicationTypeById(id);
+            MedicationType medicationType = _repository.GetMedicationTypeById(medicationTypeDto);
             if (medicationType == null)
             {
                 return NotFound();
@@ -60,10 +58,9 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("medicationType/delete/{id:int}")]
-        public IActionResult DeleteMedicationType(int id)
+        public IActionResult DeleteMedicationType(GetMedicationTypeDto medicationTypeDto)
         {
-            _repository.RemoveMedicationType(id);
-            _unitOfWork.Commit();
+            _repository.RemoveMedicationType(medicationTypeDto);
             return Ok();
         }
     }
