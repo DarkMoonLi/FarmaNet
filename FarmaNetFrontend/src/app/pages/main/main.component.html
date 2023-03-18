@@ -12,7 +12,7 @@
             <!-- <p class="search-container__addiction">Введите примерное название блюда, а мы по тегам найдем его</p> -->
             <div class="search-container__search">
                 <input type="text" class="search-container__input" [(ngModel)]="title" placeholder="Название Лекарства....">
-                <input type="submit" class="search-container__submit" value="Поиск">
+                <input type="submit" class="search-container__submit" (click)="onProcess()" value="Поиск">
             </div>
             <div class="search-container__nav">
                 <a *ngFor="let tag of Tags" class="nav-container__link" href="#"> {{tag.name}}</a>
