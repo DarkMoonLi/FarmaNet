@@ -17,7 +17,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("workerAccounts")]
-        public IActionResult GetImports()
+        public IActionResult GetWorkerAccounts()
         {
             List<WorkerAccountDto> workerAccounts = _repository.GetWorkerAccounts().ConvertAll(m => new WorkerAccountDto(m));
             return Ok(workerAccounts);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("workerAccount")]
-        public IActionResult GetImport(GetWorkerAccountDto workerAccountDto)
+        public IActionResult GetWorkerAccount(GetWorkerAccountDto workerAccountDto)
         {
             WorkerAccount workerAccount = _repository.GetWorkerAccountById(workerAccountDto);
 
@@ -39,7 +39,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workerAccounts/add")]
-        public IActionResult AddImport(AddWorkerAccountDto workerAccountDto)
+        public IActionResult AddWorkerAccount(AddWorkerAccountDto workerAccountDto)
         {
             _repository.AddWorkerAccount(workerAccountDto);
             return Ok();
@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workerAccounts/update")]
-        public IActionResult UpdateImport(UpdateWorkerAccountDto workerAccountDto)
+        public IActionResult UpdateWorkerAccount(UpdateWorkerAccountDto workerAccountDto)
         {
             _repository.UpdateWorkerAccount(workerAccountDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("workerAccounts")]
-        public IActionResult RemoveImport(GetWorkerAccountDto workerAccountDto)
+        public IActionResult RemoveWorkerAccount(GetWorkerAccountDto workerAccountDto)
         {
             _repository.RemoveWorkerAccount(workerAccountDto);
             return Ok();

@@ -40,7 +40,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workingHours/add")]
-        public IActionResult AddImport(AddWorkingHoursDto workingHoursDto)
+        public IActionResult AddWorkingHours(AddWorkingHoursDto workingHoursDto)
         {
             _repository.AddWorkingHours(workingHoursDto);
             return Ok();
@@ -56,7 +56,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("workingHours")]
-        public IActionResult RemoveImport(GetWorkingHoursDto workingHoursDto)
+        public IActionResult RemoveWorkingHours(GetWorkingHoursDto workingHoursDto)
         {
             _repository.RemoveWorkingHours(workingHoursDto);
             return Ok();

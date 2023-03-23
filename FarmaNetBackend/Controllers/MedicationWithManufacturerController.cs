@@ -17,7 +17,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("medicationWithManufacturers")]
-        public IActionResult GetImports()
+        public IActionResult GetMedicationWithManufacturers()
         {
             List<MedicationWithManufacturerDto> medicationWithManufacturers = _repository.GetMedicationWithManufacturers().ConvertAll(m => new MedicationWithManufacturerDto(m));
             return Ok(medicationWithManufacturers);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("medicationWithManufacturer")]
-        public IActionResult GetImport(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
+        public IActionResult GetMedicationWithManufacturer(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
             MedicationWithManufacturer medicationWithManufacturer = _repository.GetMedicationWithManufacturerById(medicationWithManufacturerDto);
 
@@ -39,7 +39,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("medicationWithManufacturers/add")]
-        public IActionResult AddImport(AddMedicationWithManufacturerDto medicationWithManufacturerDto)
+        public IActionResult AddMedicationWithManufacturer(AddMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
             _repository.AddMedicationWithManufacturer(medicationWithManufacturerDto);
             return Ok();
@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("medicationWithManufacturers/update")]
-        public IActionResult UpdateImport(UpdateMedicationWithManufacturerDto medicationWithManufacturerDto)
+        public IActionResult UpdateMedicationWithManufacturer(UpdateMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
             _repository.UpdateMedicationWithManufacturer(medicationWithManufacturerDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("medicationWithManufacturers")]
-        public IActionResult RemoveImport(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
+        public IActionResult RemoveMedicationWithManufacturer(GetMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
             _repository.RemoveMedicationWithManufacturer(medicationWithManufacturerDto);
             return Ok();

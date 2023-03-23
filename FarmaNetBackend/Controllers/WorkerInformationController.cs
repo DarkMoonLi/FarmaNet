@@ -16,8 +16,8 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("workerInforamtions")]
-        public IActionResult GetImports()
+        [Route("workerInformations")]
+        public IActionResult GetWorkerInformations()
         {
             List<WorkerInformationDto> workerInforamtions = _repository.GetWorkerInformations().ConvertAll(m => new WorkerInformationDto(m));
             return Ok(workerInforamtions);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("workerInformation")]
-        public IActionResult GetImport(GetWorkerInformationDto workerInformationDto)
+        public IActionResult GetWorkerInformation(GetWorkerInformationDto workerInformationDto)
         {
             WorkerInformation workerInformation = _repository.GetWorkerInformationById(workerInformationDto);
 
@@ -38,16 +38,16 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpPost]
-        [Route("workerInforamtions/add")]
-        public IActionResult AddImport(AddWorkerInformationDto workerInformationDto)
+        [Route("workerInformations/add")]
+        public IActionResult AddWorkerInformation(AddWorkerInformationDto workerInformationDto)
         {
             _repository.AddWorkerInformation(workerInformationDto);
             return Ok();
         }
 
         [HttpPost]
-        [Route("workerInforamtions/update")]
-        public IActionResult UpdateImport(UpdateWorkerInformationDto workerInformationDto)
+        [Route("workerInformations/update")]
+        public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
         {
             _repository.UpdateWorkerInformation(workerInformationDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("workerInformations")]
-        public IActionResult RemoveImport(GetWorkerInformationDto workerInformationDto)
+        public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
         {
             _repository.RemoveWorkerInformation(workerInformationDto);
             return Ok();

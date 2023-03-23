@@ -12,7 +12,11 @@ namespace FarmaNetBackend.Dto.PharmacyDto
 
         public PharmacyDto(Pharmacy pharmacy)
         {
-            
+            this.PharmacyId = pharmacy.PharmacyId;
+            this.Name = pharmacy.Name;
+            this.Adress = pharmacy.Address;
+            this.Email = pharmacy.Email;
+            this.Descripiton = pharmacy.Description;
         }
     }
 }

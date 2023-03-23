@@ -43,7 +43,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpPost]
-        [Route( "add" )]
+        [Route( "medications/add" )]
         public IActionResult AddMedication(AddMedicationDto medicationDto)
         {
             _repository.AddMedication(medicationDto);

@@ -17,7 +17,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("positions")]
-        public IActionResult GetImports()
+        public IActionResult GetPositions()
         {
             List<PositionDto> positions = _repository.GetPositions().ConvertAll(m => new PositionDto(m));
             return Ok(positions);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("position")]
-        public IActionResult GetImport(GetPositionDto positionDto)
+        public IActionResult GetPosition(GetPositionDto positionDto)
         {
             Position position = _repository.GetPositionById(positionDto);
 
@@ -39,7 +39,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("positions/add")]
-        public IActionResult AddImport(AddPositionDto positionDto)
+        public IActionResult AddPosition(AddPositionDto positionDto)
         {
             _repository.AddPosition(positionDto);
             return Ok();
@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("positions/update")]
-        public IActionResult UpdateImport(UpdatePositionDto positionDto)
+        public IActionResult UpdatePosition(UpdatePositionDto positionDto)
         {
             _repository.UpdatePosition(positionDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("positions")]
-        public IActionResult RemoveImport(GetPositionDto positionDto)
+        public IActionResult RemovePosition(GetPositionDto positionDto)
         {
             _repository.RemovePosition(positionDto);
             return Ok();

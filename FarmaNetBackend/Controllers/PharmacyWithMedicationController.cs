@@ -17,7 +17,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("pharmacyWithMedications")]
-        public IActionResult GetImports()
+        public IActionResult GetPharmacyWithMedications()
         {
             List<PharmacyWithMedicationDto> pharmacyWithMedications = _repository.GetPharmacyWithMedications().ConvertAll(m => new PharmacyWithMedicationDto(m));
             return Ok(pharmacyWithMedications);
@@ -25,7 +25,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpGet]
         [Route("pharmacyWithMedication")]
-        public IActionResult GetImport(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
+        public IActionResult GetPharmacyWithMedication(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             PharmacyWithMedication pharmacyWithMedication = _repository.GetPharmacyWithMedicationById(pharmacyWithMedicationDto);
 
@@ -39,7 +39,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("pharmacyWithMedications/add")]
-        public IActionResult AddImport(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)
+        public IActionResult AddPharmacyWithMedication(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             _repository.AddPharmacyWithMedication(pharmacyWithMedicationDto);
             return Ok();
@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("pharmacyWithMedications/update")]
-        public IActionResult UpdateImport(UpdatePharmacyWithMedicationDto pharmacyWithMedicationDto)
+        public IActionResult UpdatePharmacyWithMedication(UpdatePharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             _repository.UpdatePharmacyWithMedication(pharmacyWithMedicationDto);
             return Ok();
@@ -55,7 +55,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpDelete]
         [Route("pharmacyWithMedications")]
-        public IActionResult RemoveImport(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
+        public IActionResult RemovePharmacyWithMedication(GetPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             _repository.RemovePharmacyWithMedication(pharmacyWithMedicationDto);
             return Ok();
