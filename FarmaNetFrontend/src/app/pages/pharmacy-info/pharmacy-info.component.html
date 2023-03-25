@@ -1,0 +1,28 @@
+<div class="pharmacy-wraper">
+  <div class="pharmacy-info">
+    <img class="photo" 
+         src={Drug.image}
+         onerror="this.src = '../../../assets/no-product.jpg'" 
+         alt="Фото Препарата"/>
+    <div class="information">
+      <div class="text-wraper">
+        <span class="bold">Название: </span> Аптека №1
+      </div>
+      <div class="text-wraper">
+        <span class="bold">Адрес: </span> Йошкар-Ола, ул. Лобачевского, дом 16
+      </div>
+      <div class="text-wraper">
+        <span class="bold">Email: </span> aptekaFirst@mail.ru
+      </div>
+      <div class="text-wraper">
+        <span class="bold">Описание: </span> Огромное описание
+      </div>
+    </div>
+  </div>
+  <div class="drugs-info-wraper">
+    <div class="title">Имеющиеся препараты:</div>
+    <div class="drugs-wrapper">
+      <app-drug *ngFor="let Drug of data" [Drug] = "Drug"></app-drug>
+    </div>
+  </div>
+</div>

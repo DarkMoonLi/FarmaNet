@@ -46,63 +46,16 @@ export class MainComponent {
       .subscribe((data: any) => this.drugTypes = data);
   }
 
-  // сохранение данных
-  save() {
-    if (this.drugType.id == null) {
-        this.dataService.createProduct(this.drugType);
-    } else {
-        this.dataService.updateProduct(this.drugType)
-            .subscribe(data => this.loadProducts());
-    }
-    this.cancel();
-}
-editProduct(p: DrugTypeDto) {
-    this.drugType = p;
-}
-cancel() {
-    this.drugType = new DrugTypeDto();
-    this.tableMode = true;
-}
-delete(p: DrugTypeDto) {
-  if (p.id){
-    this.dataService.deleteProduct(p.id)
-        .subscribe(data => this.loadProducts());
-  }
-}
-add() {
-    this.cancel();
-    this.tableMode = false;
-}
-
-  openDialog() {
-    // this.dialog.open(DialogOptionsComponent);
+  authorization() {
+    this.router.navigate(["/authorization"]);
   } 
 
-  openNewRecipe(){
-    this.router.navigate(['/new_farma']);
-  }
-
   async onProcess(){
-    // await this.httpService.searchRecipe(this.title).then((data: RecipeDto[]) => {
-    //   this.data = data;
-    // });;
   }
-
-  // async onProcess(){
-  //   await this.httpService.searchRecipe(this.title).then((data: RecipeDto[]) => {
-  //     this.data = data;
-  //   });;
-  // }
-
-  // constructor() { }
-
-  // ngOnInit(): void {
-  // }
 
 }
 export interface Category {
   name: string;
-  // text: string;
   photo: string;
 }
 export interface Tag {

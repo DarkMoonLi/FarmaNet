@@ -60,6 +60,7 @@
     border-style: none;
     outline: none;
     font: 600 18px/22px "Montserrat";
+    cursor: pointer;
 }
 
 .search-container__nav
@@ -68,4 +69,26 @@
     justify-content: left; 
     width: 884px; 
     margin: 0 auto;
+}
+
+.download-button {
+    display: block;
+    height: 80px;
+    width: 360px;
+    background-color: #155263;
+    border-radius: 17px;
+    margin: 45px auto;
+    cursor: pointer;
+    border: #155263;
+}
+
+.download-button:hover {
+    background-color: #fff;
+    color: #155263;
+}
+
+.download-button-text {
+    font: 700 24px/30 'Montserrat';
+    line-height: 30px;
+    color: #fff;
 }

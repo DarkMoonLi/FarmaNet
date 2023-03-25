@@ -4,12 +4,10 @@
         <h1 class="main-container__title">Управляй аптекой удобно</h1>
         <div class="main-container__description">Решение для фармацевтических компаний и их покупателей.</div>
         <div class="main-container__functions">
-            <!-- <button class="function-button function-button_add-recipe" mat-button (click)="openNewRecipe()">Добавить рецепт</button>
-            <button class="function-button" mat-button (click)="openDialog()">Войти</button> -->
+            <button class="function-button" mat-button (click)="authorization()">Войти</button>
         </div>
         <div class="search-container">
             <h2 class="search-container__title">Поиск Препаратов</h2>
-            <!-- <p class="search-container__addiction">Введите примерное название блюда, а мы по тегам найдем его</p> -->
             <div class="search-container__search">
                 <input type="text" class="search-container__input" [(ngModel)]="title" placeholder="Название Лекарства....">
                 <input type="submit" class="search-container__submit" (click)="onProcess()" value="Поиск">
