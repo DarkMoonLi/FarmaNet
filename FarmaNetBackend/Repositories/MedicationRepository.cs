@@ -40,9 +40,13 @@ namespace FarmaNetBackend.Repositories
 
             if (medication != null)
             {
-                medication.MedicationTypeId = medicationDto.MedicationTypeId;
-                medication.Name = medicationDto.Name;
-                medication.Recipe = medicationDto.Recipe;
+                medication.MedicationTypeId  = medicationDto.MedicationTypeId;
+                medication.Name              = medicationDto.Name;
+                medication.IndicationsForUse = medicationDto.IndicationsForUse;
+                medication.Instruction       = medicationDto.Instruction;
+                medication.Composition       = medicationDto.Composition;
+                medication.Contraindications = medicationDto.Contraindications;
+                medication.MedicationImageId = medicationDto.MedicationImageId;
 
                 _context.Medications.Update(medication);
                 _context.SaveChanges();

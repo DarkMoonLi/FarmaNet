@@ -8,6 +8,7 @@
         public const int nameLength = 100;
         public const int emailLength = 100;
         public const int loginLength = 100;
+        public const int imagePathLength = 150;
         public const int addressLength = 250;
         public const int descriptionLength = 500;
 

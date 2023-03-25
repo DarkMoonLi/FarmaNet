@@ -40,10 +40,11 @@ namespace FarmaNetBackend.Repositories
 
             if (pharmacy != null)
             {
-                pharmacy.Address = pharmacyDto.Address;
-                pharmacy.Name = pharmacyDto.Name;
-                pharmacy.Email = pharmacyDto.Email;
-                pharmacy.Description = pharmacyDto.Description;
+                pharmacy.Address         = pharmacyDto.Address;
+                pharmacy.Name            = pharmacyDto.Name;
+                pharmacy.Email           = pharmacyDto.Email;
+                pharmacy.Description     = pharmacyDto.Description;
+                pharmacy.PharmacyImageId = pharmacyDto.PharmacyImageId;
 
                 _context.Pharmacies.Update(pharmacy);
                 _context.SaveChanges();
