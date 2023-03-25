@@ -2,6 +2,7 @@
 using FarmaNetBackend.Dto.SupplierDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -40,7 +41,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("suppliers/add")]
-        public IActionResult AddSupplier(AddSupplierDto supplierDto)
+        public IActionResult AddSupplier(AddSupplierDto supplierDto, IFormFile image)
         {
             _repository.AddSupplier(supplierDto);
             return Ok();

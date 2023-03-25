@@ -18,7 +18,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("medicationTypes")]
+        [Route("/medicationType/all")]
         public IActionResult GetMedicationTypes()
         {
             List<MedicationTypeDto> medicationTypes = _repository.GetMedicationTypes().ConvertAll(r => new MedicationTypeDto(r));
@@ -28,7 +28,7 @@ namespace FarmaNetBackend.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MedicationTypeDto))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Route("medicationType")]
+        [Route("medicationType/{id:int}")]
         public IActionResult GetMedicationTypeById(GetMedicationTypeDto medicationTypeDto)
         {
             MedicationType medicationType = _repository.GetMedicationTypeById(medicationTypeDto);
@@ -41,7 +41,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpPost]
-        [Route("medicationTypes/add")]
+        [Route("medicationType/add")]
         public IActionResult AddMedicationType(AddMedicationTypeDto medicationTypeDto)
         {
             _repository.AddMedicationType(medicationTypeDto);
@@ -57,7 +57,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpDelete]
-        [Route("medicationTypes")]
+        [Route("medicationType/delete/{id:int}")]
         public IActionResult DeleteMedicationType(GetMedicationTypeDto medicationTypeDto)
         {
             _repository.RemoveMedicationType(medicationTypeDto);
