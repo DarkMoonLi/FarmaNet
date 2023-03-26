@@ -27,8 +27,6 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        //[ProducesResponseType( StatusCodes.Status200OK, Type = typeof( MedicationDto ) )]
-        //[ProducesResponseType( StatusCodes.Status404NotFound )]
         [Route("medication")]
         public IActionResult GetMedicationById(GetMedicationDto medicationDto)
         {

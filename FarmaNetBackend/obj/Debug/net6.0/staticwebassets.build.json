@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wLyvEZXPmSlHAKIY5CgUFEDlxrVpfe4T2cFZgAKm2ho=",
+  "Hash": "OoHtpTDfpk14CMtYTCvKYpLUpauAO5Z5MkSvwlHEMlQ=",
   "Source": "FarmaNetBackend",
   "BasePath": "_content/FarmaNetBackend",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\closebutton.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\drug1.jpeg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+      "BasePath": "_content/FarmaNetBackend",
+      "RelativePath": "assets/drug1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\drug1.jpeg"
     },
     {
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fav.svg",
@@ -629,6 +646,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\meat.png"
     },
     {
+      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\no-product.jpg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+      "BasePath": "_content/FarmaNetBackend",
+      "RelativePath": "assets/no-product.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\no-product.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\pancake.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
@@ -833,12 +867,12 @@
       "OriginalItemSpec": "wwwroot\\Login.40ef3dcdca03db33.svg"
     },
     {
-      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f2abf64ce1925346.js",
+      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f87582cdfacfe6c1.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
       "BasePath": "_content/FarmaNetBackend",
-      "RelativePath": "main.f2abf64ce1925346.js",
+      "RelativePath": "main.f87582cdfacfe6c1.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -847,7 +881,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.f2abf64ce1925346.js"
+      "OriginalItemSpec": "wwwroot\\main.f87582cdfacfe6c1.js"
     },
     {
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",
@@ -901,12 +935,12 @@
       "OriginalItemSpec": "wwwroot\\runtime.397c3874548e84cd.js"
     },
     {
-      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.0a269146a3cd907b.css",
+      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.fe9f977a05534a3d.css",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
       "BasePath": "_content/FarmaNetBackend",
-      "RelativePath": "styles.0a269146a3cd907b.css",
+      "RelativePath": "styles.fe9f977a05534a3d.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -915,7 +949,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\styles.0a269146a3cd907b.css"
+      "OriginalItemSpec": "wwwroot\\styles.fe9f977a05534a3d.css"
     },
     {
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.01e586c2a1542425.svg",

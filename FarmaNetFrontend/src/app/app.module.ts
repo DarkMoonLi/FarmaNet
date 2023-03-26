@@ -4,26 +4,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatInputModule} from '@angular/material/input';
-import {MatListModule} from '@angular/material/list';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FarmaService} from './farma.service'
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AllDrugsComponent } from './pages/all-drugs/all-drugs.component';
 import { DrugComponent } from './components/drug/drug.component';
-import { DrugInfoComponent } from './components/drug-info/drug-info.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ImportsComponent } from './pages/imports/imports.component';
-// import { MatTableModule } from '@angular/material/table'  
-import { MatTableModule } from '@angular/material' 
+import { DrugInfoComponent } from './pages/drug-info/drug-info.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ImportsComponent } from './pages/imports/imports.component'; 
+import { MatTableModule } from '@angular/material';
+import { PharmacyComponent } from './components/pharmacy/pharmacy.component';
+import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
+import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component' 
+import { AuthorizationComponent } from './pages/authorization/authorization.component';
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -44,6 +42,10 @@ import { MatTableModule } from '@angular/material'
     DrugInfoComponent,
     ProfileComponent,
     ImportsComponent,
+    PharmacyComponent,
+    PharmaciesComponent,
+    PharmacyInfoComponent,
+    AuthorizationComponent,
     // LoginFormComponent
   ],
   imports: [

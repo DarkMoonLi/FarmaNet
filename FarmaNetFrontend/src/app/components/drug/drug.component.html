@@ -1,5 +1,7 @@
 <a class="drug" (click)="goToDrugId(Drug.id)">
-    <img class="photo" width="150" height="150" src="../../../assets/drug1.jpeg" alt="Фото Препарата">
-    <div>{{Drug.name}}</div>
-    <div>{{Drug.description}}</div>
+    <img class="photo" 
+    src={Drug.image}
+    onerror="this.src = '../../../assets/no-product.jpg'" 
+    alt="Фото Препарата">
+    <div class="name">{{Drug.name}}</div>
 </a>

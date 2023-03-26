@@ -18,17 +18,15 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  openMainPage() {
-    this.router.navigate(['/main']);
+  openMedicaments() {
+    this.router.navigate(['/drugs']);
   }
-  openRecipes() {
-    this.router.navigate(['/recipes']);
-  }
+
   openImports() {
     this.router.navigate(['/imports'])
   }
-  openProfilePage() {
-    this.router.navigate(['/profile']);
+  openPharmacies() {
+    this.router.navigate(['/pharmacies']);
   }
 
 }

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\assets\\closebutton.svg"
     },
     {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\drug1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\drug1.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fav.svg",
       "PackagePath": "staticwebassets\\assets\\fav.svg"
     },
@@ -161,6 +165,10 @@
       "PackagePath": "staticwebassets\\assets\\meat.png"
     },
     {
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\no-product.jpg",
+      "PackagePath": "staticwebassets\\assets\\no-product.jpg"
+    },
+    {
       "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\pancake.png",
       "PackagePath": "staticwebassets\\assets\\pancake.png"
     },
@@ -193,8 +201,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f2abf64ce1925346.js",
-      "PackagePath": "staticwebassets\\main.f2abf64ce1925346.js"
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f87582cdfacfe6c1.js",
+      "PackagePath": "staticwebassets\\main.f87582cdfacfe6c1.js"
     },
     {
       "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",
@@ -209,8 +217,8 @@
       "PackagePath": "staticwebassets\\runtime.397c3874548e84cd.js"
     },
     {
-      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.0a269146a3cd907b.css",
-      "PackagePath": "staticwebassets\\styles.0a269146a3cd907b.css"
+      "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.fe9f977a05534a3d.css",
+      "PackagePath": "staticwebassets\\styles.fe9f977a05534a3d.css"
     },
     {
       "Id": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.01e586c2a1542425.svg",
