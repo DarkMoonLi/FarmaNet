@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.PositionDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,11 @@ namespace FarmaNetBackend.Controllers
         [Route("positions/add")]
         public IActionResult AddPosition(AddPositionDto positionDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+
             _repository.AddPosition(positionDto);
             return Ok();
         }
@@ -49,6 +55,11 @@ namespace FarmaNetBackend.Controllers
         [Route("positions/update")]
         public IActionResult UpdatePosition(UpdatePositionDto positionDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+
             _repository.UpdatePosition(positionDto);
             return Ok();
         }

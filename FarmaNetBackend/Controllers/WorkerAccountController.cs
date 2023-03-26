@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.WorkerAccountDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,11 @@ namespace FarmaNetBackend.Controllers
         [Route("workerAccounts/add")]
         public IActionResult AddWorkerAccount(AddWorkerAccountDto workerAccountDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddWorkerAccount(workerAccountDto);
             return Ok();
         }
@@ -49,6 +55,11 @@ namespace FarmaNetBackend.Controllers
         [Route("workerAccounts/update")]
         public IActionResult UpdateWorkerAccount(UpdateWorkerAccountDto workerAccountDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateWorkerAccount(workerAccountDto);
             return Ok();
         }

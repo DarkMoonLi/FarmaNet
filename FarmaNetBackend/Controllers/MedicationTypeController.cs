@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.MedicationTypeDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -44,16 +45,30 @@ namespace FarmaNetBackend.Controllers
         [Route("medicationType/add")]
         public IActionResult AddMedicationType(AddMedicationTypeDto medicationTypeDto)
         {
-            _repository.AddMedicationType(medicationTypeDto);
-            return Ok();
+            NameValidator.Validate(medicationTypeDto.Name, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.AddMedicationType(medicationTypeDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpPost]
         [Route("medicationTypes/update")]
         public IActionResult UpdateImport(UpdateMedicationTypeDto medicationTypeDto)
         {
-            _repository.UpdateMedicationType(medicationTypeDto);
-            return Ok();
+            NameValidator.Validate(medicationTypeDto.Name, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.UpdateMedicationType(medicationTypeDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpDelete]

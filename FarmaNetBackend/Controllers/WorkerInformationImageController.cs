@@ -1,5 +1,6 @@
 ﻿using FarmaNetBackend.Infrastructure;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -52,6 +53,14 @@ namespace FarmaNetBackend.Controllers
             if (uploadedFile != null)
             {
                 string path = "/WorkerInfromations/" + uploadedFile.FileName;
+
+                NameValidator.Validate(uploadedFile.FileName, ModelState);
+                ImagePathValidator.Validate(path, ModelState);
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest( ModelStateError.Errors(ModelState) );
+                }
 
                 using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
                 {

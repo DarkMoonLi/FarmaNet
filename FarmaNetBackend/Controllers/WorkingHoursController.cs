@@ -2,6 +2,7 @@
 using FarmaNetBackend.Dto.WorkingHoursDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -42,6 +43,13 @@ namespace FarmaNetBackend.Controllers
         [Route("workingHours/add")]
         public IActionResult AddWorkingHours(AddWorkingHoursDto workingHoursDto)
         {
+            DescriptionValidator.Validate(workingHoursDto.Description, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddWorkingHours(workingHoursDto);
             return Ok();
         }
@@ -50,6 +58,13 @@ namespace FarmaNetBackend.Controllers
         [Route("workingHours/update")]
         public IActionResult UpdateWorkingHours(UpdateWorkingHoursDto workingHoursDto)
         {
+            DescriptionValidator.Validate(workingHoursDto.Description, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateWorkingHours(workingHoursDto);
             return Ok();
         }

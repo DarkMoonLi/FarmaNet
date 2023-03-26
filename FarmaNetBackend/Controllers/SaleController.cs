@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.SaleDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,13 @@ namespace FarmaNetBackend.Controllers
         [Route("sales/add")]
         public IActionResult AddSale(AddSaleDto saleDto)
         {
+            QuantityValidator.Validate(saleDto.Quantity, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddSale(saleDto);
             return Ok();
         }
@@ -49,6 +57,13 @@ namespace FarmaNetBackend.Controllers
         [Route("sales/update")]
         public IActionResult UpdateSale(UpdateSaleDto saleDto)
         {
+            QuantityValidator.Validate(saleDto.Quantity, ModelState);
+            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateSale(saleDto);
             return Ok();
         }

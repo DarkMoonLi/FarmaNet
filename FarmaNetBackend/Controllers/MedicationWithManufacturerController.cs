@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.MedicationWithManufacturerDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,11 @@ namespace FarmaNetBackend.Controllers
         [Route("medicationWithManufacturers/add")]
         public IActionResult AddMedicationWithManufacturer(AddMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+
             _repository.AddMedicationWithManufacturer(medicationWithManufacturerDto);
             return Ok();
         }
@@ -49,6 +55,11 @@ namespace FarmaNetBackend.Controllers
         [Route("medicationWithManufacturers/update")]
         public IActionResult UpdateMedicationWithManufacturer(UpdateMedicationWithManufacturerDto medicationWithManufacturerDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+            
             _repository.UpdateMedicationWithManufacturer(medicationWithManufacturerDto);
             return Ok();
         }
