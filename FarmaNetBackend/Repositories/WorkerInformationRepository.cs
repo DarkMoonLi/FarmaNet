@@ -40,14 +40,15 @@ namespace FarmaNetBackend.Repositories
 
             if (workerInformation != null)
             {
-                workerInformation.Experience = workerInformationDto.Experience;
-                workerInformation.Name = workerInformationDto.Name;
-                workerInformation.Email = workerInformationDto.Email;
-                workerInformation.BirthDate = workerInformationDto.DataBirth;
-                workerInformation.PassportNumber = workerInformation.PassportNumber;
-                workerInformation.PassportSeries = workerInformation.PassportSeries;
-                workerInformation.LastName = workerInformationDto.LastName;
-                workerInformation.PositionId = workerInformationDto.PositionId;
+                workerInformation.Experience               = workerInformationDto.Experience;
+                workerInformation.Name                     = workerInformationDto.Name;
+                workerInformation.Email                    = workerInformationDto.Email;
+                workerInformation.BirthDate                = workerInformationDto.DataBirth;
+                workerInformation.PassportNumber           = workerInformation.PassportNumber;
+                workerInformation.PassportSeries           = workerInformation.PassportSeries;
+                workerInformation.LastName                 = workerInformationDto.LastName;
+                workerInformation.PositionId               = workerInformationDto.PositionId;
+                workerInformation.WorkerInformationImageId = workerInformationDto.WorkerInfromationImageId;
                 
                 _context.WorkersInformation.Update(workerInformation);
                 _context.SaveChanges();

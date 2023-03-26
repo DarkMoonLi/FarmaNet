@@ -22,6 +22,10 @@ namespace FarmaNetBackend.Infrastructure
         public DbSet<WorkerAccount> WorkerAccounts { get; set; }
         public DbSet<WorkingHours> WorkingHours { get; set; }
         public DbSet<WriteDowns> WriteDowns { get; set; }
+        
+        public DbSet<MedicationImage> MedicationImages { get; set; }
+        public DbSet<PharmacyImage> PharmacyImages { get; set; }
+        public DbSet<WorkerInformationImage> WorkerInformationImages { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -50,6 +54,10 @@ namespace FarmaNetBackend.Infrastructure
             modelBuilder.ApplyConfiguration(new WorkerInformationConfiguration());
             modelBuilder.ApplyConfiguration(new WorkingHoursConfiguration());
             modelBuilder.ApplyConfiguration(new WriteDownsConfiguration());
+
+            modelBuilder.ApplyConfiguration(new MedicationImageConfiguration());
+            modelBuilder.ApplyConfiguration(new PharmacyImageConfiguration());
+            modelBuilder.ApplyConfiguration(new WorkerInformationImageConfiguration());
         }
     }
 }

@@ -16,8 +16,11 @@ namespace FarmaNetBackend.Models
         public short? PassportSeries { get; set; }
         public short? PassportNumber { get; set; }
         public float? Experience { get; set; }
-
+        public int WorkerInformationImageId { get; set; }
+       
+        public WorkerInformationImage WorkerInformationImage{ get; set; }
         public Position Position { get; set; }
+
         public virtual List<WorkerAccount> WorkerAccounts { get; set; }
 
 

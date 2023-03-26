@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.WorkerInformationDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,14 @@ namespace FarmaNetBackend.Controllers
         [Route("workerInformations/add")]
         public IActionResult AddWorkerInformation(AddWorkerInformationDto workerInformationDto)
         {
+            NameValidator.Validate(workerInformationDto.Name, ModelState);
+            EmailValidator.Validate(workerInformationDto.Email, ModelState);
+            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddWorkerInformation(workerInformationDto);
             return Ok();
         }
@@ -49,6 +58,14 @@ namespace FarmaNetBackend.Controllers
         [Route("workerInformations/update")]
         public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
         {
+            NameValidator.Validate(workerInformationDto.Name, ModelState);
+            EmailValidator.Validate(workerInformationDto.Email, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateWorkerInformation(workerInformationDto);
             return Ok();
         }

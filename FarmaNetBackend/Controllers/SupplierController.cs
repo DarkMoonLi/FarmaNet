@@ -2,6 +2,8 @@
 using FarmaNetBackend.Dto.SupplierDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -40,8 +42,15 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("suppliers/add")]
-        public IActionResult AddSupplier(AddSupplierDto supplierDto)
+        public IActionResult AddSupplier(AddSupplierDto supplierDto, IFormFile image)
         {
+            NameValidator.Validate(supplierDto.Name, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddSupplier(supplierDto);
             return Ok();
         }
@@ -50,6 +59,13 @@ namespace FarmaNetBackend.Controllers
         [Route("suppliers/update")]
         public IActionResult UpdateSupplier(UpdateSupplierDto supplierDto)
         {
+            NameValidator.Validate(supplierDto.Name, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateSupplier(supplierDto);
             return Ok();
         }

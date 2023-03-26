@@ -1,4 +1,5 @@
 ﻿using FarmaNetBackend.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 
 namespace FarmaNetBackend.Dto.WorkerInformationDto
@@ -14,18 +15,20 @@ namespace FarmaNetBackend.Dto.WorkerInformationDto
         public float? Experience { get; set; }
         public string Email { get; set; }
         public int PositionId { get; set; }
+        public int WorkerInformationImageId { get; set; }
 
         public WorkerInformationDto(WorkerInformation workerInformation)
         {
-            WorkerInformationId = workerInformation.WorkerInformationId;
-            Name = workerInformation.Name;
-            LastName = workerInformation.LastName;
-            DataBirth = workerInformation.BirthDate;
-            SeriesPassport = workerInformation.PassportSeries;
-            NumberPassport = workerInformation.PassportNumber;
-            Experience = workerInformation.Experience;
-            Email = workerInformation.Email;
-            PositionId = workerInformation.PositionId;
+            this.WorkerInformationId      = workerInformation.WorkerInformationId;
+            this.Name                     = workerInformation.Name;
+            this.LastName                 = workerInformation.LastName;
+            this.DataBirth                = workerInformation.BirthDate;
+            this.SeriesPassport           = workerInformation.PassportSeries;
+            this.NumberPassport           = workerInformation.PassportNumber;
+            this.Experience               = workerInformation.Experience;
+            this.Email                    = workerInformation.Email;
+            this.PositionId               = workerInformation.PositionId;
+            this.WorkerInformationImageId = workerInformation.WorkerInformationImageId;
         }
     }
 }

@@ -2,6 +2,7 @@
 using FarmaNetBackend.Dto.WriteDownsDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -42,6 +43,13 @@ namespace FarmaNetBackend.Controllers
         [Route("writeDowns/add")]
         public IActionResult AddWriteDowns(AddWriteDownsDto writeDownsDto)
         {
+            QuantityValidator.Validate(writeDownsDto.Quantity, ModelState);
+            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.AddWriteDown(writeDownsDto);
             return Ok();
         }
@@ -50,6 +58,13 @@ namespace FarmaNetBackend.Controllers
         [Route("writeDowns/update")]
         public IActionResult UpdateWriteDowns(UpdateWriteDownsDto writeDownsDto)
         {
+            QuantityValidator.Validate(writeDownsDto.Quantity, ModelState);
+            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
+
             _repository.UpdateWriteDown(writeDownsDto);
             return Ok();
         }

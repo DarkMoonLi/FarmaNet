@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Dto.ManufacturerDto;
+using FarmaNetBackend.Validation;
+using Microsoft.EntityFrameworkCore;
 
 namespace FarmaNetBackend.Controllers
 {
@@ -41,16 +43,32 @@ namespace FarmaNetBackend.Controllers
         [Route("manufacturers/add")]
         public IActionResult AddManufacturer(AddManufacturerDto manufacturerDto)
         {
-            _repository.AddManufacturer(manufacturerDto);
-            return Ok();
+            NameValidator.Validate(manufacturerDto.Name, ModelState);
+            AddressValidator.Validate(manufacturerDto.Address, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.AddManufacturer(manufacturerDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpPost]
         [Route("manufacturers/update")]
         public IActionResult UpdateManufacturer(UpdateManufacturerDto manufacturerDto)
         {
-            _repository.UpdateManufacturer(manufacturerDto);
-            return Ok();
+            NameValidator.Validate(manufacturerDto.Name, ModelState);
+            AddressValidator.Validate(manufacturerDto.Address, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.UpdateManufacturer(manufacturerDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpDelete]

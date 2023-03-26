@@ -1,6 +1,7 @@
 ﻿using FarmaNetBackend.Dto.ImportWithMedicationDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -41,6 +42,13 @@ namespace FarmaNetBackend.Controllers
         [Route("importWithMedications/add")]
         public IActionResult AddImportWithMedication(AddImportWithMedicationDto importWithMedicationDto)
         {
+            QuantityValidator.Validate(importWithMedicationDto.Quantity, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+
             _repository.AddImportWithMedication(importWithMedicationDto);
             return Ok();
         }
@@ -49,6 +57,13 @@ namespace FarmaNetBackend.Controllers
         [Route("importWithMedications/update")]
         public IActionResult UpdateImportWithMedication(UpdateImportWithMedicationDto importWithMedicationDto)
         {
+            QuantityValidator.Validate(importWithMedicationDto.Quantity, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
+
             _repository.UpdateImportWithMedication(importWithMedicationDto);
             return Ok();
         }

@@ -18,7 +18,7 @@ namespace FarmaNetBackend.Configurations
             builder.Property(w => w.PassportSeries).HasColumnType(Constants.columnTypeSmallInt);
             builder.Property(w => w.PassportNumber).HasColumnType(Constants.columnTypeInt);
             builder.Property(w => w.Experience).HasColumnType(Constants.columnTypeReal);
-
+            
             builder.HasOne(w => w.Position).WithMany(p => p.WorkerInformations).IsRequired().HasForeignKey(w => w.PositionId);
         }
     }

@@ -21,6 +21,16 @@ namespace FarmaNetBackend.Repositories
             return _context.Medications.ToList();
         }
 
+        public List<Medication> GetMedicationsByName(string name)
+        {
+            return _context.Medications.Where(m => m.Name == name).ToList();
+        }
+
+        public List<Medication> GetMedicationsByType(int medicationTypeId)
+        {
+            return _context.Medications.Where(m => m.MedicationTypeId == medicationTypeId).ToList();
+        }
+
         public Medication GetMedicationById(GetMedicationDto medicationDto)
         {
             return _context.Medications.FirstOrDefault(p => p.MedicationId == medicationDto.MedicationId);
@@ -40,9 +50,13 @@ namespace FarmaNetBackend.Repositories
 
             if (medication != null)
             {
-                medication.MedicationTypeId = medicationDto.MedicationTypeId;
-                medication.Name = medicationDto.Name;
-                medication.Recipe = medicationDto.Recipe;
+                medication.MedicationTypeId  = medicationDto.MedicationTypeId;
+                medication.Name              = medicationDto.Name;
+                medication.IndicationsForUse = medicationDto.IndicationsForUse;
+                medication.Instruction       = medicationDto.Instruction;
+                medication.Composition       = medicationDto.Composition;
+                medication.Contraindications = medicationDto.Contraindications;
+                medication.MedicationImageId = medicationDto.MedicationImageId;
 
                 _context.Medications.Update(medication);
                 _context.SaveChanges();

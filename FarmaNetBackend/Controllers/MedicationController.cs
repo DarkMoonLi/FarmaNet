@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Repositories;
+using FarmaNetBackend.Validation;
 
 namespace FarmaNetBackend.Controllers
 {
@@ -27,6 +28,36 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
+        [Route("medicationsByName/{name}")]
+        public IActionResult GetMedicationByName(string name)
+        {
+            List<Medication> medication = _repository.GetMedicationsByName(name);
+
+            if (medication == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(medication);
+        }
+
+        [HttpGet]
+        [Route("medicationsByType/{medicationTypeId}")]
+        public IActionResult GetMedicationByMedicationType(int medicationTypeId)
+        {
+            List<Medication> medication = _repository.GetMedicationsByType(medicationTypeId);
+
+            if (medication == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(medication);
+        }
+
+        [HttpGet]
+        //[ProducesResponseType( StatusCodes.Status200OK, Type = typeof( MedicationDto ) )]
+        //[ProducesResponseType( StatusCodes.Status404NotFound )]
         [Route("medication")]
         public IActionResult GetMedicationById(GetMedicationDto medicationDto)
         {
@@ -44,8 +75,38 @@ namespace FarmaNetBackend.Controllers
         [Route( "medications/add" )]
         public IActionResult AddMedication(AddMedicationDto medicationDto)
         {
-            _repository.AddMedication(medicationDto);
-            return Ok();
+            NameValidator.Validate(medicationDto.Name, ModelState);
+            DescriptionValidator.Validate(medicationDto.Contraindications, ModelState);
+            DescriptionValidator.Validate(medicationDto.Instruction, ModelState);
+            DescriptionValidator.Validate(medicationDto.Composition, ModelState);
+            DescriptionValidator.Validate(medicationDto.IndicationsForUse, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.AddMedication(medicationDto);
+                return Ok();
+            }
+            
+            return BadRequest( ModelStateError.Errors(ModelState) );
+        }
+        
+        [HttpPost]
+        [Route("medications/update")]
+        public IActionResult UpdateMedication(UpdateMedicationDto medicationDto)
+        {
+            NameValidator.Validate(medicationDto.Name, ModelState);
+            DescriptionValidator.Validate(medicationDto.Contraindications, ModelState);
+            DescriptionValidator.Validate(medicationDto.Instruction, ModelState);
+            DescriptionValidator.Validate(medicationDto.Composition, ModelState);
+            DescriptionValidator.Validate(medicationDto.IndicationsForUse, ModelState);
+
+            if (ModelState.IsValid)
+            {
+                _repository.UpdateMedication(medicationDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpDelete]

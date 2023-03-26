@@ -33,7 +33,7 @@ builder.Services.AddScoped<IWorkinHoursRepository, WorkingHoursRepository>();
 builder.Services.AddScoped<IWriteDownsRepository, WriteDownsRepository>();
 builder.Services.AddScoped<IAuthorizationRepository, AuthorizationRepository>();
 
-builder.Services.AddScoped<IUnitOfWork, ApplicationDbContext>();
+// builder.Services.AddScoped<IUnitOfWork, ApplicationDbContext>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

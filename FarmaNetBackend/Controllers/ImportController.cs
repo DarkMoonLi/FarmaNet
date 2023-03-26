@@ -2,6 +2,7 @@
 using FarmaNetBackend.Dto.ManufacturerDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
+using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -42,16 +43,26 @@ namespace FarmaNetBackend.Controllers
         [Route("imports/add")]
         public IActionResult AddImport(AddImportDto importDto)
         {
-            _repository.AddImport(importDto);
-            return Ok();
+            if (ModelState.IsValid)
+            {
+                _repository.AddImport(importDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpPost]
         [Route("imports/update")]
         public IActionResult UpdateImport(UpdateImportDto importDto)
         {
-            _repository.UpdateImport(importDto);
-            return Ok();
+            if (ModelState.IsValid)
+            {
+                _repository.UpdateImport(importDto);
+                return Ok();
+            }
+
+            return BadRequest( ModelStateError.Errors(ModelState) );
         }
 
         [HttpDelete]
