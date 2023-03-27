@@ -5,7 +5,7 @@ namespace FarmaNetBackend.Models
         public int ImportId { get; set; }
         public int MedicationId { get; set; }
         
-        public float? Price { get; set; }
+        public double? Price { get; set; }
         public int Quantity { get; set; }
 
         public Import Import { get; set; }

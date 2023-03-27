@@ -5,10 +5,12 @@ namespace FarmaNetBackend.Validation
 {
     public class DateValidator
     {
-        public void Validate(DateTime date, ModelStateDictionary ModelState)
+        public static void Validate(DateTime date, ModelStateDictionary ModelState)
         {
-            if (date >= new DateTime())
-            { }
+            if (date < new DateTime(1900, 1, 1) || date > new DateTime(2999, 12, 31, 23, 59, 59))
+            {
+                ModelState.AddModelError("Date", "Date is incorrect.");
+            }
         }
     }
 }
