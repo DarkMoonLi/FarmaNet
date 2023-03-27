@@ -43,6 +43,10 @@ namespace FarmaNetBackend.Controllers
         [Route("imports/add")]
         public IActionResult AddImport(AddImportDto importDto)
         {
+            NumberValidator.Validate(importDto.Number, ModelState);
+            SumValidator.Validate(importDto.SumPrice, ModelState);
+            DateValidator.Validate(importDto.Date, ModelState);
+
             if (ModelState.IsValid)
             {
                 _repository.AddImport(importDto);
@@ -56,6 +60,10 @@ namespace FarmaNetBackend.Controllers
         [Route("imports/update")]
         public IActionResult UpdateImport(UpdateImportDto importDto)
         {
+            NumberValidator.Validate(importDto.Number, ModelState);
+            SumValidator.Validate(importDto.SumPrice, ModelState);
+            DateValidator.Validate(importDto.Date, ModelState);
+
             if (ModelState.IsValid)
             {
                 _repository.UpdateImport(importDto);

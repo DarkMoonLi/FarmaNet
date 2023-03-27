@@ -45,6 +45,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddSupplier(AddSupplierDto supplierDto, IFormFile image)
         {
             NameValidator.Validate(supplierDto.Name, ModelState);
+            InnValidator.Validate(supplierDto.Inn, ModelState);
 
             if (!ModelState.IsValid)
             {
@@ -60,6 +61,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult UpdateSupplier(UpdateSupplierDto supplierDto)
         {
             NameValidator.Validate(supplierDto.Name, ModelState);
+            InnValidator.Validate(supplierDto.Inn, ModelState);
 
             if (!ModelState.IsValid)
             {
