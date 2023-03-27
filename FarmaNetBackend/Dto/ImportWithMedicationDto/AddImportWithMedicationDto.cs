@@ -7,7 +7,7 @@ namespace FarmaNetBackend.Dto.ImportWithMedicationDto
         public int ImportId { get; set; }
         public int MedicationId { get; set; }
         public int Quantity { get; set; }
-        public float? Price { get; set; }
+        public double? Price { get; set; }
 
         public ImportWithMedication ConvertToImportWithMedication()
         {
