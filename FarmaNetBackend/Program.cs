@@ -31,8 +31,7 @@ builder.Services.AddScoped<IWorkerAccountRepository, WorkerAccountRepository>();
 builder.Services.AddScoped<IWorkerInformationRepository, WorkerInformationRepository>();
 builder.Services.AddScoped<IWorkinHoursRepository, WorkingHoursRepository>();
 builder.Services.AddScoped<IWriteDownsRepository, WriteDownsRepository>();
-
-// builder.Services.AddScoped<IUnitOfWork, ApplicationDbContext>();
+builder.Services.AddScoped<IAuthorizationRepository, AuthorizationRepository>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
