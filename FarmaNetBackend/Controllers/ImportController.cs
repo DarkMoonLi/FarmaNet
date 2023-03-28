@@ -1,5 +1,6 @@
 ﻿using FarmaNetBackend.Dto.ImportDto;
 using FarmaNetBackend.Dto.ManufacturerDto;
+using FarmaNetBackend.Dto.SupplierDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
@@ -23,6 +24,24 @@ namespace FarmaNetBackend.Controllers
         {
             List<ImportDto> imports = _repository.GetImports().ConvertAll(m => new ImportDto(m));
             return Ok(imports);
+        }
+
+        [HttpGet]
+        [Route("importByPharmacy/{id}")]
+        public IActionResult GetImportsByPharmacy(int id)
+        {
+            List<ImportReportDto> imports = _repository.GetImportsByPharmacy(id);
+
+            return Ok(imports);
+        }
+
+        [HttpGet]
+        [Route("suppliersByPharmacy/{id}")]
+        public IActionResult GetSuppliersByPharmacy(int id)
+        {
+            List<SupplierDto> suppliers = _repository.GetSupplierByPharmacy(id);
+
+            return Ok(suppliers);
         }
 
         [HttpGet]

@@ -12,10 +12,10 @@ namespace FarmaNetBackend.Configurations
 
             builder.Property(m => m.Name).IsRequired().HasMaxLength(Constants.nameLength);
 
-            builder.Property(m => m.IndicationsForUse).HasMaxLength(Constants.descriptionLength);
-            builder.Property(m => m.Composition).HasMaxLength(Constants.descriptionLength);
-            builder.Property(m => m.Contraindications).HasMaxLength(Constants.descriptionLength);
-            builder.Property(m => m.Instruction).HasMaxLength(Constants.descriptionLength);
+            builder.Property(m => m.IndicationsForUse).HasMaxLength(Constants.descriptionLength).HasColumnType(Constants.columnTypeText);
+            builder.Property(m => m.Composition).HasMaxLength(Constants.descriptionLength).HasColumnType(Constants.columnTypeText);
+            builder.Property(m => m.Contraindications).HasMaxLength(Constants.descriptionLength).HasColumnType(Constants.columnTypeText);
+            builder.Property(m => m.Instruction).HasMaxLength(Constants.descriptionLength).HasColumnType(Constants.columnTypeText);
             
             builder.HasOne(m => m.MedicationType).WithMany(m => m.Medications).IsRequired().HasForeignKey(m => m.MedicationTypeId);
         }

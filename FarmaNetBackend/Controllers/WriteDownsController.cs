@@ -26,6 +26,15 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
+        [Route("writeDownsByPharmacy/{id}")]
+        public IActionResult GetWriteDownsByPharmacy(int id)
+        {
+            List<WriteDownsReportDto> writeDowns = _repository.GetWriteDownsByPharmacy(id);
+
+            return Ok(writeDowns);
+        }
+
+        [HttpGet]
         [Route("writeDown")]
         public IActionResult GetWriteDown(GetWriteDownsDto writeDownsDto)
         {

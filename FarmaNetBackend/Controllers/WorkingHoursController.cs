@@ -1,5 +1,4 @@
-﻿using FarmaNetBackend.Dto.ImportDto;
-using FarmaNetBackend.Dto.WorkingHoursDto;
+﻿using FarmaNetBackend.Dto.WorkingHoursDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
@@ -22,6 +21,14 @@ namespace FarmaNetBackend.Controllers
         public IActionResult GetWorkingHours()
         {
             List<WorkingHoursDto> workingHours = _repository.GetWorkingHours().ConvertAll(m => new WorkingHoursDto(m));
+            return Ok(workingHours);
+        }
+
+        [HttpGet]
+        [Route("workingHoursByWorker/{id}")]
+        public IActionResult GetWorkingHoursByWorker(int id)
+        {
+            List<WorkingHoursDto> workingHours = _repository.GetWorkingHoursByWorker(id).ConvertAll(m => new WorkingHoursDto(m));
             return Ok(workingHours);
         }
 

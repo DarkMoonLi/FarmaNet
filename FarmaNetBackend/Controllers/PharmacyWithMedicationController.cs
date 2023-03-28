@@ -38,6 +38,24 @@ namespace FarmaNetBackend.Controllers
             return Ok(pharmacyWithMedication);
         }
 
+        [HttpGet]
+        [Route("pharmacyWithMedicationsByPharmacy/{id}")]
+        public IActionResult GetMedicationsInPharmacy(int id)
+        {
+            List<PharmacyWithMedication> medications = _repository.GetMedicationsInPharmacy(id);  
+
+            return Ok(medications);
+        }
+
+        [HttpGet]
+        [Route("pharmacyWithMedicationByMedication/{id}")]
+        public IActionResult GetPharmaciesWithMedication(int id)
+        {
+            List<PharmacyWithMedication> medications = _repository.GetPharmaciesWithMedicaion(id);
+
+            return Ok(medications);
+        }
+
         [HttpPost]
         [Route("pharmacyWithMedications/add")]
         public IActionResult AddPharmacyWithMedication(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)

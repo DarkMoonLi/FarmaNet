@@ -7,6 +7,7 @@ namespace FarmaNetBackend.IRepositories
     public interface IWriteDownsRepository
     {
         public List<WriteDowns> GetWriteDowns();
+        public List<WriteDownsReportDto> GetWriteDownsByPharmacy(int id);
         public WriteDowns GetWriteDownById(GetWriteDownsDto writeDownsDto);
         public void AddWriteDown(AddWriteDownsDto writeDownsDto);
         public void UpdateWriteDown(UpdateWriteDownsDto writeDownsDto);
