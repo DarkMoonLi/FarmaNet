@@ -43,6 +43,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddSale(AddSaleDto saleDto)
         {
             QuantityValidator.Validate(saleDto.Quantity, ModelState);
+            SumValidator.Validate(saleDto.Price, ModelState);
 
             if (!ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult UpdateSale(UpdateSaleDto saleDto)
         {
             QuantityValidator.Validate(saleDto.Quantity, ModelState);
+            SumValidator.Validate(saleDto.Price, ModelState);
             
             if (!ModelState.IsValid)
             {

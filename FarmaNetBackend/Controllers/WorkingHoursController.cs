@@ -43,7 +43,9 @@ namespace FarmaNetBackend.Controllers
         [Route("workingHours/add")]
         public IActionResult AddWorkingHours(AddWorkingHoursDto workingHoursDto)
         {
+            DateValidator.Validate(workingHoursDto.Date, ModelState);
             DescriptionValidator.Validate(workingHoursDto.Description, ModelState);
+            TimeValidator.Validate(workingHoursDto.Time, ModelState);
 
             if (!ModelState.IsValid)
             {
@@ -58,7 +60,9 @@ namespace FarmaNetBackend.Controllers
         [Route("workingHours/update")]
         public IActionResult UpdateWorkingHours(UpdateWorkingHoursDto workingHoursDto)
         {
+            DateValidator.Validate(workingHoursDto.Date, ModelState);
             DescriptionValidator.Validate(workingHoursDto.Description, ModelState);
+            TimeValidator.Validate(workingHoursDto.Time, ModelState);
 
             if (!ModelState.IsValid)
             {

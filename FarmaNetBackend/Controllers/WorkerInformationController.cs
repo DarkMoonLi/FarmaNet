@@ -43,7 +43,12 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddWorkerInformation(AddWorkerInformationDto workerInformationDto)
         {
             NameValidator.Validate(workerInformationDto.Name, ModelState);
+            NameValidator.Validate(workerInformationDto.LastName, ModelState);
             EmailValidator.Validate(workerInformationDto.Email, ModelState);
+            PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
+            PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
+            ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
+            DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
             
             if (!ModelState.IsValid)
             {
@@ -59,7 +64,12 @@ namespace FarmaNetBackend.Controllers
         public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
         {
             NameValidator.Validate(workerInformationDto.Name, ModelState);
+            NameValidator.Validate(workerInformationDto.LastName, ModelState);
             EmailValidator.Validate(workerInformationDto.Email, ModelState);
+            PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
+            PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
+            ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
+            DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
 
             if (!ModelState.IsValid)
             {

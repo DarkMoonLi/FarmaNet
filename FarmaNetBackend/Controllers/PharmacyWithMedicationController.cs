@@ -43,6 +43,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult AddPharmacyWithMedication(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             QuantityValidator.Validate(pharmacyWithMedicationDto.Quantity, ModelState);
+            SumValidator.Validate(pharmacyWithMedicationDto.Price, ModelState);
 
             if (!ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace FarmaNetBackend.Controllers
         public IActionResult UpdatePharmacyWithMedication(UpdatePharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             QuantityValidator.Validate(pharmacyWithMedicationDto.Quantity, ModelState);
+            SumValidator.Validate(pharmacyWithMedicationDto.Price, ModelState);
 
             if (!ModelState.IsValid)
             {

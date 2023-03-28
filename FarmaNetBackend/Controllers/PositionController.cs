@@ -42,6 +42,9 @@ namespace FarmaNetBackend.Controllers
         [Route("positions/add")]
         public IActionResult AddPosition(AddPositionDto positionDto)
         {
+            PostValidator.Validate(positionDto.Position, ModelState);
+            SalaryInHoursValidator.Validate(positionDto.SalaryInHours, ModelState);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest( ModelStateError.Errors(ModelState) );
@@ -55,6 +58,9 @@ namespace FarmaNetBackend.Controllers
         [Route("positions/update")]
         public IActionResult UpdatePosition(UpdatePositionDto positionDto)
         {
+            PostValidator.Validate(positionDto.Position, ModelState);
+            SalaryInHoursValidator.Validate(positionDto.SalaryInHours, ModelState);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest( ModelStateError.Errors(ModelState) );

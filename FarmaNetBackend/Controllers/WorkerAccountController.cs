@@ -42,6 +42,9 @@ namespace FarmaNetBackend.Controllers
         [Route("workerAccounts/add")]
         public IActionResult AddWorkerAccount(AddWorkerAccountDto workerAccountDto)
         {
+            LoginValidator.Validate(workerAccountDto.Login, ModelState);
+            PasswordValidator.Validate(workerAccountDto.Password, ModelState);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelStateError.Errors(ModelState));
@@ -55,6 +58,9 @@ namespace FarmaNetBackend.Controllers
         [Route("workerAccounts/update")]
         public IActionResult UpdateWorkerAccount(UpdateWorkerAccountDto workerAccountDto)
         {
+            LoginValidator.Validate(workerAccountDto.Login, ModelState);
+            PasswordValidator.Validate(workerAccountDto.Password, ModelState);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelStateError.Errors(ModelState));
