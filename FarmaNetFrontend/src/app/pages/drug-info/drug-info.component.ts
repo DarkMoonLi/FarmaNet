@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class DrugInfoComponent implements OnInit {
 
+  panelOpenState = false;
+
   constructor(private router: Router) { 
   }
 

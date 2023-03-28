@@ -23,6 +23,9 @@ import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
 import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component' 
 import { AuthorizationComponent } from './pages/authorization/authorization.component';
 
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
 // import { HeaderComponent } from './components/header/header.component';
@@ -51,6 +54,8 @@ import { AuthorizationComponent } from './pages/authorization/authorization.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatTabsModule,
+    MatExpansionModule,
     // MatButtonModule,
     // MatDialogModule,
     NoopAnimationsModule,
@@ -58,6 +63,7 @@ import { AuthorizationComponent } from './pages/authorization/authorization.comp
     HttpClientModule,
     FormsModule,
     MatTableModule,
+    MatNativeDateModule,
     // MatChipsModule,
     // MatInputModule,
     // MatListModule,
