@@ -9,11 +9,10 @@ import { ImportDto } from '../../dto/import.dto';
   templateUrl: './imports.component.html',
 })
 export class ImportsComponent implements OnInit {
-  import!: ImportDto;
-  imports!: ImportDto[];                 // массив товаров
-  tableMode: boolean = true;           // табличный режим
+  public import: ImportDto = new ImportDto();
+  public imports!: ImportDto[];                 // массив товаров
 
-  constructor(private router: Router, private importService: ImportsService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private importService: ImportsService) { }
 
   id: string | null = localStorage.getItem('pharmacyId');
 
@@ -23,7 +22,7 @@ export class ImportsComponent implements OnInit {
   // получаем данные через сервис
   loadProducts() {
       this.importService.getImports(this.id)
-        .subscribe((data: any) => this.imports = data);
+        .subscribe((data: any) => {this.imports = data; console.log(this.imports);});
   }
 
 }

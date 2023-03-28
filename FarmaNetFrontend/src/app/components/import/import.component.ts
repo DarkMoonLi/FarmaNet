@@ -12,8 +12,6 @@ export class ImportComponent implements OnInit {
 
   @Input() 
   import!: ImportDto;
-  pharmacy!: PharmacyDto;
-  supplier!: SupplierDto;
 
   constructor() { }
 

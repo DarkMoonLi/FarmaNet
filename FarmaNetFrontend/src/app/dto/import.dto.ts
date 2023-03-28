@@ -1,9 +1,6 @@
 export class ImportDto {
         constructor(
-                public ImportId?: number,
-                public Number?: string,
-                public Date?: string,
+                public Date?: Date,
                 public SumPrice?: number,
-                public SupplierId?: number,
-                public PharmacyId?: number,) {}
+                public SupplierName?: string,) {}
 }

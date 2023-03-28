@@ -26,8 +26,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/drugs']);
   }
 
+  openMedicamentsPharmacy() {
+    this.router.navigate(['/drugs/' + this.pharmacyId]);
+  }
+
   openImports() {
-    this.router.navigate(['/imports/' + this.pharmacyId])
+    this.router.navigate(['/imports'])
   }
   openPharmacies() {
     this.router.navigate(['/pharmacies']);
