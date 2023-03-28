@@ -21,6 +21,30 @@ namespace FarmaNetBackend.Repositories
             return _context.WriteDowns.ToList();
         }
 
+        public List<WriteDownsReportDto> GetWriteDownsByPharmacy(int id)
+        {
+            List<WriteDowns> writeDowns = _context.WriteDowns.Where(w => w.PharmacyId.Equals(id)).ToList();
+
+            List<WriteDownsReportDto> writeDownsReportDto = new List<WriteDownsReportDto>();
+
+            foreach (WriteDowns writeDown in writeDowns)
+            {
+                Medication med = _context.Medications.FirstOrDefault(m => m.MedicationId.Equals(writeDown.MedicationId));
+
+                if (med != null)
+                {
+                    WriteDownsReportDto writeDownsDto = new WriteDownsReportDto();
+
+                    writeDownsDto.MedicationName = med.Name;
+                    writeDownsDto.Quantity = writeDown.Quantity;
+
+                    writeDownsReportDto.Add(writeDownsDto);
+                }
+            }
+
+            return writeDownsReportDto;
+        }
+
         public WriteDowns GetWriteDownById(GetWriteDownsDto writeDownsDto)
         {
             return _context.WriteDowns.FirstOrDefault(w => w.PharmacyId == writeDownsDto.PharmacyId && w.MedicationId == writeDownsDto.MedicationId);

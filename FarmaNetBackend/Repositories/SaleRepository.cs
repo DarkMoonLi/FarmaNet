@@ -21,6 +21,32 @@ namespace FarmaNetBackend.Repositories
             return _context.Sales.ToList();
         }
 
+        public List<SaleReportDto> GetSalesByPharmacy(int id)
+        {
+            List<Sale> sales = _context.Sales.Where(s => s.PharmacyId.Equals(id)).ToList();
+
+            List<SaleReportDto> saleReports = new List<SaleReportDto>();
+
+            foreach (Sale sale in sales)
+            {
+                SaleReportDto reportDto = new SaleReportDto();
+
+                Medication med = _context.Medications.FirstOrDefault(m => m.MedicationId == sale.MedicationId);
+
+                if (med != null)
+                {
+                    reportDto.MedicationName = med.Name;
+                    reportDto.Price = sale.Price;
+                    reportDto.Quantity = sale.Quantity;
+                    reportDto.Sum = reportDto.Price * reportDto.Quantity;
+
+                    saleReports.Add(reportDto);
+                }
+            }
+
+            return saleReports;
+        }
+
         public Sale GetSaleById(GetSaleDto saleDto)
         {
             return _context.Sales.FirstOrDefault(s => s.PharmacyId == saleDto.PharmacyId && s.MedicationId == saleDto.MedicationId);

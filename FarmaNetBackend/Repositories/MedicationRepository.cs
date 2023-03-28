@@ -23,7 +23,7 @@ namespace FarmaNetBackend.Repositories
 
         public List<Medication> GetMedicationsByName(string name)
         {
-            return _context.Medications.Where(m => m.Name == name).ToList();
+            return _context.Medications.Where(m => m.Name.Contains(name)).ToList();
         }
 
         public List<Medication> GetMedicationsByType(int medicationTypeId)
@@ -31,9 +31,18 @@ namespace FarmaNetBackend.Repositories
             return _context.Medications.Where(m => m.MedicationTypeId == medicationTypeId).ToList();
         }
 
-        public Medication GetMedicationById(GetMedicationDto medicationDto)
+        public Medication GetMedicationById(int id)
         {
-            return _context.Medications.FirstOrDefault(p => p.MedicationId == medicationDto.MedicationId);
+            return _context.Medications.FirstOrDefault(p => p.MedicationId == id);
+        }
+
+        public List<Medication> GetMedicationsByPharmacyId(int id)
+        {
+            return _context.Medications
+                           .Join(_context.PharmacyWithMedications, m => m.MedicationId, pm => pm.MedicationId, (m, pm) => new { Medicine = m, PharmacyMedicine = pm })
+                           .Where(mpm => mpm.PharmacyMedicine.PharmacyId == id)
+                           .Select(mpm => mpm.Medicine)
+                           .ToList();
         }
 
         public void AddMedication(AddMedicationDto medicationDto)
@@ -44,9 +53,9 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdateMedication(UpdateMedicationDto medicationDto)
+        /*public void UpdateMedication(int id)
         {
-            Medication medication = GetMedicationById(new GetMedicationDto{ MedicationId = medicationDto.MedicationId });
+            Medication medication = GetMedicationById(id);
 
             if (medication != null)
             {
@@ -61,11 +70,11 @@ namespace FarmaNetBackend.Repositories
                 _context.Medications.Update(medication);
                 _context.SaveChanges();
             }
-        }
+        }*/
 
-        public void DeleteMedication(GetMedicationDto medicationDto)
+        public void DeleteMedication(int id)
         {
-            Medication medication = GetMedicationById(medicationDto);
+            Medication medication = GetMedicationById(id);
             
             if (medication != null)
             {

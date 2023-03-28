@@ -21,6 +21,13 @@ namespace FarmaNetBackend.Repositories
             return _context.WorkingHours.ToList();
         }
 
+        public List<WorkingHours> GetWorkingHoursByWorker(int id)
+        {
+            List<WorkingHours> workingHours = _context.WorkingHours.Where(w => w.WorkerAccountId.Equals(id)).ToList();
+
+            return workingHours;
+        }
+
         public WorkingHours GetWorkingHoursById(GetWorkingHoursDto workingHoursDto)
         {
             return _context.WorkingHours.FirstOrDefault(w => w.WorkingHoursId == workingHoursDto.WorkingHoursId);

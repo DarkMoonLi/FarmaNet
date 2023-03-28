@@ -27,6 +27,20 @@ namespace FarmaNetBackend.Repositories
                                                                         && p.MedicationId == pharmacyWithMedicationDto.MedicationId);
         }
 
+        public List<PharmacyWithMedication> GetMedicationsInPharmacy(int id)
+        {
+            List<PharmacyWithMedication> medications = _context.PharmacyWithMedications.Where(p => p.PharmacyId.Equals(id)).ToList();
+
+            return medications;
+        }
+
+        public List<PharmacyWithMedication> GetPharmaciesWithMedicaion(int id)
+        {
+            List<PharmacyWithMedication> pharmacies = _context.PharmacyWithMedications.Where(p => p.MedicationId.Equals(id)).ToList();
+
+            return pharmacies;
+        }
+
         public void AddPharmacyWithMedication(AddPharmacyWithMedicationDto pharmacyWithMedicationDto)
         {
             PharmacyWithMedication pharmacy = pharmacyWithMedicationDto.ConvertToPharmacyWithMedication();
