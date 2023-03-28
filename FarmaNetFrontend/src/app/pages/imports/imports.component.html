@@ -1,118 +1,62 @@
 <div class="imports">
-  <!-- <div>Imports shpws</div> -->
-    <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table"> -->
-        <!-- <ng-container matColumnDef="ImportId">
-          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.ImportId}} </mat-cell>
-        </ng-container>
-      
-        <ng-container matColumnDef="Number">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.Number}} </mat-cell>
-        </ng-container>
-      
-        <ng-container matColumnDef="Date">
-          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
-        </ng-container>
-      
-        <ng-container matColumnDef="SumPrice">
-          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.SumPrice}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="SupplierId">
-          <mat-header-cell *matHeaderCellDef> Symbol1 </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.SupplierId}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="PharmacyId">
-          <mat-header-cell *matHeaderCellDef> Symbol2 </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.PharmacyId}} </mat-cell>
-        </ng-container>
-      
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
-      <!-- </table> -->
-      <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort >
-
-      
-        <ng-container matColumnDef="ImportId">
-          <mat-header-cell *matHeaderCellDef>ImportId</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.ImportId}} </mat-cell>
-        </ng-container>
-      
-      
-        <ng-container matColumnDef="Number">
-          <mat-header-cell *matHeaderCellDef>Number</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.Number}} </mat-cell>
-        </ng-container>
-      
-       
-        <ng-container matColumnDef="Date">
-          <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.Date}} </mat-cell>
-        </ng-container>
-      
-        <ng-container matColumnDef="SumPrice">
-          <mat-header-cell *matHeaderCellDef>SumPrice</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.SumPrice}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="SupplierId">
-          <mat-header-cell *matHeaderCellDef>SupplierId</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.SupplierId}} </mat-cell>
-        </ng-container>
-
-        <ng-container matColumnDef="PharmacyId">
-          <mat-header-cell *matHeaderCellDef>PharmacyId</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.PharmacyId}} </mat-cell>
-        </ng-container>
-
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['ImportId'];"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['Number'];"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['Date'];"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['SumPrice'];"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['SupplierId'];"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['PharmacyId'];"></mat-row>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
-      </table> -->
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="weight">
-          <th mat-header-cell *matHeaderCellDef> Weight </th>
-          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef> Symbol </th>
-          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-        </ng-container>
-      
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-      
-      
+<h1>Список накладных</h1>
+<input type="button" value="Добавить" class="btn btn-default" (click)="add()" />
+<table *ngIf="tableMode; else create" class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Номер</td>
+            <td>Дата</td>
+            <td>Стоимость</td>
+            <td>Поставщик</td>
+            <td>Аптека</td>
+            <td>Действие</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <ng-template [ngIf]="product?.ImportId != p.ImportId" class="table-castom">
+                <td>{{p?.ImportId}}</td>
+                <td>{{p?.Number}}</td>
+                <td>{{p?.Date}}</td>
+                <td>{{p?.SumPrice}}</td>
+                <td>{{p?.SupplierId}}</td>
+                <td>{{p?.PharmacyId}}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)="delete(p)">Удалить</button>
+                </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
+<ng-template #create>
+  <div class="form-group">
+      <label>Модель</label>
+      <input type="text" [(ngModel)]="product.Number" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Производитель</label>
+      <input type="text" [(ngModel)]="product.Date" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="product.SumPrice" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="product.SumPrice" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="product.SupplierId" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="product.PharmacyId" class="form-control" />
+  </div>
+  <div>
+      <input type="button" value="Сохранить" (click)="save()" class="btn btn-success" />
+      <input type="button" value="Отмена" (click)="cancel()" class="btn btn-warning" />
+  </div>
+</ng-template>
 </div>
