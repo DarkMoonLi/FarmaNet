@@ -52,3 +52,23 @@
 {
     margin-right: 40px;
 }
+
+.menu {
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    font: 500 18px/22px 'Montserrat';
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #9196a1;
+}
+
+.menu-item:hover {
+    font-weight: 700;
+}

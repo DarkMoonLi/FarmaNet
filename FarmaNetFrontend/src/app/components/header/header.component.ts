@@ -8,6 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+openWorkingHours() {
+throw new Error('Method not implemented.');
+}
+openWriteDowns() {
+throw new Error('Method not implemented.');
+}
+openSuppliers() {
+throw new Error('Method not implemented.');
+}
+openSales() {
+throw new Error('Method not implemented.');
+}
+openProfile() {
+throw new Error('Method not implemented.');
+}
 
   constructor(private router: Router) { }
 
