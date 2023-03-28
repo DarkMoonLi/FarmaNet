@@ -13,8 +13,8 @@ namespace FarmaNetBackend.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
-        public short? PassportSeries { get; set; }
-        public short? PassportNumber { get; set; }
+        public int? PassportSeries { get; set; }
+        public int? PassportNumber { get; set; }
         public float? Experience { get; set; }
         public int WorkerInformationImageId { get; set; }
        

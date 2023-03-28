@@ -4,6 +4,7 @@ using FarmaNetBackend.Dto.ImportDto;
 using FarmaNetBackend.Infrastructure;
 using System.Collections.Generic;
 using System.Linq;
+using FarmaNetBackend.Dto.SupplierDto;
 
 namespace FarmaNetBackend.Repositories
 {
@@ -19,6 +20,41 @@ namespace FarmaNetBackend.Repositories
         public List<Import> GetImports()
         {
             return _context.Imports.ToList();
+        }
+
+        public List<ImportReportDto> GetImportsByPharmacy(int id)
+        {
+            List<Import> imports = _context.Imports.Where(i => i.PharmacyId.Equals(id)).ToList();
+
+            List<ImportReportDto> result = new List<ImportReportDto>();
+
+            foreach (Import import in imports)
+            {
+                Supplier supplier = _context.Suppliers.FirstOrDefault(s => s.SupplierId.Equals(import.SupplierId));
+
+                if (supplier != null)
+                {
+                    ImportReportDto importReportDto = new ImportReportDto();
+
+                    importReportDto.SumPrice = import.SumPrice;
+                    importReportDto.SupplierName = supplier.Name;
+                    importReportDto.Date = import.Date;
+
+                    result.Add(importReportDto);
+                }
+            }
+
+            return result;
+        }
+
+    public List<SupplierDto> GetSupplierByPharmacy(int id)
+        {
+            List<SupplierDto> suppliers = (from i in _context.Imports
+                                          join s in _context.Suppliers on i.SupplierId equals s.SupplierId
+                                          where i.PharmacyId.Equals(id)
+                                          select s).Distinct().ToList().ConvertAll(s => new SupplierDto(s));
+
+            return suppliers;
         }
 
         public Import GetImportById(GetImportDto importDto)

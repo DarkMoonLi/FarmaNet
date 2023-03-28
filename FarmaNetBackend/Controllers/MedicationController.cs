@@ -80,7 +80,7 @@ namespace FarmaNetBackend.Controllers
                 return NotFound();
             }
 
-            return Ok( medication.ConvertToMedicationDto() );
+            return Ok( new MedicationDto(medication) );
         }
 
         [HttpPost]

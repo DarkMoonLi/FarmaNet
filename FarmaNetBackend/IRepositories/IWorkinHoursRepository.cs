@@ -7,6 +7,7 @@ namespace FarmaNetBackend.IRepositories
     public interface IWorkinHoursRepository
     {
         public List<WorkingHours> GetWorkingHours();
+        public List<WorkingHours> GetWorkingHoursByWorker(int id);
         public WorkingHours GetWorkingHoursById(GetWorkingHoursDto workingHoursDto);
         public void AddWorkingHours(AddWorkingHoursDto workingHoursDto);
         public void UpdateWorkingHours(UpdateWorkingHoursDto workingHoursDto);

@@ -42,14 +42,14 @@ namespace FarmaNetBackend.Controllers
         [Route("workerPharmacy/{id}")]
         public IActionResult GetPharmacyByWorkerInformationId(int id)
         {
-            Pharmacy workerInformation = _repository.GetPharmacyByWorkerInformationId(id);
+            Pharmacy pharmacy = _repository.GetPharmacyByWorkerInformationId(id);
 
-            if (workerInformation == null)
+            if (pharmacy == null)
             {
                 return NotFound();
             }
 
-            return Ok(workerInformation);
+            return Ok(pharmacy);
         }
 
         [HttpGet]

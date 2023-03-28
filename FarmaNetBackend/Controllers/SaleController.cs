@@ -25,6 +25,15 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
+        [Route("salesByPharmacy/{id}")]
+        public IActionResult GetSalesByPharmacy(int id)
+        {
+            List<SaleReportDto> sales = _repository.GetSalesByPharmacy(id);
+
+            return Ok(sales);
+        }
+
+        [HttpGet]
         [Route("sale")]
         public IActionResult GetSale(GetSaleDto saleDto)
         {

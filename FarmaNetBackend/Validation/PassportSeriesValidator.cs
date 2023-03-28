@@ -4,7 +4,7 @@ namespace FarmaNetBackend.Validation
 {
     public class PassportSeriesValidator
     {
-        public static void Validate(short? series, ModelStateDictionary ModelState)
+        public static void Validate(int? series, ModelStateDictionary ModelState)
         {
             if (series > 9999)
             {

@@ -23,7 +23,7 @@ namespace FarmaNetBackend.Repositories
 
         public List<Medication> GetMedicationsByName(string name)
         {
-            return _context.Medications.Where(m => m.Name == name).ToList();
+            return _context.Medications.Where(m => m.Name.Contains(name)).ToList();
         }
 
         public List<Medication> GetMedicationsByType(int medicationTypeId)

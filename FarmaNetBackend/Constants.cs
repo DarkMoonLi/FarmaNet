@@ -19,5 +19,7 @@
 
         public const string columnTypeDate = "date";
         public const string columnTypeTime = "time";
+
+        public const string columnTypeText = "text";
     }
 }
