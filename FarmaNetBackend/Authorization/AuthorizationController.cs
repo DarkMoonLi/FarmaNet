@@ -47,7 +47,9 @@ namespace FarmaNetBackend.Authorization
 
             var data = new {
                 token = GetAuthorizationToken(account),
-                workerInformationId = person.WorkerInformationId
+                workerInformationId = person.WorkerInformationId,
+                pharmacyId = person.PharmacyId,
+                accountId = person.WorkerAccountId,
             };
 
             return Results.Json(data);

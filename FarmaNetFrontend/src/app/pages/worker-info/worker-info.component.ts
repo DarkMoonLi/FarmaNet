@@ -14,12 +14,9 @@ export class WorkerInfoComponent implements OnInit {
 
   constructor(private workerInfoService: WorkerInfoService, private route: ActivatedRoute) { }
 
-  id!: string | null;
+  id: string | null = localStorage.getItem('workerInformationId');
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.id = params.get('id');
-    });
     this.loadProduct();
   }
 

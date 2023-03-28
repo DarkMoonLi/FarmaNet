@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nuLXWvm/iiUMlXlDsLGcVx4cuquRbyU9cmnXgR/oY0w=",
+  "Hash": "1OO0jfELYxqnX6XEW35lcfnPyx8ZjUU1nkqYxAIaybg=",
   "Source": "FarmaNetBackend",
   "BasePath": "_content/FarmaNetBackend",
   "Mode": "Default",
@@ -867,12 +867,12 @@
       "OriginalItemSpec": "wwwroot\\Login.40ef3dcdca03db33.svg"
     },
     {
-      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.919baddadc69d63f.js",
+      "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.4f45326440b43ed4.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
       "BasePath": "_content/FarmaNetBackend",
-      "RelativePath": "main.919baddadc69d63f.js",
+      "RelativePath": "main.4f45326440b43ed4.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -881,7 +881,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.919baddadc69d63f.js"
+      "OriginalItemSpec": "wwwroot\\main.4f45326440b43ed4.js"
     },
     {
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",

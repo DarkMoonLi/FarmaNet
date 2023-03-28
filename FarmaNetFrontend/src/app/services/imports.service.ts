@@ -11,6 +11,6 @@ export class ImportsService {
   }
  
   getImports(id: string | null) {
-      return this.http.get(this.url + 'imports/' + id);
+      return this.http.get(this.url + 'importsByPharmacy/' + id);
   }
 }

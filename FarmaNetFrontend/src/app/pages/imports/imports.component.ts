@@ -15,12 +15,9 @@ export class ImportsComponent implements OnInit {
 
   constructor(private router: Router, private importService: ImportsService, private route: ActivatedRoute) { }
 
-  id!: string | null;
+  id: string | null = localStorage.getItem('pharmacyId');
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.id = params.get('id');
-    });
       this.loadProducts(); 
   }
   // получаем данные через сервис

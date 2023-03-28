@@ -9,17 +9,18 @@ import { AuthorizationComponent } from './pages/authorization/authorization.comp
 import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
 import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component';
 import { WorkerInfoComponent } from './pages/worker-info/worker-info.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
     {path: '', component: MainComponent},
     {path: 'drugs', component: AllDrugsComponent},
     {path: 'drug/:id', component: DrugInfoComponent},
-    {path: 'profile', component: ProfileComponent},
-    {path: 'imports/:id', component: ImportsComponent},
+    {path: 'profile', canActivate: [AuthGuard], component: ProfileComponent},
+    {path: 'imports/:id', canActivate: [AuthGuard], component: ImportsComponent},
     {path: 'authorization', component: AuthorizationComponent},
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},
-    {path: 'worker/:id', component: WorkerInfoComponent},
+    {path: 'worker/:id', canActivate: [AuthGuard], component: WorkerInfoComponent},
   ];
 
 @NgModule({

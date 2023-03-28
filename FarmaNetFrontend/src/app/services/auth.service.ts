@@ -17,10 +17,17 @@ export class AuthService {
       if (resp != null) {
         this.router.navigate(['worker/', resp.value.workerInformationId ]);
         localStorage.setItem('token', resp.value.token);
-        localStorage.setItem('workerId', resp.value.workerId);
+        localStorage.setItem('workerInformationId', resp.value.workerInformationId);
         localStorage.setItem('pharmacyId', resp.value.pharmacyId);
+        localStorage.setItem('accountId', resp.value.accountId);
       }
     })
+  }
+
+  token: string = 'token'
+
+  getToken(): string | null {
+    return localStorage.getItem(this.token);
   }
 
   logout() {

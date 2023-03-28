@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +9,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
+  workerId: string | null = localStorage.getItem('workerInformationId');
+  pharmacyId: string | null = localStorage.getItem('pharmacyId');
+  accountId: string | null = localStorage.getItem('accountId');
 
   ngOnInit(): void {
   }
@@ -23,14 +27,14 @@ export class HeaderComponent implements OnInit {
   }
 
   openImports() {
-    this.router.navigate(['/imports'])
+    this.router.navigate(['/imports/' + this.pharmacyId])
   }
   openPharmacies() {
     this.router.navigate(['/pharmacies']);
   }
 
   openWorkingHours() {
-    this.router.navigate(['/workingHours']);
+    this.router.navigate(['/workingHours/']);
     }
     openWriteDowns() {
       this.router.navigate(['/writeDowns']);
@@ -42,7 +46,7 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/sales']);
     }
     openProfile() {
-      this.router.navigate(['/worker/:id']);
+      this.router.navigate(['/worker/' + this.workerId]);
     }
 
 }
