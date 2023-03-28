@@ -19,7 +19,7 @@ const routes: Routes = [
     {path: 'authorization', component: AuthorizationComponent},
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},
-    {path: 'worker', component: WorkerInfoComponent},
+    {path: 'worker/:id', component: WorkerInfoComponent},
   ];
 
 @NgModule({

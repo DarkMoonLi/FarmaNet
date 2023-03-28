@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DrugDto } from 'src/app/dto/drug.dto';
+import { PharmacyDto } from 'src/app/dto/pharmacy.dto';
+import { DrugService } from 'src/app/services/drug.service';
+import { PharmacyInfoService } from 'src/app/services/pharmacy-info.service';
 
 @Component({
   selector: 'app-pharmacy-info',
@@ -8,14 +12,28 @@ import { DrugDto } from 'src/app/dto/drug.dto';
 })
 export class PharmacyInfoComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private router: Router, private pharmacyInfoService: PharmacyInfoService, private route: ActivatedRoute, private drugService: DrugService) { 
   }
 
-  datas: DrugDto = {
-    name: 'Ибупрофен',
-    description: 'Описание...',
-  };
-  data = Array(6).fill(this.datas);
+  id!: string | null;
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+    this.loadProduct();
+  }
+  
+  //Запрашивать при открытии страницы эти рецепты
+
+  pharmacy: PharmacyDto = new PharmacyDto();
+  drugs!: DrugDto[];
+
+  loadProduct() {
+    this.pharmacyInfoService.getPharmacy(this.id)
+      .subscribe((data: any) => this.pharmacy = data);
+
+      this.drugService.getDrugsByPharmacyId(this.id)
+      .subscribe((data: any) => this.drugs = data);
+  }
 }

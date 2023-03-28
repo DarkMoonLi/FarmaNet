@@ -15,8 +15,8 @@ export class AuthService {
     let response = this.http.post(this.url + 'authorization', {login: login, password: password})
     response.subscribe((resp: any) => {
       if (resp != null) {
-        this.router.navigate(['worker']);
-        localStorage.setItem('auth_token', resp.value);
+        this.router.navigate(['worker/', resp.value.workerInformationId ]);
+        localStorage.setItem('auth_token', resp.value.token);
       }
     })
   }

@@ -8,21 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-openWorkingHours() {
-throw new Error('Method not implemented.');
-}
-openWriteDowns() {
-throw new Error('Method not implemented.');
-}
-openSuppliers() {
-throw new Error('Method not implemented.');
-}
-openSales() {
-throw new Error('Method not implemented.');
-}
-openProfile() {
-throw new Error('Method not implemented.');
-}
 
   constructor(private router: Router) { }
 
@@ -43,5 +28,21 @@ throw new Error('Method not implemented.');
   openPharmacies() {
     this.router.navigate(['/pharmacies']);
   }
+
+  openWorkingHours() {
+    this.router.navigate(['/workingHours']);
+    }
+    openWriteDowns() {
+      this.router.navigate(['/writeDowns']);
+    }
+    openSuppliers() {
+      this.router.navigate(['/suppliers']);
+    }
+    openSales() {
+      this.router.navigate(['/sales']);
+    }
+    openProfile() {
+      this.router.navigate(['/worker/:id']);
+    }
 
 }

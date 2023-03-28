@@ -1,15 +1,15 @@
 <div class="worker-wraper">
   <div class="image-wraper">
     <img class="image" 
-         src={Pharmacy.image}
+         src={{worker.image}}
          onerror="this.src = '../../../assets/no-product.jpg'" 
          alt="Фото Препарата"/>
     <div class="pharmacy">
       <div class="pharmacy-text">
-        Аптека №1
+        {{pharmacy.name}}
       </div>
       <div class="pharmacy-text">
-        Йошкар-Ола, ул. Первомайская, дом 46
+        {{pharmacy.address}}
       </div>
     </div>
   </div>
@@ -18,31 +18,31 @@
       Личная информация
     </div>
     <div class="subtitle">
-      <span class="bold">ФИО: </span> Прозоров Максим Андреевич
+      <span class="bold">ФИО: </span> {{worker.name}} {{worker.lastName}}
     </div>
     <div class="subtitle">
-      <span class="bold">Дата Рождения: </span> 21.01.2002
+      <span class="bold">Дата Рождения: </span> {{worker.dataBirth}}
     </div>
     <div class="subtitle">
-      <span class="bold">Опыт(в годах): </span> 3
+      <span class="bold">Опыт(в годах): </span> {{worker.experience}}
     </div>
     <div class="subtitle">
-      <span class="bold">Email: </span> masya.prozorov@mail.ru
+      <span class="bold">Email: </span> {{worker.email}}
     </div>
     <div class="subtitle">
-      <span class="bold">Позиция: </span> Фармацевт
+      <span class="bold">Позиция: </span> {{position.post}}
     </div>
     <div class="subtitle">
-      <span class="bold">Ставка: </span> 230 руб/ч
+      <span class="bold">Ставка: </span> {{position.salaryInHours}}
     </div>
     <div class="title">
       Паспортные данные
     </div>
     <div class="subtitle">
-      <span class="bold">Серия: </span> 8890
+      <span class="bold">Серия: </span> {{worker.seriesPassport}}
     </div>
     <div class="subtitle">
-      <span class="bold">Номер: </span> 435423
+      <span class="bold">Номер: </span> {{worker.numberPassport}}
     </div>
   </div>
 </div>

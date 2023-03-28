@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DrugDto } from 'src/app/dto/drug.dto';
+import { DrugService } from 'src/app/services/drug.service';
 
 @Component({
   selector: 'app-all-drugs',
@@ -9,26 +10,27 @@ import { DrugDto } from 'src/app/dto/drug.dto';
 export class AllDrugsComponent implements OnInit {
 
   public title!: string;
+  drug: DrugDto = new DrugDto();
+  drugs!: DrugDto[];
 
-  constructor() { }
+  constructor(private drugService: DrugService ) {}
 
   ngOnInit(): void {
+    this.loadProducts();
   }
 
+  loadProducts() {
+    this.drugService.getDrugs()
+      .subscribe((data: any) => this.drugs = data);
+  }
 
-  datas: DrugDto = {
-    name: 'Ибупрофен',
-    description: 'Описание...',
+  Tags: Tag[] = [
+    { name: 'Лекарства и Бады'},
+    { name: 'Активная косметика'},
+    { name: 'Красота и Здоровье'},
+    { name: 'Ортопедия'},
+  ]
 };
-data = Array(6).fill(this.datas);
-Tags: Tag[] = [
-  { name: 'Лекарства и Бады'},
-  { name: 'Активная косметика'},
-  { name: 'Красота и Здоровье'},
-  { name: 'Ортопедия'},
-]
-
-}
 
 export interface Tag {
   name: string;

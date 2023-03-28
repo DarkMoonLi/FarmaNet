@@ -13,14 +13,14 @@ export class ProfileComponent implements OnInit {
   // public data!: WorkerInfoDto;
 
   profile: WorkerInfoDto = {
-    Name: 'Ирина',
-    LastName: 'Коскина',
-    DataBirth: new Date(),
-    SeriesPassport: 1234,
-    NumberPassport: 123456,
-    Experience: 800,
-    Email: 'sciraraider@gmail.com',
-    PositionId: 0
+    name: 'Ирина',
+    lastName: 'Коскина',
+    dataBirth: new Date(),
+    seriesPassport: 1234,
+    numberPassport: 123456,
+    experience: 800,
+    email: 'sciraraider@gmail.com',
+    positionId: 0
   }
   public data: WorkerInfoDto = this.profile;
 

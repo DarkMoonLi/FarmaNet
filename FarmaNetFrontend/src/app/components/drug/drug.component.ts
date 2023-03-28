@@ -20,6 +20,6 @@ export class DrugComponent implements OnInit {
 
   goToDrugId(drugId: number| undefined)
   {
-    this.router.navigate(['/drug/:id', {id: drugId}])
+    this.router.navigate(['/drug/', drugId])
   }
 }

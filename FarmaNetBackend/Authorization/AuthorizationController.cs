@@ -41,13 +41,16 @@ namespace FarmaNetBackend.Authorization
         {
             WorkerAccount person = _repository.Login(account);
 
-            if (person == null) { 
-                return null; 
+            if (person == null) {
+                return null;
             }
 
-            var encodedJwt = GetAuthorizationToken(account);
+            var data = new {
+                token = GetAuthorizationToken(account),
+                workerInformationId = person.WorkerInformationId
+            };
 
-            return Results.Json(encodedJwt);
+            return Results.Json(data);
         }
     }
 }

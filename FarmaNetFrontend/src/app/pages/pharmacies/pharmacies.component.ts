@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PharmacyDto } from 'src/app/dto/pharmacy.dto';
+import { DrugService } from 'src/app/services/drug.service';
+import { PharmaciesService } from 'src/app/services/pharmacies.service';
 
 @Component({
   selector: 'app-pharmacies',
@@ -9,19 +11,17 @@ import { PharmacyDto } from 'src/app/dto/pharmacy.dto';
 export class PharmaciesComponent implements OnInit {
 
   public title!: string;
+  public pharmacies!: PharmacyDto[];
 
-  constructor() { }
+  constructor(private pharmaciesService: PharmaciesService) { }
 
   ngOnInit(): void {
+    this.loadProducts();
   }
 
-  datas: PharmacyDto = {
-    name: 'Аптека №1',
-    address: 'Йошкар-Ола, ул. Лобачевского, дом 16',
-    image: '/',
-    email: 'aptekaFirst@mail.ru',
-    description: 'Cool pharmacy'
-  };
-  data = Array(10).fill(this.datas);
+  loadProducts() {
+    this.pharmaciesService.getDrugs()
+      .subscribe((data: any) => this.pharmacies = data);
+  }
 
 }

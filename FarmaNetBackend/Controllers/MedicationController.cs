@@ -20,7 +20,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("medications")]
+        [Route("drugs")]
         public IActionResult GetMedications()
         {
             List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
@@ -56,12 +56,24 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        //[ProducesResponseType( StatusCodes.Status200OK, Type = typeof( MedicationDto ) )]
-        //[ProducesResponseType( StatusCodes.Status404NotFound )]
-        [Route("medication")]
-        public IActionResult GetMedicationById(GetMedicationDto medicationDto)
+        [Route("drugs/{id}")]
+        public IActionResult GetMedicationByPharmacyId(int id)
         {
-            Medication medication = _repository.GetMedicationById(medicationDto);
+            List<Medication> medication = _repository.GetMedicationsByPharmacyId(id);
+
+            if (medication == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(medication);
+        }
+
+        [HttpGet]
+        [Route("drug/{id}")]
+        public IActionResult GetMedicationById(int id)
+        {
+            Medication medication = _repository.GetMedicationById(id);
             
             if ( medication == null )
             {
@@ -72,7 +84,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpPost]
-        [Route( "medications/add" )]
+        [Route( "drugs/add" )]
         public IActionResult AddMedication(AddMedicationDto medicationDto)
         {
             NameValidator.Validate(medicationDto.Name, ModelState);
@@ -91,8 +103,8 @@ namespace FarmaNetBackend.Controllers
         }
         
         [HttpPost]
-        [Route("medications/update")]
-        public IActionResult UpdateMedication(UpdateMedicationDto medicationDto)
+        [Route("drugs/update")]
+        /*public IActionResult UpdateMedication(UpdateMedicationDto medicationDto)
         {
             NameValidator.Validate(medicationDto.Name, ModelState);
             DescriptionValidator.Validate(medicationDto.Contraindications, ModelState);
@@ -107,13 +119,13 @@ namespace FarmaNetBackend.Controllers
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );
-        }
+        }*/
 
         [HttpDelete]
-        [Route( "medications" )]
-        public IActionResult DeleteMedication(GetMedicationDto medicationDto)
+        [Route( "drugs/delete" )]
+        public IActionResult DeleteMedication(int id)
         {
-            _repository.DeleteMedication(medicationDto);
+            _repository.DeleteMedication(id);
             return Ok();
         }
     }

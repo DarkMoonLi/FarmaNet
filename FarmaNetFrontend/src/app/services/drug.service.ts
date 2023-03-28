@@ -7,19 +7,16 @@ import { DrugDto } from '../dto/drug.dto';
   providedIn: 'root'
 })
 export class DrugService {
-  public _http: HttpClient;
-
-  constructor(public http: HttpClient) { 
-    this._http = http;
+  private url = "https://localhost:44362/";
+ 
+  constructor(private http: HttpClient) {
   }
-  async getData(): Promise<any> {
-    return this._http.get<DrugDto[]>('/medications').toPromise();
+ 
+  getDrugs() {
+      return this.http.get(this.url + 'drugs');
   }
-  // async saveProfile(): Promise<any> {
-  //   return this._http.get
-  // }
 
-
-
-  // constructor() { }
+  getDrugsByPharmacyId(id: string | null) {
+    return this.http.get(this.url + 'drugs/' + id);
+}
 }

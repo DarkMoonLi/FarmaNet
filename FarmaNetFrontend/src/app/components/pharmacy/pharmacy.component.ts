@@ -18,7 +18,7 @@ export class PharmacyComponent implements OnInit {
 
   goToPharmacyId(pharmacyId: number| undefined)
   {
-    this.router.navigate(['/pharmacy/:id', {id: pharmacyId}])
+    this.router.navigate(['/pharmacy/', pharmacyId])
   }
 
 }

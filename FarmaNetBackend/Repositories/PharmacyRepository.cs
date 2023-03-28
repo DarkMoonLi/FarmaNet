@@ -21,9 +21,9 @@ namespace FarmaNetBackend.Repositories
             return _context.Pharmacies.ToList();
         }
 
-        public Pharmacy GetPharmacyById(GetPharmacyDto pharmacyDto)
+        public Pharmacy GetPharmacyById(int id)
         {
-            return _context.Pharmacies.FirstOrDefault(p => p.PharmacyId == pharmacyDto.PharmacyId);
+            return _context.Pharmacies.FirstOrDefault(p => p.PharmacyId == id);
         }
 
         public void AddPharmacy(AddPharmacyDto pharmacyDto)
@@ -34,7 +34,7 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
+        /*public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
         {
             Pharmacy pharmacy = GetPharmacyById(new GetPharmacyDto { PharmacyId = pharmacyDto.PharmacyId });
 
@@ -49,9 +49,9 @@ namespace FarmaNetBackend.Repositories
                 _context.Pharmacies.Update(pharmacy);
                 _context.SaveChanges();
             }
-        }
+        }*/
 
-        public void RemovePharmacy(GetPharmacyDto pharmacyDto)
+        /*public void RemovePharmacy(GetPharmacyDto pharmacyDto)
         {
             Pharmacy pharmacy = GetPharmacyById(pharmacyDto);
 
@@ -60,6 +60,6 @@ namespace FarmaNetBackend.Repositories
                 _context.Pharmacies.Remove(pharmacy);
                 _context.SaveChanges();
             }
-        }
+        }*/
     }
 }

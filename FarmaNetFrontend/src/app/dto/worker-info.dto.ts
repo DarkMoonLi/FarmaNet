@@ -1,12 +1,14 @@
-export interface WorkerInfoDto {
-    id?: number;
-    Name: string;
-    LastName: string;
-    DataBirth: Date;
-    SeriesPassport: number;
-    NumberPassport: number;
-    Experience: number;
-    Email: string;
-    PositionId: number;
-    
+export class WorkerInfoDto {
+    constructor(
+    public workerInformationId?: number,
+    public name?: string,
+    public lastName?: string,
+    public dataBirth?: Date,
+    public seriesPassport?: number,
+    public numberPassport?: number,
+    public experience?: number,
+    public email?: string,
+    public positionId?: number,
+    public image?: string,
+    ){}
 }

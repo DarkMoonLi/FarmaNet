@@ -25,10 +25,38 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("workerInformation")]
-        public IActionResult GetWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        [Route("workerInformation/{id}")]
+        public IActionResult GetWorkerInformation(int id)
         {
-            WorkerInformation workerInformation = _repository.GetWorkerInformationById(workerInformationDto);
+            WorkerInformation workerInformation = _repository.GetWorkerInformationById(id);
+
+            if (workerInformation == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(workerInformation);
+        }
+
+        [HttpGet]
+        [Route("workerPharmacy/{id}")]
+        public IActionResult GetPharmacyByWorkerInformationId(int id)
+        {
+            Pharmacy workerInformation = _repository.GetPharmacyByWorkerInformationId(id);
+
+            if (workerInformation == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(workerInformation);
+        }
+
+        [HttpGet]
+        [Route("workerPosition/{id}")]
+        public IActionResult GetPositionByWorkerInformationId(int id)
+        {
+            Position workerInformation = _repository.GetPositionByWorkerInformationId(id);
 
             if (workerInformation == null)
             {
@@ -59,33 +87,33 @@ namespace FarmaNetBackend.Controllers
             return Ok();
         }
 
-        [HttpPost]
-        [Route("workerInformations/update")]
-        public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
-        {
-            NameValidator.Validate(workerInformationDto.Name, ModelState);
-            NameValidator.Validate(workerInformationDto.LastName, ModelState);
-            EmailValidator.Validate(workerInformationDto.Email, ModelState);
-            PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
-            PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
-            ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
-            DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
+        //[HttpPost]
+        //[Route("workerInformations/update")]
+        //public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
+        //{
+        //    NameValidator.Validate(workerInformationDto.Name, ModelState);
+        //    NameValidator.Validate(workerInformationDto.LastName, ModelState);
+        //    EmailValidator.Validate(workerInformationDto.Email, ModelState);
+        //    PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
+        //    PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
+        //    ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
+        //    DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
 
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelStateError.Errors(ModelState));
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelStateError.Errors(ModelState));
+        //    }
 
-            _repository.UpdateWorkerInformation(workerInformationDto);
-            return Ok();
-        }
+        //    _repository.UpdateWorkerInformation(workerInformationDto);
+        //    return Ok();
+        //}
 
-        [HttpDelete]
-        [Route("workerInformations")]
-        public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
-        {
-            _repository.RemoveWorkerInformation(workerInformationDto);
-            return Ok();
-        }
+        //[HttpDelete]
+        //[Route("workerInformations")]
+        //public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        //{
+        //    _repository.RemoveWorkerInformation(workerInformationDto);
+        //    return Ok();
+        //}
     }
 }
