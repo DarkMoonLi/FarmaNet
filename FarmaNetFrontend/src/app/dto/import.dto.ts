@@ -1,8 +1,9 @@
-export interface ImportDto {
-        ImportId?: number,
-        Number: string,
-        Date: string,
-        SumPrice: number,
-        SupplierId: number,
-        PharmacyId: number,
+export class ImportDto {
+        constructor(
+                public ImportId?: number,
+                public Number?: string,
+                public Date?: string,
+                public SumPrice?: number,
+                public SupplierId?: number,
+                public PharmacyId?: number,) {}
 }

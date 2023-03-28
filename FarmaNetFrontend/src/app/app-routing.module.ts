@@ -15,7 +15,7 @@ const routes: Routes = [
     {path: 'drugs', component: AllDrugsComponent},
     {path: 'drug/:id', component: DrugInfoComponent},
     {path: 'profile', component: ProfileComponent},
-    {path: 'imports', component: ImportsComponent},
+    {path: 'imports/:id', component: ImportsComponent},
     {path: 'authorization', component: AuthorizationComponent},
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},

@@ -16,7 +16,9 @@ export class AuthService {
     response.subscribe((resp: any) => {
       if (resp != null) {
         this.router.navigate(['worker/', resp.value.workerInformationId ]);
-        localStorage.setItem('auth_token', resp.value.token);
+        localStorage.setItem('token', resp.value.token);
+        localStorage.setItem('workerId', resp.value.workerId);
+        localStorage.setItem('pharmacyId', resp.value.pharmacyId);
       }
     })
   }

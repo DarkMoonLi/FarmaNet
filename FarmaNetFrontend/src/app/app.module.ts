@@ -23,6 +23,7 @@ import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
 import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component' 
 import { AuthorizationComponent } from './pages/authorization/authorization.component';
 import { WorkerInfoComponent } from './pages/worker-info/worker-info.component';
+import { ImportComponent } from './components/import/import.component';
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -48,6 +49,7 @@ import { WorkerInfoComponent } from './pages/worker-info/worker-info.component';
     PharmacyInfoComponent,
     AuthorizationComponent,
     WorkerInfoComponent,
+    ImportComponent,
     // LoginFormComponent
   ],
   imports: [
