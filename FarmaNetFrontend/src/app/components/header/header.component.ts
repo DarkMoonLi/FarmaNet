@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -9,7 +10,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
+
+  workerId: string | null = sessionStorage.getItem('workerId');
+  pharmacyId: string | null = sessionStorage.getItem('pharmacyId');
+  accountId: string | null = sessionStorage.getItem('accountId');
 
   ngOnInit(): void {
   }
@@ -18,14 +23,42 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  openMainPage() {
-    this.router.navigate(['/main']);
+  isLoggedIn() {
+    return this.authService.isLoggedIn();
   }
-  openRecipes() {
-    this.router.navigate(['/recipes']);
+
+  openMedicaments() {
+    this.router.navigate(['/drugs']);
   }
-  openFavoritesPage() {
-    this.router.navigate(['/favorites'])
+
+  openMedicamentsPharmacy() {
+    this.router.navigate(['/drugs/' + this.pharmacyId]);
   }
+
+  openImports() {
+    this.router.navigate(['/imports'])
+  }
+  openPharmacies() {
+    this.router.navigate(['/pharmacies']);
+  }
+
+  openWorkingHours() {
+    this.router.navigate(['/workingHours/']);
+    }
+    openWriteDowns() {
+      this.router.navigate(['/writedowns']);
+    }
+    openSuppliers() {
+      this.router.navigate(['/suppliers']);
+    }
+    openSales() {
+      this.router.navigate(['/sales']);
+    }
+    openProfile() {
+      this.router.navigate(['/worker/' + this.workerId]);
+    }
+    checkToken() {
+      return localStorage.getItem('token') !== null
+    }
 
 }

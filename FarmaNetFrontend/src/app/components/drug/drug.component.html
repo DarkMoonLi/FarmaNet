@@ -1,0 +1,7 @@
+<a class="drug" (click)="goToDrugId(Drug.medicationId)">
+    <img class="photo" 
+    src={Drug.image}
+    onerror="this.src = '../../../assets/no-product.jpg'" 
+    alt="Фото Препарата">
+    <div class="name">{{Drug.name}}</div>
+</a>

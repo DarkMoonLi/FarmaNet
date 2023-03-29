@@ -1,10 +1,17 @@
 <header class="nav-container">
     <nav>
         <a (click)="openMain()" routerLink="" routerLinkActive="active" class="nav-link nav-container__link_recipes">FarmaNet</a>
-        <a (click)="openMainPage()" routerLink="main" routerLinkActive="active" class="nav-link nav-container__link">Главная</a>
-        <a (click)="openRecipes()" routerLink="recipes" routerLinkActive="active" class="nav-link nav-container__link">Популярное</a>
-        <a (click)="openFavoritesPage()" routerLink="favorites" routerLinkActive="active" class="nav-link nav-container__link">Промоакции</a>
+        <a (click)="openMain()" routerLink="main" routerLinkActive="active" class="nav-link nav-container__link">Главная</a>
+        <a (click)="openMedicaments()" routerLink="drugs" routerLinkActive="active" class="nav-link nav-container__link">Препараты</a>
+        <a (click)="openPharmacies()" routerLink="pharmacies" routerLinkActive="active" class="nav-link nav-container__link">Аптеки</a>
     </nav>
-    <!-- TODO Добавить вход в личный кабинет -->
-    <!-- <app-dialog-element></app-dialog-element> -->
 </header> 
+<div *ngIf="isLoggedIn()" class="menu">
+    <a (click)="openProfile()" routerLink="worker/:id" routerLinkActive="active" class="menu-item">Профиль</a>
+    <a (click)="openMedicamentsPharmacy()" routerLink="drugs" routerLinkActive="active" class="menu-item">Препараты</a>
+    <a (click)="openImports()" routerLink="imports/:id" routerLinkActive="active" class="menu-item">Накладные</a>
+    <a (click)="openSales()" routerLink="sales" routerLinkActive="active" class="menu-item">Продажи</a>
+    <a (click)="openSuppliers()" routerLink="suppliers" routerLinkActive="active" class="menu-item">Поставщики</a>
+    <a (click)="openWriteDowns()" routerLink="writedowns" routerLinkActive="active" class="menu-item">Списания</a>
+    <a (click)="openWorkingHours()" routerLink="workinghours" routerLinkActive="active" class="menu-item">Рабочее время</a>
+</div>

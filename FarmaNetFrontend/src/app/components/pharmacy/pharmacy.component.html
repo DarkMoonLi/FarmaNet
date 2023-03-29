@@ -1,0 +1,8 @@
+<a class="pharmacy" (click)="goToPharmacyId(Pharmacy.pharmacyId)">
+  <img class="photo" 
+       src={Pharmacy.image}
+       onerror="this.src = '../../../assets/no-product.jpg'" 
+       alt="Фото Препарата">
+  <div class="name">{{Pharmacy.name}}</div>
+  <div class="address">{{Pharmacy.address}}</div>
+</a>

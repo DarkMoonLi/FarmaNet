@@ -1,11 +1,10 @@
 .nav-container
 {
-    margin: 0 auto;
     padding: 48px 0;
-    width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 15%;
     transition: .15s all;
 }
 
@@ -21,6 +20,10 @@
     text-decoration: none;
     color: #9196a1;
     transition: .15s all;
+}
+
+.nav-container__link:hover{
+    font-weight: 700;
 }
 
 .nav-container__link_recipes
@@ -48,4 +51,24 @@
 .nav-link
 {
     margin-right: 40px;
+}
+
+.menu {
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    font: 500 18px/22px 'Montserrat';
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #9196a1;
+}
+
+.menu-item:hover {
+    font-weight: 700;
 }
