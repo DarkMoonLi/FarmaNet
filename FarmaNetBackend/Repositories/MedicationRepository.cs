@@ -16,33 +16,62 @@ namespace FarmaNetBackend.Repositories
             _context = context;
         }
 
-        public List<Medication> GetMedications()
+        public List<MedicationDto> GetMedications()
         {
-            return _context.Medications.ToList();
+            List<Medication> medications = _context.Medications.ToList();
+
+            List<MedicationDto> result = ConvertMedications(medications);
+
+            return result;
         }
 
-        public List<Medication> GetMedicationsByName(string name)
+        public List<MedicationDto> GetMedicationsByName(string name)
         {
-            return _context.Medications.Where(m => m.Name.Contains(name)).ToList();
+            List<Medication> medications = _context.Medications.Where(m => m.Name.Contains(name)).ToList();
+
+            List<MedicationDto> result = ConvertMedications(medications);
+
+            return result;
         }
 
-        public List<Medication> GetMedicationsByType(int medicationTypeId)
+        public List<MedicationDto> GetMedicationsByType(int medicationTypeId)
         {
-            return _context.Medications.Where(m => m.MedicationTypeId == medicationTypeId).ToList();
+            List<Medication> medications = _context.Medications.Where(m => m.MedicationTypeId == medicationTypeId).ToList();
+
+            List<MedicationDto> result = ConvertMedications(medications);
+
+            return result;
         }
 
-        public Medication GetMedicationById(int id)
+        public MedicationDto GetMedicationById(int id)
         {
-            return _context.Medications.FirstOrDefault(p => p.MedicationId == id);
+            Medication med = _context.Medications.FirstOrDefault(p => p.MedicationId == id);
+
+            if (med != null)
+            {
+                MedicationDto result = ConvertMedication(med);
+                return result;
+            }
+
+            return null;
         }
 
-        public List<Medication> GetMedicationsByPharmacyId(int id)
+        //public MedicationImage GetMedicationImageByMedication(int id)
+        //{
+        //    return _context.MedicationImages.FirstOrDefault(i => i.ImageId.Equals(id));
+        //}
+
+        public List<MedicationDto> GetMedicationsByPharmacyId(int id)
         {
-            return _context.Medications
-                           .Join(_context.PharmacyWithMedications, m => m.MedicationId, pm => pm.MedicationId, (m, pm) => new { Medicine = m, PharmacyMedicine = pm })
-                           .Where(mpm => mpm.PharmacyMedicine.PharmacyId == id)
-                           .Select(mpm => mpm.Medicine)
-                           .ToList();
+            List<Medication> medications = _context.Medications
+                                            .Join(_context.PharmacyWithMedications, m => m.MedicationId, pm => pm.MedicationId, (m, pm) => new { Medicine = m, PharmacyMedicine = pm })
+                                            .Where(mpm => mpm.PharmacyMedicine.PharmacyId == id)
+                                            .Select(mpm => mpm.Medicine)
+                                            .ToList();
+
+            List<MedicationDto> result = ConvertMedications(medications);
+
+            return result;
         }
 
         public void AddMedication(AddMedicationDto medicationDto)
@@ -74,13 +103,42 @@ namespace FarmaNetBackend.Repositories
 
         public void DeleteMedication(int id)
         {
-            Medication medication = GetMedicationById(id);
+            Medication medication = _context.Medications.FirstOrDefault(m => m.MedicationId.Equals(id));
             
             if (medication != null)
             {
                 _context.Medications.Remove(medication);
                 _context.SaveChanges();
             }
+        }
+
+        private List<MedicationDto> ConvertMedications(List<Medication> medications)
+        {
+            List<MedicationDto> result = new List<MedicationDto>();
+
+            foreach (Medication med in medications)
+            {
+                MedicationDto medDto = ConvertMedication(med);
+
+                result.Add(medDto);
+            }
+
+            return result;
+        }
+
+        private MedicationDto ConvertMedication(Medication medication)
+        {
+            MedicationDto medDto = new MedicationDto(medication);
+
+            MedicationImage image = _context.MedicationImages.FirstOrDefault(i => i.ImageId.Equals(medication.MedicationImageId));
+
+            if (image != null)
+            {
+                medDto.ImageTitle = image.Title;
+                medDto.ImagePath = image.Path;
+            }
+
+            return medDto;
         }
     }
 

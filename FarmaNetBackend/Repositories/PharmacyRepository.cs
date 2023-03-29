@@ -16,14 +16,27 @@ namespace FarmaNetBackend.Repositories
             _context = context;
         }
 
-        public List<Pharmacy> GetPharmacies()
+        public List<PharmacyDto> GetPharmacies()
         {
-            return _context.Pharmacies.ToList();
+            List<Pharmacy> pharmacies = _context.Pharmacies.ToList();
+
+            List<PharmacyDto> result = ConvertPharmacies(pharmacies);
+
+            return result;
         }
 
-        public Pharmacy GetPharmacyById(int id)
+        public PharmacyDto GetPharmacyById(int id)
         {
-            return _context.Pharmacies.FirstOrDefault(p => p.PharmacyId == id);
+            Pharmacy pharmacy = _context.Pharmacies.FirstOrDefault(p => p.PharmacyId == id);
+
+            if (pharmacy != null)
+            {
+                PharmacyDto result = ConvertPharmacy(pharmacy);
+
+                return result;
+            }
+
+            return null;
         }
 
         public void AddPharmacy(AddPharmacyDto pharmacyDto)
@@ -61,5 +74,34 @@ namespace FarmaNetBackend.Repositories
                 _context.SaveChanges();
             }
         }*/
+
+        private List<PharmacyDto> ConvertPharmacies(List<Pharmacy> pharmacies)
+        {
+            List<PharmacyDto> result = new List<PharmacyDto>();
+
+            foreach (Pharmacy pharmacy in pharmacies)
+            {
+                PharmacyDto pharmacyDto = ConvertPharmacy(pharmacy);
+
+                result.Add(pharmacyDto);
+            }
+
+            return result;
+        }
+
+        private PharmacyDto ConvertPharmacy(Pharmacy pharmacy)
+        {
+            PharmacyDto result = new PharmacyDto(pharmacy);
+
+            PharmacyImage image = _context.PharmacyImages.FirstOrDefault(i => i.ImageId.Equals(pharmacy.PharmacyImageId));
+
+            if (image != null)
+            {
+                result.ImageTitle = image.Title;
+                result.ImagePath = image.Path;
+            }
+
+            return result;
+        }
     }
 }

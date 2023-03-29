@@ -16,14 +16,26 @@ namespace FarmaNetBackend.Repositories
             _context = context;
         }
 
-        public List<WorkerInformation> GetWorkerInformations()
+        public List<WorkerInformationDto> GetWorkerInformations()
         {
-            return _context.WorkersInformation.ToList();
+            List<WorkerInformation> workerInformations = _context.WorkersInformation.ToList();
+            List<WorkerInformationDto> result = ConvertWorkerInformations(workerInformations);
+
+            return result;
         }
 
-        public WorkerInformation GetWorkerInformationById(int id)
+        public WorkerInformationDto GetWorkerInformationById(int id)
         {
-            return _context.WorkersInformation.FirstOrDefault(w => w.WorkerInformationId == id);
+            WorkerInformation workerInformation = _context.WorkersInformation.FirstOrDefault(w => w.WorkerInformationId == id);
+
+            if (workerInformation != null)
+            {
+                WorkerInformationDto result = ConvertWorkerInformation(workerInformation);
+
+                return result;
+            }
+
+            return null;
         }
 
         public Pharmacy GetPharmacyByWorkerInformationId(int id) 
@@ -85,5 +97,34 @@ namespace FarmaNetBackend.Repositories
         //        _context.SaveChanges();
         //    }
         //}
+
+        private List<WorkerInformationDto> ConvertWorkerInformations(List<WorkerInformation> workerInformations)
+        {
+            List<WorkerInformationDto> result = new List<WorkerInformationDto>();
+
+            foreach (WorkerInformation workerInformation in workerInformations)
+            {
+                WorkerInformationDto workerInformationDto = ConvertWorkerInformation(workerInformation);
+
+                result.Add(workerInformationDto);
+            }
+
+            return result;
+        }
+
+        private WorkerInformationDto ConvertWorkerInformation(WorkerInformation workerInformation)
+        {
+            WorkerInformationDto result = new WorkerInformationDto(workerInformation);
+
+            WorkerInformationImage image = _context.WorkerInformationImages.FirstOrDefault(i => i.ImageId.Equals(workerInformation.WorkerInformationImageId));
+
+            if (image != null)
+            {
+                result.ImageTitle = image.Title;
+                result.ImagePath = image.Path;
+            }
+
+            return result;
+        }
     }
 }
