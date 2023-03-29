@@ -1,0 +1,12 @@
+<div class="sales">
+  <div class="table">
+    <div class="table-head">
+        <span class="bold">Дата</span>
+        <span class="bold">Описание</span>
+        <span class="bold">Время</span>
+    </div>
+    <div class="table-body">
+        <app-working-hour *ngFor="let workingHour of workingHours" [workingHour] = "workingHour"></app-working-hour>
+    </div>
+  </div>
+</div>

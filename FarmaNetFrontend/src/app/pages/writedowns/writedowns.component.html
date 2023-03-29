@@ -1,0 +1,11 @@
+<div class="sales">
+  <div class="table">
+    <div class="table-head">
+        <span class="bold">Препарат</span>
+        <span class="bold">Количество</span>
+    </div>
+    <div class="table-body">
+        <app-writedown *ngFor="let writedown of writedowns" [writedown] = "writedown"></app-writedown>
+    </div>
+  </div>
+</div>

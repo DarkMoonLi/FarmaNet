@@ -1,0 +1,69 @@
+<div class="imports">
+<h1>Список накладных</h1>
+<!-- <input type="button" value="Добавить" class="btn btn-default" (click)="add()" /> -->
+<!-- <table *ngIf="tableMode; else create" class="table table-striped">
+    <thead>
+        <tr class="table-head">
+            <td>Номер</td>
+            <td>Дата</td>
+            <td>Аптека</td>
+            <td>Поставщик</td>
+            <td>Стоимость</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <ng-template class="table-castom">
+                <td>{{p?.Number}}</td>
+                <td>{{p?.Date}}</td>
+                <td>{{p?.PharmacyId}}</td>
+                <td>{{p?.SupplierId}}</td>
+                <td>{{p?.SumPrice}}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)="delete(p)">Удалить</button>
+                </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table> -->
+<div class="table">
+    <div class="table-head">
+        <span class="bold">Дата</span>
+        <span class="bold">Поставщик</span>
+        <span class="bold">Стоимость</span>
+    </div>
+    <div class="table-body">
+        <app-import *ngFor="let import of imports" [import] = "import"></app-import>
+    </div>
+</div>
+<!-- <ng-template #create>
+  <div class="form-group">
+      <label>Модель</label>
+      <input type="text" [(ngModel)]="import.Number" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Производитель</label>
+      <input type="text" [(ngModel)]="import.Date" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="import.SumPrice" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="import.SumPrice" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="import.SupplierId" class="form-control" />
+  </div>
+  <div class="form-group">
+      <label>Цена</label>
+      <input type="number" [(ngModel)]="import.PharmacyId" class="form-control" />
+  </div>
+  <div>
+      <input type="button" value="Сохранить" (click)="save()" class="btn btn-success" />
+      <input type="button" value="Отмена" (click)="cancel()" class="btn btn-warning" />
+  </div>
+</ng-template> -->
+</div>

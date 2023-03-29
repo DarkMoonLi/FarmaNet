@@ -4,15 +4,13 @@
         <h1 class="main-container__title">Управляй аптекой удобно</h1>
         <div class="main-container__description">Решение для фармацевтических компаний и их покупателей.</div>
         <div class="main-container__functions">
-            <!-- <button class="function-button function-button_add-recipe" mat-button (click)="openNewRecipe()">Добавить рецепт</button>
-            <button class="function-button" mat-button (click)="openDialog()">Войти</button> -->
+            <button class="function-button" mat-button (click)="authorization()">Войти</button>
         </div>
         <div class="search-container">
             <h2 class="search-container__title">Поиск Препаратов</h2>
-            <!-- <p class="search-container__addiction">Введите примерное название блюда, а мы по тегам найдем его</p> -->
             <div class="search-container__search">
                 <input type="text" class="search-container__input" [(ngModel)]="title" placeholder="Название Лекарства....">
-                <input type="submit" class="search-container__submit" value="Поиск">
+                <input type="submit" class="search-container__submit" (click)="onProcess()" value="Поиск">
             </div>
             <div class="search-container__nav">
                 <a *ngFor="let tag of Tags" class="nav-container__link" href="#"> {{tag.name}}</a>
@@ -27,9 +25,9 @@
             <h2 class="nav-section__title">Cортировка по тегам</h2>
             <!-- <p class="nav-section__description">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p> -->
             <div class="nav-section__tags">
-                <a class="tags" *ngFor="let categoty of Categories" href="#">
-                    <img src="../../assets/{{categoty.photo}}" alt="#">
-                    <h3 class="tags__title">{{categoty.name}}</h3>
+                <a class="tags" *ngFor="let drugType of drugTypes" href="#">
+                    <!-- <img src="../../assets/{{drugType.photo}}" alt="#"> -->
+                    <h3 class="tags__title">{{drugType.name}}</h3>
                     <!-- <p class="tags__text">{{categoty.text}}</p> -->
                 </a>
             </div>

@@ -1,0 +1,66 @@
+<div class="worker-wraper">
+  <div class="image-wraper">
+    <img class="image" 
+         src="https://localhost:44362/{{workerImage.path}}"
+         alt="Фото Препарата"/>
+    <button class="download-button" (click)="openModal()">
+      <span class="download-button-text">Загрузить фото</span>
+    </button>
+    <div class="pharmacy">
+      <div class="pharmacy-text">
+        {{pharmacy.name}}
+      </div>
+      <div class="pharmacy-text">
+        {{pharmacy.address}}
+      </div>
+    </div>
+  </div>
+  <div class="information">
+    <div class="title">
+      Личная информация
+    </div>
+    <div class="subtitle">
+      <span class="bold">ФИО: </span> {{worker.name}} {{worker.lastName}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Дата Рождения: </span> {{worker.dataBirth}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Опыт(в годах): </span> {{worker.experience}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Email: </span> {{worker.email}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Позиция: </span> {{position.post}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Ставка: </span> {{position.salaryInHours}}
+    </div>
+    <div class="title">
+      Паспортные данные
+    </div>
+    <div class="subtitle">
+      <span class="bold">Серия: </span> {{worker.passportSeries}}
+    </div>
+    <div class="subtitle">
+      <span class="bold">Номер: </span> {{worker.passportNumber}}
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" [class.active]="modalActive">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Загрузка изображения</h2>
+      <button (click)="closeModal()" class="close-button">&times;</button>
+    </div>
+    <form class="modal-body" #fileForm="ngForm" (ngSubmit)="handleFileInput(fileForm)">
+      <input type="file" (change)="onFileSelected($event)"/>
+      <button type="submit">Загрузить</button>
+    </form>
+    <div class="modal-footer">
+      <button (click)="closeModal()" class="close-button">Закрыть</button>
+    </div>
+  </div>
+</div>

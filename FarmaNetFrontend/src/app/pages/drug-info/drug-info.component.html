@@ -1,0 +1,35 @@
+<div class="drug">
+    <div class="drug-wrapper">
+        <div>
+            <img class="image"
+            src="../../../assets/drug1.jpeg" 
+            onerror="this.src = '../../../assets/no-product.jpg'" 
+            alt="Фото Препарата">
+        </div>
+        <div class="drug-info">
+            <div class="drug-title">{{drug.name}}</div>
+            <div class="drug-price">{{drug.price}}</div>
+            <div class="drug-information">
+                <div class="drug-information-type" data-target="collapse-div-1">Показания к применению</div>
+                <div class="drug-information-type" data-target="collapse-div-2">Состав</div>
+                <div class="drug-information-type" data-target="collapse-div-3">Противопоказания</div>
+                <div class="drug-information-type" data-target="collapse-div-4">Инструкция по применению</div>
+            </div>
+            <div class="type-information-block">
+                <div id="collapse-div-1" class="detail-information">
+                    {{drug.indicationsForUse}}
+                </div>
+                <div id="collapse-div-2" class="detail-information">
+                    {{drug.compositions}}
+                </div>
+                <div id="collapse-div-3" class="detail-information">
+                    {{drug.contraindications}}
+                </div>
+                <div id="collapse-div-4" class="detail-information">
+                    {{drug.instruction}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
