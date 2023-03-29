@@ -1,0 +1,13 @@
+<div class="sales">
+  <div class="table">
+    <div class="table-head">
+        <span class="bold">Препарат</span>
+        <span class="bold">Цена</span>
+        <span class="bold">Количество</span>
+        <span class="bold">Сумма</span>
+    </div>
+    <div class="table-body">
+        <app-sale *ngFor="let sale of sales" [sale] = "sale"></app-sale>
+    </div>
+  </div>
+</div>

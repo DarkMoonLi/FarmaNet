@@ -16,8 +16,8 @@ export class ProfileComponent implements OnInit {
     name: 'Ирина',
     lastName: 'Коскина',
     dataBirth: new Date(),
-    seriesPassport: 1234,
-    numberPassport: 123456,
+    passportSeries: 1234,
+    passportNumber: 123456,
     experience: 800,
     email: 'sciraraider@gmail.com',
     positionId: 0

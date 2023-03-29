@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { ImportsService } from 'src/app/services/imports.service';
 import { ImportDto } from '../../dto/import.dto';
 
@@ -14,7 +15,7 @@ export class ImportsComponent implements OnInit {
 
   constructor(private router: Router, private importService: ImportsService) { }
 
-  id: string | null = localStorage.getItem('pharmacyId');
+  id: string | null = sessionStorage.getItem('pharmacyId');
 
   ngOnInit() {
       this.loadProducts(); 

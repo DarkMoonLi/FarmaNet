@@ -6,7 +6,7 @@
         <a (click)="openPharmacies()" routerLink="pharmacies" routerLinkActive="active" class="nav-link nav-container__link">Аптеки</a>
     </nav>
 </header> 
-<div class="menu">
+<div *ngIf="isLoggedIn()" class="menu">
     <a (click)="openProfile()" routerLink="worker/:id" routerLinkActive="active" class="menu-item">Профиль</a>
     <a (click)="openMedicamentsPharmacy()" routerLink="drugs" routerLinkActive="active" class="menu-item">Препараты</a>
     <a (click)="openImports()" routerLink="imports/:id" routerLinkActive="active" class="menu-item">Накладные</a>

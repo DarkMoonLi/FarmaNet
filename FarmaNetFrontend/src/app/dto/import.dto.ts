@@ -1,6 +1,6 @@
 export class ImportDto {
         constructor(
-                public Date?: Date,
-                public SumPrice?: number,
-                public SupplierName?: string,) {}
+                public date?: Date,
+                public sumPrice?: number,
+                public supplierName?: string,) {}
 }

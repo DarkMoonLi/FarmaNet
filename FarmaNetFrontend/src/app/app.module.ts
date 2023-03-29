@@ -24,6 +24,10 @@ import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.compo
 import { AuthorizationComponent } from './pages/authorization/authorization.component';
 import { WorkerInfoComponent } from './pages/worker-info/worker-info.component';
 import { ImportComponent } from './components/import/import.component';
+import { SalesComponent } from './pages/sales/sales.component';
+import { SaleComponent } from './components/sale/sale.component';
+import { SuppliersComponent } from './pages/suppliers/suppliers.component';
+import { SupplierComponent } from './components/supplier/supplier.component';
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -50,6 +54,10 @@ import { ImportComponent } from './components/import/import.component';
     AuthorizationComponent,
     WorkerInfoComponent,
     ImportComponent,
+    SalesComponent,
+    SaleComponent,
+    SuppliersComponent,
+    SupplierComponent,
     // LoginFormComponent
   ],
   imports: [

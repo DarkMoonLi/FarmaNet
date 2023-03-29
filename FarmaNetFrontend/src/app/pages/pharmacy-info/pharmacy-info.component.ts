@@ -15,16 +15,11 @@ export class PharmacyInfoComponent implements OnInit {
   constructor(private router: Router, private pharmacyInfoService: PharmacyInfoService, private route: ActivatedRoute, private drugService: DrugService) { 
   }
 
-  id!: string | null;
+  id: string | null = sessionStorage.getItem('pharmacyId');
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.id = params.get('id');
-    });
     this.loadProduct();
   }
-  
-  //Запрашивать при открытии страницы эти рецепты
 
   pharmacy: PharmacyDto = new PharmacyDto();
   drugs!: DrugDto[];

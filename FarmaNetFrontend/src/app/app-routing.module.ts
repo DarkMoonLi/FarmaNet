@@ -10,11 +10,14 @@ import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
 import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component';
 import { WorkerInfoComponent } from './pages/worker-info/worker-info.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { SaleComponent } from './components/sale/sale.component';
+import { SalesComponent } from './pages/sales/sales.component';
+import { SupplierComponent } from './components/supplier/supplier.component';
 
 const routes: Routes = [
     {path: '', component: MainComponent},
     {path: 'drugs', component: AllDrugsComponent},
-    {path: 'drugs/:id', component: AllDrugsComponent},
+    {path: 'drugs/:id', canActivate: [AuthGuard], component: AllDrugsComponent},
     {path: 'drug/:id', component: DrugInfoComponent},
     {path: 'profile', canActivate: [AuthGuard], component: ProfileComponent},
     {path: 'imports', canActivate: [AuthGuard], component: ImportsComponent},
@@ -22,6 +25,8 @@ const routes: Routes = [
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},
     {path: 'worker/:id', canActivate: [AuthGuard], component: WorkerInfoComponent},
+    {path: 'sales', canActivate: [AuthGuard], component: SalesComponent},
+    {path: 'suppliers', component: SupplierComponent},
   ];
 
 @NgModule({

@@ -1,0 +1,11 @@
+<div class="sales">
+  <div class="table">
+    <div class="table-head">
+        <span class="bold">Название</span>
+        <span class="bold">ИНН</span>
+    </div>
+    <div class="table-body">
+        <app-supplier *ngFor="let supplier of suppliers" [supplier] = "supplier"></app-supplier>
+    </div>
+  </div>
+</div>
