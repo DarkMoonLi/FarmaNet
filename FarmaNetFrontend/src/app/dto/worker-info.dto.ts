@@ -10,5 +10,6 @@ export class WorkerInfoDto {
     public email?: string,
     public positionId?: number,
     public image?: string,
+    public workerInformationImageId?: number
     ){}
 }

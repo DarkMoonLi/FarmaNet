@@ -34,6 +34,7 @@ export class WorkerInfoComponent implements OnInit {
   }
 
   modalActive: boolean = false;
+  modalUpdateActive: boolean = false;
 
   handleFileInput(event: any): void {
     const file: File = event.target.files[0];
@@ -50,5 +51,30 @@ export class WorkerInfoComponent implements OnInit {
 
   closeModal() {
     this.modalActive = false;
+  }
+
+  openUpdateModal() {
+    this.modalUpdateActive = true;
+  }
+
+  closeUpdateModal() {
+    this.modalUpdateActive = false;
+  }
+
+  sendData() {
+    const Data = {
+      WorkerInformationId: this.worker.workerInformationId,
+      Name: this.worker.name,
+      LastName: this.worker.lastName,
+      DataBirth: this.worker.dataBirth,
+      SeriesPassport: this.worker.passportSeries,
+      NumberPassport: this.worker.passportNumber,
+      Experience: this.worker.experience,
+      Email: this.worker.email,
+      PositionId: this.worker.positionId,
+      WorkerInformationImageId: this.worker.workerInformationImageId
+    }
+    this.workerInfoService.updateData(Data)
+      .subscribe((data:any) => this.position = data);
   }
 }

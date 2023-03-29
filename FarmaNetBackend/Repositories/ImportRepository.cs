@@ -47,7 +47,7 @@ namespace FarmaNetBackend.Repositories
             return result;
         }
 
-    public List<SupplierDto> GetSupplierByPharmacy(int id)
+        public List<SupplierDto> GetSupplierByPharmacy(int id)
         {
             List<SupplierDto> suppliers = (from i in _context.Imports
                                           join s in _context.Suppliers on i.SupplierId equals s.SupplierId

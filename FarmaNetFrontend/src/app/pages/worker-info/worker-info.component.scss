@@ -69,7 +69,7 @@
   visibility: visible;
 }
 
-.modal {
+.modal, .modal-update {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,4 +131,50 @@
 .download-button-text {
   font: 700 24px/30 'Montserrat';
   line-height: 30px;
+}
+
+.modal-update {
+  width: 90%;
+}
+
+.search-container__submit
+{
+    display: block;
+    width: 152px;
+    height: 50px;
+    border-radius: 16px;
+    background: #155263;
+    color: #fff;
+    border-style: none;
+    outline: none;
+    font: 600 18px/22px "Montserrat";
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.modal-update-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  box-sizing: border-box;
+}
+
+.search-container__input
+{
+  height: 73px;
+  width: 716px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+  font: 400 18px/22px "Montserrat";
+  border-style: none;
+  outline: none;
+  padding-left: 32px;
+  margin-right: 16px;
+  margin-bottom: 20px;
 }

@@ -87,26 +87,26 @@ namespace FarmaNetBackend.Controllers
             return Ok();
         }
 
-        //[HttpPost]
-        //[Route("workerInformations/update")]
-        //public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
-        //{
-        //    NameValidator.Validate(workerInformationDto.Name, ModelState);
-        //    NameValidator.Validate(workerInformationDto.LastName, ModelState);
-        //    EmailValidator.Validate(workerInformationDto.Email, ModelState);
-        //    PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
-        //    PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
-        //    ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
-        //    DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
+        [HttpPost]
+        [Route("workerInformations/update")]
+        public IActionResult UpdateWorkerInformation([FromBody] UpdateWorkerInformationDto workerInformationDto)
+        {
+            NameValidator.Validate(workerInformationDto.Name, ModelState);
+            NameValidator.Validate(workerInformationDto.LastName, ModelState);
+            EmailValidator.Validate(workerInformationDto.Email, ModelState);
+            PassportSeriesValidator.Validate(workerInformationDto.SeriesPassport, ModelState);
+            PassportNumberValidator.Validate(workerInformationDto.NumberPassport, ModelState);
+            ExperienceValidator.Validate(workerInformationDto.Experience, ModelState);
+            DateValidator.Validate(workerInformationDto.DataBirth, ModelState);
 
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelStateError.Errors(ModelState));
-        //    }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelStateError.Errors(ModelState));
+            }
 
-        //    _repository.UpdateWorkerInformation(workerInformationDto);
-        //    return Ok();
-        //}
+            _repository.UpdateWorkerInformation(workerInformationDto);
+            return Ok();
+        }
 
         //[HttpDelete]
         //[Route("workerInformations")]

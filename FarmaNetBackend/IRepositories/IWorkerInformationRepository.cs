@@ -11,7 +11,7 @@ namespace FarmaNetBackend.IRepositories
         public Pharmacy GetPharmacyByWorkerInformationId(int id);
         public Position GetPositionByWorkerInformationId(int id);
         public void AddWorkerInformation(AddWorkerInformationDto workerInformationDto);
-        //public void UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto);
+        public void UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto);
         //public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto);
     }
 }

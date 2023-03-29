@@ -41,7 +41,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("suppliers/add")]
-        public IActionResult AddSupplier(AddSupplierDto supplierDto, IFormFile image)
+        public IActionResult AddSupplier(AddSupplierDto supplierDto)
         {
             NameValidator.Validate(supplierDto.Name, ModelState);
             InnValidator.Validate(supplierDto.Inn, ModelState);

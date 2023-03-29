@@ -48,7 +48,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("pharmacyImages/upload")]
-        public async Task<IActionResult> AddImage([FromForm(Name = "uploadedFile")] IFormFile uploadedFile)
+        public async Task<IActionResult> AddImage([FromBody] IFormFile uploadedFile)
         {
             if (uploadedFile != null)
             {

@@ -25,4 +25,12 @@ export class WorkerInfoService {
   sendImage(formData: any) {
     return this.http.post(this.url + 'workerInfromationImages/upload', formData);
   }
+
+  getImage(id: string | null) {
+    return this.http.get(this.url + 'workerPharmacy/' + id);
+  }
+
+  updateData(formData: any) {
+    return this.http.post(this.url + 'workerInformations/update', formData);
+  }
 }

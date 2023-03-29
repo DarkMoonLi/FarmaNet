@@ -47,6 +47,9 @@
     <div class="subtitle">
       <span class="bold">Номер: </span> {{worker.passportNumber}}
     </div>
+    <button class="download-button" (click)="openUpdateModal()">
+      <span class="download-button-text">Редактировать</span>
+    </button>
   </div>
 </div>
 
@@ -61,6 +64,25 @@
     </div>
     <div class="modal-footer">
       <button (click)="closeModal()" class="close-button">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" [class.active]="modalUpdateActive">
+  <div class="modal-update">
+    <div class="container">
+      <h1>Профиль пользователя</h1>
+      <input type="text" class="search-container__input" [(ngModel)]="worker.name" value="{{worker.name}}" placeholder="Имя....">
+      <input type="text" class="search-container__input" [(ngModel)]="worker.lastName" value="{{worker.lastName}}" placeholder="Фамилия....">
+      <input type="text" class="search-container__input" [(ngModel)]="worker.email" value="{{worker.email}}" placeholder="Email....">
+      <input type="text" class="search-container__input" [(ngModel)]="worker.dataBirth" value="{{worker.dataBirth}}" placeholder="Дата рождения....">
+      <h3>Паспортные данные</h3>
+      <input type="text" class="search-container__input" [(ngModel)]="worker.passportSeries" value="{{worker.passportSeries}}" placeholder="Серия....">
+      <input type="text" class="search-container__input" [(ngModel)]="worker.passportNumber" value="{{worker.passportNumber}}" placeholder="Номер....">
+    </div>  
+    <div class="modal-update-footer">
+      <button type="submit" (click)="sendData()" class="search-container__submit">Сохранить</button>
+      <button (click)="closeUpdateModal()" class="search-container__submit">Закрыть</button>
     </div>
   </div>
 </div>
