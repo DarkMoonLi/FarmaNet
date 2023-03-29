@@ -3,6 +3,7 @@
 html 
 {
     overflow-y: scroll;
+    height: 100%;
 }
 
 body
@@ -11,6 +12,7 @@ body
     background-color: #fefefb;
     background: #fefefb url(assets/wave.svg) no-repeat bottom center;
     font-family: "Montserrat", sans-serif;
+    height: 100%;
 }
 
 *, 
