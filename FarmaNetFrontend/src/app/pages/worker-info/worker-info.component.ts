@@ -33,4 +33,22 @@ export class WorkerInfoComponent implements OnInit {
       .subscribe((data:any) => this.position = data);
   }
 
+  modalActive: boolean = false;
+
+  handleFileInput(event: any): void {
+    const file: File = event.target.files[0];
+  
+    const formData = new FormData();
+    formData.append('uploadedFile', file);
+    this.workerInfoService.sendImage(formData);
+    this.closeModal()
+  }
+
+  openModal() {
+    this.modalActive = true;
+  }
+
+  closeModal() {
+    this.modalActive = false;
+  }
 }

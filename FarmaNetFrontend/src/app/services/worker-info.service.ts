@@ -21,4 +21,8 @@ export class WorkerInfoService {
   getPosition(id: string | null) {
     return this.http.get(this.url + 'workerPosition/' + id);
   }
+
+  sendImage(formData: any) {
+    return this.http.post(this.url + 'workerInfromationImages/upload', formData);
+  }
 }
