@@ -27,7 +27,7 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpGet]
-        [Route("importByPharmacy/{id}")]
+        [Route("importsByPharmacy/{id}")]
         public IActionResult GetImportsByPharmacy(int id)
         {
             List<ImportReportDto> imports = _repository.GetImportsByPharmacy(id);
