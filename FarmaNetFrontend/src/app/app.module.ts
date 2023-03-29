@@ -28,6 +28,10 @@ import { SalesComponent } from './pages/sales/sales.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
+import { WritedownsComponent } from './pages/writedowns/writedowns.component';
+import { WritedownComponent } from './components/writedown/writedown.component';
+import { WorkingHoursComponent } from './pages/working-hours/working-hours.component';
+import { WorkingHourComponent } from './components/working-hour/working-hour.component';
 
 // import { RegistrationComponent } from './pages/registration/registration.component';
 // import { InputComponent } from './pages/input/input.component';
@@ -58,6 +62,10 @@ import { SupplierComponent } from './components/supplier/supplier.component';
     SaleComponent,
     SuppliersComponent,
     SupplierComponent,
+    WritedownsComponent,
+    WritedownComponent,
+    WorkingHoursComponent,
+    WorkingHourComponent,
     // LoginFormComponent
   ],
   imports: [

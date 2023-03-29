@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/workingHours/']);
     }
     openWriteDowns() {
-      this.router.navigate(['/writeDowns']);
+      this.router.navigate(['/writedowns']);
     }
     openSuppliers() {
       this.router.navigate(['/suppliers']);

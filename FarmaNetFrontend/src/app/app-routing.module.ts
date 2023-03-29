@@ -13,6 +13,10 @@ import { AuthGuard } from './services/auth-guard.service';
 import { SaleComponent } from './components/sale/sale.component';
 import { SalesComponent } from './pages/sales/sales.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
+import { SuppliersComponent } from './pages/suppliers/suppliers.component';
+import { WritedownComponent } from './components/writedown/writedown.component';
+import { WritedownsComponent } from './pages/writedowns/writedowns.component';
+import { WorkingHoursComponent } from './pages/working-hours/working-hours.component';
 
 const routes: Routes = [
     {path: '', component: MainComponent},
@@ -26,7 +30,9 @@ const routes: Routes = [
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},
     {path: 'worker/:id', canActivate: [AuthGuard], component: WorkerInfoComponent},
     {path: 'sales', canActivate: [AuthGuard], component: SalesComponent},
-    {path: 'suppliers', component: SupplierComponent},
+    {path: 'suppliers', canActivate: [AuthGuard], component: SuppliersComponent},
+    {path: 'writedowns', canActivate: [AuthGuard], component: WritedownsComponent},
+    {path: 'workingHours', canActivate: [AuthGuard], component: WorkingHoursComponent},
   ];
 
 @NgModule({
