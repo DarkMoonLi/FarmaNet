@@ -66,26 +66,26 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        //public void UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
-        //{
-        //    WorkerInformation workerInformation = GetWorkerInformationById(new GetWorkerInformationDto{WorkerInformationId = workerInformationDto.WorkerInformationId});
+        public void UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
+        {
+            WorkerInformation workerInformation = _context.WorkersInformation.FirstOrDefault(w => w.WorkerInformationId.Equals(workerInformationDto.WorkerInformationId));
 
-        //    if (workerInformation != null)
-        //    {
-        //        workerInformation.Experience               = workerInformationDto.Experience;
-        //        workerInformation.Name                     = workerInformationDto.Name;
-        //        workerInformation.Email                    = workerInformationDto.Email;
-        //        workerInformation.BirthDate                = workerInformationDto.DataBirth;
-        //        workerInformation.PassportNumber           = workerInformation.PassportNumber;
-        //        workerInformation.PassportSeries           = workerInformation.PassportSeries;
-        //        workerInformation.LastName                 = workerInformationDto.LastName;
-        //        workerInformation.PositionId               = workerInformationDto.PositionId;
-        //        workerInformation.WorkerInformationImageId = workerInformationDto.WorkerInfromationImageId;
+            if (workerInformation != null)
+            {
+                workerInformation.Experience               = workerInformationDto.Experience;
+                workerInformation.Name                     = workerInformationDto.Name;
+                workerInformation.Email                    = workerInformationDto.Email;
+                workerInformation.BirthDate                = workerInformationDto.DataBirth;
+                workerInformation.PassportNumber           = workerInformation.PassportNumber;
+                workerInformation.PassportSeries           = workerInformation.PassportSeries;
+                workerInformation.LastName                 = workerInformationDto.LastName;
+                workerInformation.PositionId               = workerInformationDto.PositionId;
+                workerInformation.WorkerInformationImageId = workerInformationDto.WorkerInfromationImageId;
                 
-        //        _context.WorkersInformation.Update(workerInformation);
-        //        _context.SaveChanges();
-        //    }
-        //}
+                _context.WorkersInformation.Update(workerInformation);
+                _context.SaveChanges();
+            }
+        }
 
         //public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
         //{
