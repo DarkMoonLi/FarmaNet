@@ -16,6 +16,8 @@ namespace FarmaNetBackend.Dto.WorkerInformationDto
         public string Email { get; set; }
         public int PositionId { get; set; }
         public int WorkerInformationImageId { get; set; }
+        public string ImageTitle { get; set; }
+        public string ImagePath { get; set; }
 
         public WorkerInformationDto(WorkerInformation workerInformation)
         {

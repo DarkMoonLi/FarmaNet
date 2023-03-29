@@ -11,6 +11,8 @@ namespace FarmaNetBackend.Dto.PharmacyDto
         public string Email { get; set; }
         public string Descripiton { get; set; }
         public int PharmacyImageId { get; set; }
+        public string ImageTitle { get; set; }
+        public string ImagePath { get; set; }
 
         public PharmacyDto(Pharmacy pharmacy)
         {
