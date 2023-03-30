@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./drug-info.component.scss']
 })
 export class DrugInfoComponent implements OnInit {
+  Data: DrugDto = {
+    name: 'Ибупрофен',
+    description: 'Описание...',
+  };
+  data = Array(1).fill(this.Data);
 
   panelOpenState = false;
 
@@ -20,9 +25,4 @@ export class DrugInfoComponent implements OnInit {
   
   //Запрашивать при открытии страницы эти рецепты
 
-  Data: DrugDto = {
-    name: 'Ибупрофен',
-    description: 'Описание...',
-  };
-  data = Array(1).fill(this.Data);
 }

@@ -8,6 +8,7 @@ import { ImportsComponent } from './pages/imports/imports.component';
 import { AuthorizationComponent } from './pages/authorization/authorization.component';
 import { PharmaciesComponent } from './pages/pharmacies/pharmacies.component';
 import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component';
+import { SuplierReportComponent } from './components/suplier-report/suplier-report.component';
 
 const routes: Routes = [
     {path: '', component: MainComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
     {path: 'authorization', component: AuthorizationComponent},
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'pharmacy/:id', component: PharmacyInfoComponent},
+    {path: 'supliers', component: SuplierReportComponent}
   ];
 
 @NgModule({
