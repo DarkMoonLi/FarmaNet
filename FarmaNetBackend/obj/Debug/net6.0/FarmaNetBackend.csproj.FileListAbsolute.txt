@@ -171,9 +171,7 @@ C:\Ucheba\Data Base\Project\FarmaNet-main\FarmaNetBackend\obj\Debug\net6.0\refin
 C:\Ucheba\Data Base\Project\FarmaNet-main\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.pdb
 C:\Ucheba\Data Base\Project\FarmaNet-main\FarmaNetBackend\obj\Debug\net6.0\FarmaNetBackend.genruntimeconfig.cache
 C:\Ucheba\Data Base\Project\FarmaNet-main\FarmaNetBackend\obj\Debug\net6.0\ref\FarmaNetBackend.dll
-<<<<<<< HEAD
 >>>>>>> ArtUpdate
-=======
 C:\Ucheba\Data Base\Project\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\appsettings.Development.json
 C:\Ucheba\Data Base\Project\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\appsettings.json
 C:\Ucheba\Data Base\Project\FarmaNet\FarmaNetBackend\bin\Debug\net6.0\package-lock.json

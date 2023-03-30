@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\obj\\",
-=======
-    "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {}
-  },
-  "projects": {
-    "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
-        "projectName": "FarmaNetBackend",
-        "projectPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
-        "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
-        "outputPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\obj\\",
->>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

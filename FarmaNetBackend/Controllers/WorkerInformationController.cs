@@ -108,12 +108,12 @@ namespace FarmaNetBackend.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        [Route("workerInformations")]
-        public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
-        {
-            _repository.RemoveWorkerInformation(workerInformationDto);
-            return Ok();
-        }
+        //[HttpDelete]
+        //[Route("workerInformations")]
+        //public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        //{
+        //    _repository.RemoveWorkerInformation(workerInformationDto);
+        //    return Ok();
+        //}
     }
 }
