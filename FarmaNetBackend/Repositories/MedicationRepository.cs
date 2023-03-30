@@ -56,11 +56,6 @@ namespace FarmaNetBackend.Repositories
             return null;
         }
 
-        //public MedicationImage GetMedicationImageByMedication(int id)
-        //{
-        //    return _context.MedicationImages.FirstOrDefault(i => i.ImageId.Equals(id));
-        //}
-
         public List<MedicationDto> GetMedicationsByPharmacyId(int id)
         {
             List<Medication> medications = _context.Medications
@@ -82,9 +77,9 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        /*public void UpdateMedication(int id)
+        public MedicationDto UpdateMedication(UpdateMedicationDto medicationDto)
         {
-            Medication medication = GetMedicationById(id);
+            Medication medication = _context.Medications.FirstOrDefault(m => m.MedicationId.Equals(medicationDto.MedicationId));
 
             if (medication != null)
             {
@@ -98,8 +93,14 @@ namespace FarmaNetBackend.Repositories
 
                 _context.Medications.Update(medication);
                 _context.SaveChanges();
+
+                MedicationDto result = ConvertMedication(medication);
+
+                return result;
             }
-        }*/
+
+            return null;
+        }
 
         public void DeleteMedication(int id)
         {
@@ -139,14 +140,6 @@ namespace FarmaNetBackend.Repositories
             }
 
             return medDto;
-        }
-    }
-
-    public static class ConvertMedication
-    {
-        public static MedicationDto ConvertToMedicationDto( this Medication medication )
-        {
-            return new MedicationDto(medication);
         }
     }
 }

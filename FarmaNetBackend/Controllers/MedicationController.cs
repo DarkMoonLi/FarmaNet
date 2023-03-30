@@ -83,13 +83,6 @@ namespace FarmaNetBackend.Controllers
             return Ok( medication );
         }
 
-        //[HttpGet]
-        //[Route("drugImage/{id}")]
-        //public IActionResult GetMedicationImageByMedication(int id)
-        //{
-        //    MedicationImage image = _repository.GetMedicationImageByMedication(id);
-        //}
-
         [HttpPost]
         [Route( "drugs/add" )]
         public IActionResult AddMedication(AddMedicationDto medicationDto)
@@ -111,7 +104,7 @@ namespace FarmaNetBackend.Controllers
         
         [HttpPost]
         [Route("drugs/update")]
-        /*public IActionResult UpdateMedication(UpdateMedicationDto medicationDto)
+        public IActionResult UpdateMedication(UpdateMedicationDto medicationDto)
         {
             NameValidator.Validate(medicationDto.Name, ModelState);
             DescriptionValidator.Validate(medicationDto.Contraindications, ModelState);
@@ -121,12 +114,18 @@ namespace FarmaNetBackend.Controllers
 
             if (ModelState.IsValid)
             {
-                _repository.UpdateMedication(medicationDto);
-                return Ok();
+                MedicationDto med = _repository.UpdateMedication(medicationDto);
+
+                if (med != null)
+                {
+                    return Ok(med);
+                }
+
+                return NotFound();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );
-        }*/
+        }
 
         [HttpDelete]
         [Route( "drugs/delete" )]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aCkNeZPaJjqX3Gx2MazSyNLFdiErHnoUrTRLYlHyXOx3FJXB4r9A7ERHl5FrOJhZaVxhW8bmXeCDHrnz1+aMMg==",
+  "dgSpecHash": "rwhgYN/RoaI0l8Wu6xIMdcyndFjagGs5CzykbAu6TjP0p73FuHz1/NbCeDSF7ceJ5EmuwIljxaSxoOCBX3S5XA==",
   "success": true,
-  "projectFilePath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet-main\\FarmaNetBackend\\FarmaNetBackend.csproj",
+  "projectFilePath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артём\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Артём\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

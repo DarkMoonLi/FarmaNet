@@ -58,12 +58,4 @@ namespace FarmaNetBackend.Repositories
             }
         }
     }
-
-    public static class ConvertManufacturer
-    {
-        public static ManufacturerDto ConvertToManufacturerDto( this Manufacturer manufacturer)
-        {
-            return new ManufacturerDto(manufacturer);
-        }
-    }
 }

@@ -3691,11 +3691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Ucheba\\Data Base\\Project\\FarmaNet-main\\FarmaNetBackend\\FarmaNetBackend.csproj",
+      "projectUniqueName": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
       "projectName": "FarmaNetBackend",
-      "projectPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet-main\\FarmaNetBackend\\FarmaNetBackend.csproj",
+      "projectPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
       "packagesPath": "C:\\Users\\Артём\\.nuget\\packages\\",
-      "outputPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet-main\\FarmaNetBackend\\obj\\",
+      "outputPath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Артём\\AppData\\Roaming\\NuGet\\NuGet.Config",

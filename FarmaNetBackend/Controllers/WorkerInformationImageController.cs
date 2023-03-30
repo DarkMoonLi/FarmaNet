@@ -52,21 +52,27 @@ namespace FarmaNetBackend.Controllers
         public IActionResult GetImageByWorker(int id)
         {
             WorkerInformationImage image = (from w in _context.WorkersInformation
-                                           join i in _context.WorkerInformationImages
-                                           on w.WorkerInformationImageId equals i.ImageId
-                                           where w.WorkerInformationId.Equals(id)
-                                           select i).First();
+                                            join i in _context.WorkerInformationImages
+                                            on w.WorkerInformationImageId equals i.ImageId
+                                            where w.WorkerInformationId.Equals(id)
+                                            select i).First();
+
+            if (image == null)
+            {
+                return NotFound();
+            }
 
             return Ok(image);
         }
 
         [HttpPost]
         [Route("workerInfromationImages/upload")]
-        public async Task<IActionResult> AddImage(/*[FromForm(Name = "uploadedFile")]*/ IFormFile uploadedFile)
+        public async Task<IActionResult> AddImage(IFormFile uploadedFile)
         {
             if (uploadedFile != null)
             {
-                string path = "/WorkerInformations/" + uploadedFile.FileName;
+                const string directory = "/WorkerInformations";
+                string path = directory + uploadedFile.FileName;
 
                 NameValidator.Validate(uploadedFile.FileName, ModelState);
                 ImagePathValidator.Validate(path, ModelState);
@@ -74,6 +80,11 @@ namespace FarmaNetBackend.Controllers
                 if (!ModelState.IsValid)
                 {
                     return BadRequest( ModelStateError.Errors(ModelState) );
+                }
+
+                if (!Directory.Exists(_environment.WebRootPath + directory))
+                {
+                    Directory.CreateDirectory(_environment.WebRootPath + directory);
                 }
 
                 using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
