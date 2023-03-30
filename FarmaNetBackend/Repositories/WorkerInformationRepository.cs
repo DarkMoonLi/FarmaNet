@@ -76,11 +76,11 @@ namespace FarmaNetBackend.Repositories
                 workerInformation.Name                     = workerInformationDto.Name;
                 workerInformation.Email                    = workerInformationDto.Email;
                 workerInformation.BirthDate                = workerInformationDto.DataBirth;
-                workerInformation.PassportNumber           = workerInformation.PassportNumber;
-                workerInformation.PassportSeries           = workerInformation.PassportSeries;
+                workerInformation.PassportNumber           = workerInformationDto.NumberPassport;
+                workerInformation.PassportSeries           = workerInformationDto.SeriesPassport;
                 workerInformation.LastName                 = workerInformationDto.LastName;
                 workerInformation.PositionId               = workerInformationDto.PositionId;
-                workerInformation.WorkerInformationImageId = workerInformationDto.WorkerInfromationImageId;
+                workerInformation.WorkerInformationImageId = workerInformationDto.WorkerInformationImageId;
                 
                 _context.WorkersInformation.Update(workerInformation);
                 _context.SaveChanges();

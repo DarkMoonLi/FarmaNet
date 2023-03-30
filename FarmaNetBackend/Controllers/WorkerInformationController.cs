@@ -97,7 +97,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workerInformations/update")]
-        public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
+        public IActionResult UpdateWorkerInformation([FromBody]UpdateWorkerInformationDto workerInformationDto)
         {
             NameValidator.Validate(workerInformationDto.Name, ModelState);
             NameValidator.Validate(workerInformationDto.LastName, ModelState);

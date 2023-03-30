@@ -13,6 +13,6 @@ namespace FarmaNetBackend.Dto.WorkerInformationDto
         public float Experience { get; set; }
         public string Email { get; set; }
         public int PositionId { get; set; }
-        public int WorkerInfromationImageId { get; set; }
+        public int WorkerInformationImageId { get; set; }
     }
 }
