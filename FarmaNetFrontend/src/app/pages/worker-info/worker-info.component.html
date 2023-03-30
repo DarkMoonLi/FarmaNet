@@ -1,12 +1,7 @@
 <div class="worker-wraper">
   <div class="image-wraper">
     <img class="image" 
-<<<<<<< HEAD
-         src={{worker.image}}
-         onerror="this.src = '../../../assets/no-product.jpg'" 
-=======
          src="https://localhost:44362/{{workerImage.path}}"
->>>>>>> ArtUpdate
          alt="Фото Препарата"/>
     <button class="download-button" (click)="openModal()">
       <span class="download-button-text">Загрузить фото</span>
@@ -51,12 +46,9 @@
     <div class="subtitle">
       <span class="bold">Номер: </span> {{worker.passportNumber}}
     </div>
-<<<<<<< HEAD
     <button class="download-button" (click)="openUpdateModal()">
       <span class="download-button-text">Редактировать</span>
     </button>
-=======
->>>>>>> ArtUpdate
   </div>
 </div>
 
@@ -66,21 +58,14 @@
       <h2>Загрузка изображения</h2>
       <button (click)="closeModal()" class="close-button">&times;</button>
     </div>
-<<<<<<< HEAD
-    <div class="modal-body">
-      <input type="file" (change)="handleFileInput($event)"/>
-    </div>
-=======
     <form class="modal-body" #fileForm="ngForm" (ngSubmit)="handleFileInput(fileForm)">
       <input type="file" (change)="onFileSelected($event)"/>
       <button type="submit">Загрузить</button>
     </form>
->>>>>>> ArtUpdate
     <div class="modal-footer">
       <button (click)="closeModal()" class="close-button">Закрыть</button>
     </div>
   </div>
-<<<<<<< HEAD
 </div>
 
 <div class="modal-overlay" [class.active]="modalUpdateActive">
@@ -100,6 +85,4 @@
       <button (click)="closeUpdateModal()" class="search-container__submit">Закрыть</button>
     </div>
   </div>
-=======
->>>>>>> ArtUpdate
 </div>
