@@ -47,33 +47,33 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        // public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
-        // {
-        //     Pharmacy pharmacy = GetPharmacyById(pharmacyDto.PharmacyId );
-
-        //     if (pharmacy != null)
-        //     {
-        //         pharmacy.Address         = pharmacyDto.Address;
-        //         pharmacy.Name            = pharmacyDto.Name;
-        //         pharmacy.Email           = pharmacyDto.Email;
-        //         pharmacy.Description     = pharmacyDto.Description;
-        //         pharmacy.PharmacyImageId = pharmacyDto.PharmacyImageId;
-
-        //         _context.Pharmacies.Update(pharmacy);
-        //         _context.SaveChanges();
-        //     }
-        // }
-
-        /*public void RemovePharmacy(GetPharmacyDto pharmacyDto)
+        public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
         {
-            Pharmacy pharmacy = GetPharmacyById(pharmacyDto);
+            Pharmacy pharmacy = _context.Pharmacies.FirstOrDefault(p => p.PharmacyId.Equals(pharmacyDto.PharmacyId));
+
+            if (pharmacy != null)
+            {
+                pharmacy.Address         = pharmacyDto.Address;
+                pharmacy.Name            = pharmacyDto.Name;
+                pharmacy.Email           = pharmacyDto.Email;
+                pharmacy.Description     = pharmacyDto.Description;
+                pharmacy.PharmacyImageId = pharmacyDto.PharmacyImageId;
+
+                _context.Pharmacies.Update(pharmacy);
+                _context.SaveChanges();
+            }
+        }
+
+        public void RemovePharmacy(GetPharmacyDto pharmacyDto)
+        {
+            Pharmacy pharmacy = _context.Pharmacies.FirstOrDefault(p => p.PharmacyId.Equals(pharmacyDto.PharmacyId));
 
             if (pharmacy != null)
             {
                 _context.Pharmacies.Remove(pharmacy);
                 _context.SaveChanges();
             }
-        }*/
+        }
 
         private List<PharmacyDto> ConvertPharmacies(List<Pharmacy> pharmacies)
         {
