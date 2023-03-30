@@ -5,6 +5,7 @@ using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Dto.ManufacturerDto;
 using FarmaNetBackend.Validation;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace FarmaNetBackend.Controllers
 {
@@ -46,10 +47,18 @@ namespace FarmaNetBackend.Controllers
             NameValidator.Validate(manufacturerDto.Name, ModelState);
             AddressValidator.Validate(manufacturerDto.Address, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.AddManufacturer(manufacturerDto);
-                return Ok();
+
+                if (ModelState.IsValid)
+                {
+                    _repository.AddManufacturer(manufacturerDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );
@@ -62,10 +71,17 @@ namespace FarmaNetBackend.Controllers
             NameValidator.Validate(manufacturerDto.Name, ModelState);
             AddressValidator.Validate(manufacturerDto.Address, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.UpdateManufacturer(manufacturerDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.UpdateManufacturer(manufacturerDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );

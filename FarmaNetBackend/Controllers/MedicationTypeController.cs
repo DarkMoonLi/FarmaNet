@@ -4,6 +4,7 @@ using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Controllers
@@ -47,10 +48,17 @@ namespace FarmaNetBackend.Controllers
         {
             NameValidator.Validate(medicationTypeDto.Name, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.AddMedicationType(medicationTypeDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.AddMedicationType(medicationTypeDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );
@@ -62,10 +70,17 @@ namespace FarmaNetBackend.Controllers
         {
             NameValidator.Validate(medicationTypeDto.Name, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.UpdateMedicationType(medicationTypeDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.UpdateMedicationType(medicationTypeDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );

@@ -3,6 +3,7 @@ using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Controllers
@@ -59,8 +60,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest(ModelStateError.Errors(ModelState));
             }
 
-            _repository.AddSale(saleDto);
-            return Ok();
+            try
+            {
+                _repository.AddSale(saleDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
 
         [HttpPost]
@@ -75,8 +83,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest(ModelStateError.Errors(ModelState));
             }
 
-            _repository.UpdateSale(saleDto);
-            return Ok();
+            try
+            {
+                _repository.UpdateSale(saleDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpDelete]

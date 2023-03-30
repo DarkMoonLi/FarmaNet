@@ -1,10 +1,10 @@
 ﻿using FarmaNetBackend.Dto.ImportDto;
-using FarmaNetBackend.Dto.ManufacturerDto;
 using FarmaNetBackend.Dto.SupplierDto;
 using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Controllers
@@ -66,11 +66,19 @@ namespace FarmaNetBackend.Controllers
             SumValidator.Validate(importDto.SumPrice, ModelState);
             DateValidator.Validate(importDto.Date, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.AddImport(importDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.AddImport(importDto);
+                    return Ok();
+                }
             }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+            
 
             return BadRequest( ModelStateError.Errors(ModelState) );
         }
@@ -83,10 +91,17 @@ namespace FarmaNetBackend.Controllers
             SumValidator.Validate(importDto.SumPrice, ModelState);
             DateValidator.Validate(importDto.Date, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.UpdateImport(importDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.UpdateImport(importDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );

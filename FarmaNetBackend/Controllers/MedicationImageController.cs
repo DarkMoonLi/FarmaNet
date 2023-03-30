@@ -4,6 +4,7 @@ using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -91,11 +92,18 @@ namespace FarmaNetBackend.Controllers
                     await uploadedFile.CopyToAsync(fileStream);
                 }
 
-                MedicationImage image = new MedicationImage { Title = uploadedFile.FileName, Path = path };
-                _context.MedicationImages.Add(image);
-                _context.SaveChanges();
+                try
+                {
+                    MedicationImage image = new MedicationImage { Title = uploadedFile.FileName, Path = path };
+                    _context.MedicationImages.Add(image);
+                    _context.SaveChanges();
 
-                return Ok(image);
+                    return Ok(image);
+                }
+                catch (Exception e)
+                {
+                    return BadRequest();
+                }
             }
 
             return RedirectToAction("GetImages");

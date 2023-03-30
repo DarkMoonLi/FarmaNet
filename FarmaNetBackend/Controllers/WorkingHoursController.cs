@@ -3,6 +3,7 @@ using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Controllers
@@ -59,8 +60,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest(ModelStateError.Errors(ModelState));
             }
 
-            _repository.AddWorkingHours(workingHoursDto);
-            return Ok();
+            try
+            {
+                _repository.AddWorkingHours(workingHoursDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpPost]
@@ -76,8 +84,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest(ModelStateError.Errors(ModelState));
             }
 
-            _repository.UpdateWorkingHours(workingHoursDto);
-            return Ok();
+            try
+            {
+                _repository.UpdateWorkingHours(workingHoursDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpDelete]

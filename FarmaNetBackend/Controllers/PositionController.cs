@@ -3,6 +3,7 @@ using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace FarmaNetBackend.Controllers
@@ -50,8 +51,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest( ModelStateError.Errors(ModelState) );
             }
 
-            _repository.AddPosition(positionDto);
-            return Ok();
+            try
+            {
+                _repository.AddPosition(positionDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpPost]
@@ -66,8 +74,15 @@ namespace FarmaNetBackend.Controllers
                 return BadRequest( ModelStateError.Errors(ModelState) );
             }
 
-            _repository.UpdatePosition(positionDto);
-            return Ok();
+            try
+            {
+                _repository.UpdatePosition(positionDto);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpDelete]

@@ -6,6 +6,7 @@ using FarmaNetBackend.IRepositories;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Repositories;
 using FarmaNetBackend.Validation;
+using System;
 
 namespace FarmaNetBackend.Controllers
 {
@@ -93,10 +94,17 @@ namespace FarmaNetBackend.Controllers
             DescriptionValidator.Validate(medicationDto.Composition, ModelState);
             DescriptionValidator.Validate(medicationDto.IndicationsForUse, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                _repository.AddMedication(medicationDto);
-                return Ok();
+                if (ModelState.IsValid)
+                {
+                    _repository.AddMedication(medicationDto);
+                    return Ok();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
             
             return BadRequest( ModelStateError.Errors(ModelState) );
@@ -112,16 +120,23 @@ namespace FarmaNetBackend.Controllers
             DescriptionValidator.Validate(medicationDto.Composition, ModelState);
             DescriptionValidator.Validate(medicationDto.IndicationsForUse, ModelState);
 
-            if (ModelState.IsValid)
+            try
             {
-                MedicationDto med = _repository.UpdateMedication(medicationDto);
-
-                if (med != null)
+                if (ModelState.IsValid)
                 {
-                    return Ok(med);
-                }
+                    MedicationDto med = _repository.UpdateMedication(medicationDto);
 
-                return NotFound();
+                    if (med != null)
+                    {
+                        return Ok(med);
+                    }
+
+                    return NotFound();
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
             }
 
             return BadRequest( ModelStateError.Errors(ModelState) );
