@@ -87,16 +87,16 @@ namespace FarmaNetBackend.Repositories
             }
         }
 
-        //public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
-        //{
-        //    WorkerInformation workerInformation = GetWorkerInformationById(workerInformationDto);
+        public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        {
+            WorkerInformation workerInformation = _context.WorkersInformation.FirstOrDefault(w => w.WorkerInformationId.Equals(workerInformationDto.WorkerInformationId));
 
-        //    if (workerInformation != null)
-        //    {
-        //        _context.WorkersInformation.Remove(workerInformation);
-        //        _context.SaveChanges();
-        //    }
-        //}
+            if (workerInformation != null)
+            {
+                _context.WorkersInformation.Remove(workerInformation);
+                _context.SaveChanges();
+            }
+        }
 
         private List<WorkerInformationDto> ConvertWorkerInformations(List<WorkerInformation> workerInformations)
         {
