@@ -10,8 +10,8 @@ namespace FarmaNetBackend.Dto.WorkerInformationDto
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime DataBirth { get; set; }
-        public int? SeriesPassport { get; set; }
-        public int? NumberPassport { get; set; }
+        public int? PassportSeries { get; set; }
+        public int? PassportNumber { get; set; }
         public float? Experience { get; set; }
         public string Email { get; set; }
         public int PositionId { get; set; }
@@ -25,8 +25,8 @@ namespace FarmaNetBackend.Dto.WorkerInformationDto
             this.Name                     = workerInformation.Name;
             this.LastName                 = workerInformation.LastName;
             this.DataBirth                = workerInformation.BirthDate;
-            this.SeriesPassport           = workerInformation.PassportSeries;
-            this.NumberPassport           = workerInformation.PassportNumber;
+            this.PassportSeries           = workerInformation.PassportSeries;
+            this.PassportNumber           = workerInformation.PassportNumber;
             this.Experience               = workerInformation.Experience;
             this.Email                    = workerInformation.Email;
             this.PositionId               = workerInformation.PositionId;
