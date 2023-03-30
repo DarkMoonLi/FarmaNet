@@ -89,11 +89,7 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workerInformations/update")]
-<<<<<<< HEAD
-        public IActionResult UpdateWorkerInformation([FromBody] UpdateWorkerInformationDto workerInformationDto)
-=======
         public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
->>>>>>> ArtUpdate
         {
             NameValidator.Validate(workerInformationDto.Name, ModelState);
             NameValidator.Validate(workerInformationDto.LastName, ModelState);
@@ -112,12 +108,12 @@ namespace FarmaNetBackend.Controllers
             return Ok();
         }
 
-        //[HttpDelete]
-        //[Route("workerInformations")]
-        //public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
-        //{
-        //    _repository.RemoveWorkerInformation(workerInformationDto);
-        //    return Ok();
-        //}
+        [HttpDelete]
+        [Route("workerInformations")]
+        public IActionResult RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        {
+            _repository.RemoveWorkerInformation(workerInformationDto);
+            return Ok();
+        }
     }
 }

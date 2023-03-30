@@ -56,30 +56,30 @@ namespace FarmaNetBackend.Controllers
             return Ok();
         }
 
-        //[HttpPost]
-        //[Route("pharmacies/update")]
-        //public IActionResult UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
-        //{
-        //    NameValidator.Validate(pharmacyDto.Name, ModelState);
-        //    AddressValidator.Validate(pharmacyDto.Address, ModelState);
-        //    EmailValidator.Validate(pharmacyDto.Email, ModelState);
-        //    DescriptionValidator.Validate(pharmacyDto.Description, ModelState);
+        [HttpPost]
+        [Route("pharmacies/update")]
+        public IActionResult UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
+        {
+            NameValidator.Validate(pharmacyDto.Name, ModelState);
+            AddressValidator.Validate(pharmacyDto.Address, ModelState);
+            EmailValidator.Validate(pharmacyDto.Email, ModelState);
+            DescriptionValidator.Validate(pharmacyDto.Description, ModelState);
 
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest( ModelStateError.Errors(ModelState) );
-        //    }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest( ModelStateError.Errors(ModelState) );
+            }
 
-        //    _repository.UpdatePharmacy(pharmacyDto);
-        //    return Ok();
-        //}
+            _repository.UpdatePharmacy(pharmacyDto);
+            return Ok();
+        }
 
-        //[HttpDelete]
-        //[Route("pharmacies")]
-        //public IActionResult RemovePharmacy(GetPharmacyDto pharmacyDto)
-        //{
-        //    _repository.RemovePharmacy(pharmacyDto);
-        //    return Ok();
-        //}
+        [HttpDelete]
+        [Route("pharmacies")]
+        public IActionResult RemovePharmacy(GetPharmacyDto pharmacyDto)
+        {
+            _repository.RemovePharmacy(pharmacyDto);
+            return Ok();
+        }
     }
 }

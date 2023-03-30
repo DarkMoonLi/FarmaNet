@@ -47,22 +47,22 @@ namespace FarmaNetBackend.Repositories
             _context.SaveChanges();
         }
 
-        /*public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
-        {
-            Pharmacy pharmacy = GetPharmacyById(new GetPharmacyDto { PharmacyId = pharmacyDto.PharmacyId });
+        // public void UpdatePharmacy(UpdatePharmacyDto pharmacyDto)
+        // {
+        //     Pharmacy pharmacy = GetPharmacyById(pharmacyDto.PharmacyId );
 
-            if (pharmacy != null)
-            {
-                pharmacy.Address         = pharmacyDto.Address;
-                pharmacy.Name            = pharmacyDto.Name;
-                pharmacy.Email           = pharmacyDto.Email;
-                pharmacy.Description     = pharmacyDto.Description;
-                pharmacy.PharmacyImageId = pharmacyDto.PharmacyImageId;
+        //     if (pharmacy != null)
+        //     {
+        //         pharmacy.Address         = pharmacyDto.Address;
+        //         pharmacy.Name            = pharmacyDto.Name;
+        //         pharmacy.Email           = pharmacyDto.Email;
+        //         pharmacy.Description     = pharmacyDto.Description;
+        //         pharmacy.PharmacyImageId = pharmacyDto.PharmacyImageId;
 
-                _context.Pharmacies.Update(pharmacy);
-                _context.SaveChanges();
-            }
-        }*/
+        //         _context.Pharmacies.Update(pharmacy);
+        //         _context.SaveChanges();
+        //     }
+        // }
 
         /*public void RemovePharmacy(GetPharmacyDto pharmacyDto)
         {

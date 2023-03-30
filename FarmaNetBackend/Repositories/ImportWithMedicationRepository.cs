@@ -66,12 +66,4 @@ namespace FarmaNetBackend.Repositories
             }
         }
     }
-
-    public static class ConvertImportWithMedication
-    {
-        public static ImportWithMedicationDto ConvertToImportWithMedicationDto(this ImportWithMedication importWithMedication)
-        {
-            return new ImportWithMedicationDto(importWithMedication);
-        }
-    }
 }

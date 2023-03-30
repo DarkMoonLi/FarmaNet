@@ -8,12 +8,11 @@ namespace FarmaNetBackend.IRepositories
     {
         public List<MedicationDto> GetMedications();
         public MedicationDto GetMedicationById(int id);
-        //public MedicationImage GetMedicationImageByMedication(int id);
         public List<MedicationDto> GetMedicationsByName(string medicationDto);
         public List<MedicationDto> GetMedicationsByType(int medicationTypeId);
         public List<MedicationDto> GetMedicationsByPharmacyId(int id);
         public void AddMedication(AddMedicationDto medicationDto);
-        //public void UpdateMedication(int id);
+        public MedicationDto UpdateMedication(UpdateMedicationDto medicationDto);
         public void DeleteMedication(int id);
     }
 }

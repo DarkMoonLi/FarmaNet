@@ -87,8 +87,8 @@ namespace FarmaNetBackend.Repositories
             }
         }
 
-        //public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
-        //{
+        // public void RemoveWorkerInformation(GetWorkerInformationDto workerInformationDto)
+        // {
         //    WorkerInformation workerInformation = GetWorkerInformationById(workerInformationDto);
 
         //    if (workerInformation != null)
@@ -96,7 +96,7 @@ namespace FarmaNetBackend.Repositories
         //        _context.WorkersInformation.Remove(workerInformation);
         //        _context.SaveChanges();
         //    }
-        //}
+        // }
 
         private List<WorkerInformationDto> ConvertWorkerInformations(List<WorkerInformation> workerInformations)
         {
@@ -126,5 +126,5 @@ namespace FarmaNetBackend.Repositories
 
             return result;
         }
-    }
+  }
 }

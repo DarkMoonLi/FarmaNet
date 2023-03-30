@@ -1,10 +1,14 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Hash": "1OO0jfELYxqnX6XEW35lcfnPyx8ZjUU1nkqYxAIaybg=",
 =======
   "Hash": "UTyZ9CsDTbyBi4notpY7RBfI0kT9X8/JLw/0eczsWbQ=",
 >>>>>>> ArtUpdate
+=======
+  "Hash": "zSpLcQnnb9mhuQxBkWmOpX/fwu+4SFygHyUEjW0M0kw=",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
   "Source": "FarmaNetBackend",
   "BasePath": "_content/FarmaNetBackend",
   "Mode": "Default",
@@ -14,17 +18,28 @@
     {
       "Name": "FarmaNetBackend\\wwwroot",
       "Source": "FarmaNetBackend",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\3rdpartylicenses.txt",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\3rdpartylicenses.txt",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "3rdpartylicenses.txt",
       "AssetKind": "All",
@@ -38,10 +53,17 @@
       "OriginalItemSpec": "wwwroot\\3rdpartylicenses.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\addphoto.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\addphoto.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/addphoto.png",
       "AssetKind": "All",
@@ -55,10 +77,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\addphoto.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\clock.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\clock.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/clock.svg",
       "AssetKind": "All",
@@ -72,10 +101,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\clock.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\closebutton.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\closebutton.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/closebutton.svg",
       "AssetKind": "All",
@@ -89,10 +125,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\closebutton.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\drug1.jpeg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\drug1.jpeg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/drug1.jpeg",
       "AssetKind": "All",
@@ -106,10 +149,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\drug1.jpeg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fav.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fav.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fav.svg",
       "AssetKind": "All",
@@ -123,10 +173,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fav.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-Italic-VariableFont_wght.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-Italic-VariableFont_wght.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/Mulish-Italic-VariableFont_wght.ttf",
       "AssetKind": "All",
@@ -140,10 +197,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\Mulish-Italic-VariableFont_wght.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-VariableFont_wght.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\Mulish-VariableFont_wght.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/Mulish-VariableFont_wght.ttf",
       "AssetKind": "All",
@@ -157,10 +221,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\Mulish-VariableFont_wght.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\OFL.txt",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\OFL.txt",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/OFL.txt",
       "AssetKind": "All",
@@ -174,10 +245,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\OFL.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\README.txt",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\README.txt",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/README.txt",
       "AssetKind": "All",
@@ -191,10 +269,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\README.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Black.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Black.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Black.ttf",
       "AssetKind": "All",
@@ -208,10 +293,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Black.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BlackItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BlackItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-BlackItalic.ttf",
       "AssetKind": "All",
@@ -225,10 +317,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-BlackItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Bold.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Bold.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Bold.ttf",
       "AssetKind": "All",
@@ -242,10 +341,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Bold.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BoldItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-BoldItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-BoldItalic.ttf",
       "AssetKind": "All",
@@ -259,10 +365,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-BoldItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBold.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBold.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-ExtraBold.ttf",
       "AssetKind": "All",
@@ -276,10 +389,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-ExtraBold.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBoldItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraBoldItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-ExtraBoldItalic.ttf",
       "AssetKind": "All",
@@ -293,10 +413,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-ExtraBoldItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLight.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLight.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-ExtraLight.ttf",
       "AssetKind": "All",
@@ -310,10 +437,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-ExtraLight.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLightItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-ExtraLightItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-ExtraLightItalic.ttf",
       "AssetKind": "All",
@@ -327,10 +461,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-ExtraLightItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Italic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Italic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Italic.ttf",
       "AssetKind": "All",
@@ -344,10 +485,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Italic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Light.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Light.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Light.ttf",
       "AssetKind": "All",
@@ -361,10 +509,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Light.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-LightItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-LightItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-LightItalic.ttf",
       "AssetKind": "All",
@@ -378,10 +533,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-LightItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Medium.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Medium.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Medium.ttf",
       "AssetKind": "All",
@@ -395,10 +557,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Medium.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-MediumItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-MediumItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-MediumItalic.ttf",
       "AssetKind": "All",
@@ -412,10 +581,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-MediumItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Regular.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-Regular.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-Regular.ttf",
       "AssetKind": "All",
@@ -429,10 +605,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-Regular.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBold.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBold.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-SemiBold.ttf",
       "AssetKind": "All",
@@ -446,10 +629,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-SemiBold.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBoldItalic.ttf",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\fonts\\static\\Mulish-SemiBoldItalic.ttf",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/fonts/static/Mulish-SemiBoldItalic.ttf",
       "AssetKind": "All",
@@ -463,10 +653,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\static\\Mulish-SemiBoldItalic.ttf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\foodpicture.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\foodpicture.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/foodpicture.png",
       "AssetKind": "All",
@@ -480,10 +677,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\foodpicture.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\header_image.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\header_image.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/header_image.svg",
       "AssetKind": "All",
@@ -497,10 +701,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\header_image.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\ice-cream.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\ice-cream.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/ice-cream.png",
       "AssetKind": "All",
@@ -514,10 +725,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\ice-cream.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon1.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon1.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/icon1.svg",
       "AssetKind": "All",
@@ -531,10 +749,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon1.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon2.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon2.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/icon2.svg",
       "AssetKind": "All",
@@ -548,10 +773,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon2.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon3.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon3.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/icon3.svg",
       "AssetKind": "All",
@@ -565,10 +797,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon3.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon4.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\icon4.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/icon4.svg",
       "AssetKind": "All",
@@ -582,10 +821,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\icon4.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\image.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\image.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/image.png",
       "AssetKind": "All",
@@ -599,10 +845,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\image.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\like.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\like.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/like.svg",
       "AssetKind": "All",
@@ -616,10 +869,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\like.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Login.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Login.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/Login.svg",
       "AssetKind": "All",
@@ -633,10 +893,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\Login.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\meat.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\meat.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/meat.png",
       "AssetKind": "All",
@@ -650,10 +917,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\meat.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\no-product.jpg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\no-product.jpg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/no-product.jpg",
       "AssetKind": "All",
@@ -667,10 +941,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\no-product.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\pancake.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\pancake.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/pancake.png",
       "AssetKind": "All",
@@ -684,10 +965,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\pancake.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\person.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\person.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/person.svg",
       "AssetKind": "All",
@@ -701,10 +989,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\person.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\plus.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\plus.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/plus.svg",
       "AssetKind": "All",
@@ -718,10 +1013,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\plus.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Recipe.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Recipe.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/Recipe.svg",
       "AssetKind": "All",
@@ -735,10 +1037,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\Recipe.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Rectangle-18.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\Rectangle-18.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/Rectangle-18.svg",
       "AssetKind": "All",
@@ -752,10 +1061,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\Rectangle-18.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\soup.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\soup.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/soup.png",
       "AssetKind": "All",
@@ -769,10 +1085,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\soup.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\strawberry.png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\strawberry.png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/strawberry.png",
       "AssetKind": "All",
@@ -786,10 +1109,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\strawberry.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\String.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\String.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/String.svg",
       "AssetKind": "All",
@@ -803,10 +1133,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\String.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\wave.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\assets\\wave.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "assets/wave.svg",
       "AssetKind": "All",
@@ -820,10 +1157,17 @@
       "OriginalItemSpec": "wwwroot\\assets\\wave.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\favicon.ico",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\favicon.ico",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -837,10 +1181,17 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\index.html",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\index.html",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -854,10 +1205,17 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\Login.40ef3dcdca03db33.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\Login.40ef3dcdca03db33.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "Login.40ef3dcdca03db33.svg",
       "AssetKind": "All",
@@ -872,12 +1230,19 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.4f45326440b43ed4.js",
 =======
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\Login.50cfd03b0b4d425e.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\Login.50cfd03b0b4d425e.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "Login.50cfd03b0b4d425e.svg",
       "AssetKind": "All",
@@ -891,10 +1256,17 @@
       "OriginalItemSpec": "wwwroot\\Login.50cfd03b0b4d425e.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.4f45326440b43ed4.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.4f45326440b43ed4.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "main.4f45326440b43ed4.js",
       "AssetKind": "All",
@@ -908,10 +1280,17 @@
       "OriginalItemSpec": "wwwroot\\main.4f45326440b43ed4.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.68b06270725fe757.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.68b06270725fe757.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "main.68b06270725fe757.js",
       "AssetKind": "All",
@@ -925,10 +1304,17 @@
       "OriginalItemSpec": "wwwroot\\main.68b06270725fe757.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.919baddadc69d63f.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.919baddadc69d63f.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "main.919baddadc69d63f.js",
       "AssetKind": "All",
@@ -942,6 +1328,7 @@
       "OriginalItemSpec": "wwwroot\\main.919baddadc69d63f.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f2abf64ce1925346.js",
 >>>>>>> ArtUpdate
       "SourceId": "FarmaNetBackend",
@@ -949,6 +1336,14 @@
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "main.4f45326440b43ed4.js",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\main.f2abf64ce1925346.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+      "BasePath": "_content/FarmaNetBackend",
+      "RelativePath": "main.f2abf64ce1925346.js",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -957,6 +1352,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\main.4f45326440b43ed4.js"
     },
     {
@@ -964,6 +1360,15 @@
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "OriginalItemSpec": "wwwroot\\main.f2abf64ce1925346.js"
+    },
+    {
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\Medications\\image (2230).png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "Medications/image (2230).png",
       "AssetKind": "All",
@@ -977,10 +1382,17 @@
       "OriginalItemSpec": "wwwroot\\Medications\\image (2230).png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\Pharmacies\\image (2230).png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\Pharmacies\\image (2230).png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "Pharmacies/image (2230).png",
       "AssetKind": "All",
@@ -994,10 +1406,17 @@
       "OriginalItemSpec": "wwwroot\\Pharmacies\\image (2230).png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.72a464deced10226.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "plus.72a464deced10226.svg",
       "AssetKind": "All",
@@ -1011,10 +1430,17 @@
       "OriginalItemSpec": "wwwroot\\plus.72a464deced10226.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.f07bdd5ffafd1173.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\plus.f07bdd5ffafd1173.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "plus.f07bdd5ffafd1173.svg",
       "AssetKind": "All",
@@ -1028,10 +1454,17 @@
       "OriginalItemSpec": "wwwroot\\plus.f07bdd5ffafd1173.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\polyfills.a79e934dd4968e4c.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\polyfills.a79e934dd4968e4c.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "polyfills.a79e934dd4968e4c.js",
       "AssetKind": "All",
@@ -1045,10 +1478,17 @@
       "OriginalItemSpec": "wwwroot\\polyfills.a79e934dd4968e4c.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\runtime.397c3874548e84cd.js",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\runtime.397c3874548e84cd.js",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "runtime.397c3874548e84cd.js",
       "AssetKind": "All",
@@ -1062,12 +1502,21 @@
       "OriginalItemSpec": "wwwroot\\runtime.397c3874548e84cd.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.fe9f977a05534a3d.css",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "styles.fe9f977a05534a3d.css",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.0a269146a3cd907b.css",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+      "BasePath": "_content/FarmaNetBackend",
+      "RelativePath": "styles.0a269146a3cd907b.css",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1076,6 +1525,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "wwwroot\\styles.fe9f977a05534a3d.css"
     },
     {
@@ -1083,6 +1533,15 @@
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "OriginalItemSpec": "wwwroot\\styles.0a269146a3cd907b.css"
+    },
+    {
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.28b75230b4e944a9.css",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "styles.28b75230b4e944a9.css",
       "AssetKind": "All",
@@ -1096,10 +1555,17 @@
       "OriginalItemSpec": "wwwroot\\styles.28b75230b4e944a9.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.fe9f977a05534a3d.css",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\styles.fe9f977a05534a3d.css",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "styles.fe9f977a05534a3d.css",
       "AssetKind": "All",
@@ -1113,10 +1579,17 @@
       "OriginalItemSpec": "wwwroot\\styles.fe9f977a05534a3d.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.01e586c2a1542425.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.01e586c2a1542425.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "wave.01e586c2a1542425.svg",
       "AssetKind": "All",
@@ -1130,10 +1603,17 @@
       "OriginalItemSpec": "wwwroot\\wave.01e586c2a1542425.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.8c2ad9c743c963af.svg",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\wave.8c2ad9c743c963af.svg",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "wave.8c2ad9c743c963af.svg",
       "AssetKind": "All",
@@ -1147,10 +1627,17 @@
       "OriginalItemSpec": "wwwroot\\wave.8c2ad9c743c963af.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\WorkerInformations\\image (2230).png",
       "SourceId": "FarmaNetBackend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+=======
+      "Identity": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\WorkerInformations\\image (2230).png",
+      "SourceId": "FarmaNetBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\wwwroot\\",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
       "BasePath": "_content/FarmaNetBackend",
       "RelativePath": "WorkerInformations/image (2230).png",
       "AssetKind": "All",

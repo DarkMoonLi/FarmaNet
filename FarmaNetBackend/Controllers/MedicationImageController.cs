@@ -47,12 +47,31 @@ namespace FarmaNetBackend.Controllers
         }
 
         [HttpPost]
+        [Route("medicationImageByMedication/{id}")]
+        public IActionResult GetImageByMedication(int id)
+        {
+            MedicationImage image = (from m in _context.Medications
+                                     join i in _context.MedicationImages
+                                     on m.MedicationId equals i.ImageId
+                                     where m.MedicationId.Equals(id)
+                                     select i).First();
+
+            if (image == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(image);
+        }
+
+        [HttpPost]
         [Route("/medicationImages/upload")]
-        public async Task<IActionResult> AddImage([FromForm(Name = "uploadedFile")] IFormFile uploadedFile)
+        public async Task<IActionResult> AddImage(IFormFile uploadedFile)
         {
             if (uploadedFile != null)
             {
-                string path = "/Medications/" + uploadedFile.FileName;
+                const string directory = "/Medications/";
+                string path = directory + uploadedFile.FileName;
 
                 NameValidator.Validate(uploadedFile.FileName, ModelState);
                 ImagePathValidator.Validate(path, ModelState);
@@ -60,6 +79,11 @@ namespace FarmaNetBackend.Controllers
                 if (!ModelState.IsValid)
                 {
                     return BadRequest( ModelStateError.Errors(ModelState) );
+                }
+
+                if (!Directory.Exists(_environment.WebRootPath + directory))
+                {
+                    Directory.CreateDirectory(_environment.WebRootPath + directory);
                 }
 
                 using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
@@ -71,7 +95,7 @@ namespace FarmaNetBackend.Controllers
                 _context.MedicationImages.Add(image);
                 _context.SaveChanges();
 
-                return Ok(image.ImageId);
+                return Ok(image);
             }
 
             return RedirectToAction("GetImages");

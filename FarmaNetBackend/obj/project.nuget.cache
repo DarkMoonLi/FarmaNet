@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "WRJOj5VjBNkZGl5IoyHP2+dqt/cdjLGK4SPFiiTZM8x/2ANBFBS1Iq5/5uSdsrMMwmqc+HHYxhm6rPNTgUjeXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\Desktop\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
+=======
+  "dgSpecHash": "rwhgYN/RoaI0l8Wu6xIMdcyndFjagGs5CzykbAu6TjP0p73FuHz1/NbCeDSF7ceJ5EmuwIljxaSxoOCBX3S5XA==",
+  "success": true,
+  "projectFilePath": "C:\\Ucheba\\Data Base\\Project\\FarmaNet\\FarmaNetBackend\\FarmaNetBackend.csproj",
+>>>>>>> 3077cf271c085bbd4b899a59d6e1f4f48a0a3c21
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
