@@ -33,6 +33,8 @@ builder.Services.AddScoped<IWorkinHoursRepository, WorkingHoursRepository>();
 builder.Services.AddScoped<IWriteDownsRepository, WriteDownsRepository>();
 builder.Services.AddScoped<IAuthorizationRepository, AuthorizationRepository>();
 
+builder.Services.Configure<IISServerOptions>(options => { options.AllowSynchronousIO = true; });
+
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

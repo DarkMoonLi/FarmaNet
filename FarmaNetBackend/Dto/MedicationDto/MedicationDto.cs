@@ -13,6 +13,8 @@ namespace FarmaNetBackend.Dto.MedicationDto
         public string Instruction { get; set; }
         public int MedicationTypeId { get; set; }
         public int MedicationImageId { get; set; }
+        public string ImageTitle { get; set; }
+        public string ImagePath { get; set; }
         
         public MedicationDto(Medication med)
         {

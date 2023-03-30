@@ -22,6 +22,7 @@ export class WorkerInfoService {
     return this.http.get(this.url + 'workerPosition/' + id);
   }
 
+<<<<<<< HEAD
   sendImage(formData: any) {
     return this.http.post(this.url + 'workerInfromationImages/upload', formData);
   }
@@ -32,5 +33,13 @@ export class WorkerInfoService {
 
   updateData(formData: any) {
     return this.http.post(this.url + 'workerInformations/update', formData);
+=======
+  getImage(id: string | null) {
+    return this.http.get(this.url + 'workerImageByWorker/' + id);
+  }
+
+  sendImage(formData: any) {
+    return this.http.post(this.url + 'workerInfromationImages/upload', formData);
+>>>>>>> ArtUpdate
   }
 }

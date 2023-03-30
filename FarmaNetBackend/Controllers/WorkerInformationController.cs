@@ -20,7 +20,7 @@ namespace FarmaNetBackend.Controllers
         [Route("workerInformations")]
         public IActionResult GetWorkerInformations()
         {
-            List<WorkerInformationDto> workerInforamtions = _repository.GetWorkerInformations().ConvertAll(m => new WorkerInformationDto(m));
+            List<WorkerInformationDto> workerInforamtions = _repository.GetWorkerInformations();
             return Ok(workerInforamtions);
         }
 
@@ -28,7 +28,7 @@ namespace FarmaNetBackend.Controllers
         [Route("workerInformation/{id}")]
         public IActionResult GetWorkerInformation(int id)
         {
-            WorkerInformation workerInformation = _repository.GetWorkerInformationById(id);
+            WorkerInformationDto workerInformation = _repository.GetWorkerInformationById(id);
 
             if (workerInformation == null)
             {
@@ -89,7 +89,11 @@ namespace FarmaNetBackend.Controllers
 
         [HttpPost]
         [Route("workerInformations/update")]
+<<<<<<< HEAD
         public IActionResult UpdateWorkerInformation([FromBody] UpdateWorkerInformationDto workerInformationDto)
+=======
+        public IActionResult UpdateWorkerInformation(UpdateWorkerInformationDto workerInformationDto)
+>>>>>>> ArtUpdate
         {
             NameValidator.Validate(workerInformationDto.Name, ModelState);
             NameValidator.Validate(workerInformationDto.LastName, ModelState);

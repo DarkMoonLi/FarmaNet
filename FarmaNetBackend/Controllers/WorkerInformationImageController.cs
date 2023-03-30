@@ -1,4 +1,5 @@
-﻿using FarmaNetBackend.Infrastructure;
+﻿using FarmaNetBackend.Dto;
+using FarmaNetBackend.Infrastructure;
 using FarmaNetBackend.Models;
 using FarmaNetBackend.Validation;
 using Microsoft.AspNetCore.Hosting;
@@ -46,13 +47,26 @@ namespace FarmaNetBackend.Controllers
             return Ok(image);
         }
 
+        [HttpGet]
+        [Route("workerImageByWorker/{id}")]
+        public IActionResult GetImageByWorker(int id)
+        {
+            WorkerInformationImage image = (from w in _context.WorkersInformation
+                                           join i in _context.WorkerInformationImages
+                                           on w.WorkerInformationImageId equals i.ImageId
+                                           where w.WorkerInformationId.Equals(id)
+                                           select i).First();
+
+            return Ok(image);
+        }
+
         [HttpPost]
         [Route("workerInfromationImages/upload")]
-        public async Task<IActionResult> AddImage([FromForm(Name = "uploadedFile")] IFormFile uploadedFile)
+        public async Task<IActionResult> AddImage(/*[FromForm(Name = "uploadedFile")]*/ IFormFile uploadedFile)
         {
             if (uploadedFile != null)
             {
-                string path = "/WorkerInfromations/" + uploadedFile.FileName;
+                string path = "/WorkerInformations/" + uploadedFile.FileName;
 
                 NameValidator.Validate(uploadedFile.FileName, ModelState);
                 ImagePathValidator.Validate(path, ModelState);
@@ -71,7 +85,7 @@ namespace FarmaNetBackend.Controllers
                 _context.WorkerInformationImages.Add(image);
                 _context.SaveChanges();
 
-                return Ok(image.ImageId);
+                return Ok(image);
             }
 
             return RedirectToAction("GetImages");

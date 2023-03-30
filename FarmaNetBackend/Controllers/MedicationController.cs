@@ -23,7 +23,7 @@ namespace FarmaNetBackend.Controllers
         [Route("drugs")]
         public IActionResult GetMedications()
         {
-            List<MedicationDto> medications = _repository.GetMedications().ConvertAll( r => new MedicationDto(r) );
+            List<MedicationDto> medications = _repository.GetMedications();
             return Ok( medications );
         }
 
@@ -31,7 +31,7 @@ namespace FarmaNetBackend.Controllers
         [Route("medicationsByName/{name}")]
         public IActionResult GetMedicationByName(string name)
         {
-            List<Medication> medication = _repository.GetMedicationsByName(name);
+            List<MedicationDto> medication = _repository.GetMedicationsByName(name);
 
             if (medication == null)
             {
@@ -45,7 +45,7 @@ namespace FarmaNetBackend.Controllers
         [Route("medicationsByType/{medicationTypeId}")]
         public IActionResult GetMedicationByMedicationType(int medicationTypeId)
         {
-            List<Medication> medication = _repository.GetMedicationsByType(medicationTypeId);
+            List<MedicationDto> medication = _repository.GetMedicationsByType(medicationTypeId);
 
             if (medication == null)
             {
@@ -59,7 +59,7 @@ namespace FarmaNetBackend.Controllers
         [Route("drugs/{id}")]
         public IActionResult GetMedicationByPharmacyId(int id)
         {
-            List<Medication> medication = _repository.GetMedicationsByPharmacyId(id);
+            List<MedicationDto> medication = _repository.GetMedicationsByPharmacyId(id);
 
             if (medication == null)
             {
@@ -73,15 +73,22 @@ namespace FarmaNetBackend.Controllers
         [Route("drug/{id}")]
         public IActionResult GetMedicationById(int id)
         {
-            Medication medication = _repository.GetMedicationById(id);
+            MedicationDto medication = _repository.GetMedicationById(id);
             
             if ( medication == null )
             {
                 return NotFound();
             }
 
-            return Ok( new MedicationDto(medication) );
+            return Ok( medication );
         }
+
+        //[HttpGet]
+        //[Route("drugImage/{id}")]
+        //public IActionResult GetMedicationImageByMedication(int id)
+        //{
+        //    MedicationImage image = _repository.GetMedicationImageByMedication(id);
+        //}
 
         [HttpPost]
         [Route( "drugs/add" )]

@@ -10,6 +10,9 @@ export class WorkerInfoDto {
     public email?: string,
     public positionId?: number,
     public image?: string,
+<<<<<<< HEAD
     public workerInformationImageId?: number
+=======
+>>>>>>> ArtUpdate
     ){}
 }

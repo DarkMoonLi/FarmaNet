@@ -69,7 +69,11 @@
   visibility: visible;
 }
 
+<<<<<<< HEAD
 .modal, .modal-update {
+=======
+.modal {
+>>>>>>> ArtUpdate
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,6 +135,7 @@
 .download-button-text {
   font: 700 24px/30 'Montserrat';
   line-height: 30px;
+<<<<<<< HEAD
 }
 
 .modal-update {
@@ -177,4 +182,6 @@
   padding-left: 32px;
   margin-right: 16px;
   margin-bottom: 20px;
+=======
+>>>>>>> ArtUpdate
 }

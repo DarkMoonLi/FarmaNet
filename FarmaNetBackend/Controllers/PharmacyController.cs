@@ -20,7 +20,7 @@ namespace FarmaNetBackend.Controllers
         [Route("pharmacies")]
         public IActionResult GetPharmacies()
         {
-            List<PharmacyDto> pharmacies = _repository.GetPharmacies().ConvertAll(m => new PharmacyDto(m));
+            List<PharmacyDto> pharmacies = _repository.GetPharmacies();
             return Ok(pharmacies);
         }
 
@@ -28,7 +28,7 @@ namespace FarmaNetBackend.Controllers
         [Route("pharmacy/{id}")]
         public IActionResult GetPharmacy(int id)
         {
-            Pharmacy pharmacy = _repository.GetPharmacyById(id);
+            PharmacyDto pharmacy = _repository.GetPharmacyById(id);
 
             if (pharmacy == null)
             {
